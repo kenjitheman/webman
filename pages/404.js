@@ -13,7 +13,7 @@ const NotFound = () => {
             <Heading
                 as="h1"
                 mt={12}
-                fontFamily={'"Rajdhani", sans-serif'}
+                fontFamily={'"Etna", sans-serif'}
                 align="center"
             >
                 page not found | 404</Heading>
@@ -26,7 +26,7 @@ const NotFound = () => {
                     p={"7"}
                     rounded={"lg"}
                     fontSize={"xl"}
-                    fontFamily={'"Rajdhani", sans-serif'}
+                    fontFamily={'"Etna", sans-serif'}
                 >
                     home
                 </Button>
