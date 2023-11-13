@@ -1,67 +1,61 @@
 import {
     Box,
-    Button,
-    chakra,
     Container,
     Flex,
-    Heading,
-    Link,
-    List,
-    ListItem,
-    useColorModeValue,
 } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import Hero from "../components/hero.js";
-import Stats from "../components/stats.js";
-import Stories from "../components/stories.js";
+import Statistics from "../components/statistics.js";
+import Superpowers from "../components/superpowers.js";
+import Community from "../components/community.js";
 import Features from "../components/features.js";
-import SimpleAccordion from "../components/accordion.js";
-import Testimonials from "../components/testimonials.js";
+import Feature_3 from "../components/feature_3.js";
+
 
 const Home = () => {
     return (
         <Layout>
             <Flex flexDirection={'column'}>
                 <Box>
-                    <Container maxW="6xl">
+                    <Container maxW="10xl">
                         <Section delay={0.2}>
                             <Hero />
                         </Section>
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="6xl">
-                        <Section delay={0.3}>
-                            <Stats />
-                        </Section>
-                    </Container>
-                </Box>
-                <Box>
-                    <Container maxW="6xl">
+                    <Container maxW="10xl">
                         <Section delay={0.4}>
-                            <Stories />
+                            <Statistics />
                         </Section>
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="6xl">
+                    <Container maxW="8xl">
+                        <Section delay={0.3}>
+                            <Community />
+                        </Section>
+                    </Container>
+                </Box>
+                <Box>
+                    <Container maxW="8xl">
+                        <Section delay={1}>
+                            <Superpowers />
+                        </Section>
+                    </Container>
+                </Box>
+                <Box>
+                    <Container maxW="8xl">
                         <Section delay={0.5}>
                             <Features />
                         </Section>
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="6xl">
-                        <Section delay={0.6}>
-                            <Testimonials />
-                        </Section>
-                    </Container>
-                </Box>
-                <Box>
-                    <Container maxW="6xl">
-                        <Section delay={0.7}>
-                            <SimpleAccordion />
+                    <Container maxW="8xl">
+                        <Section delay={0.9}>
+                            <Feature_3 />
                         </Section>
                     </Container>
                 </Box>
