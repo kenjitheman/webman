@@ -15,7 +15,7 @@ import ThemeToggleButton from '../components/theme-toggle-button.js';
 const Links = {
     'Home': '/',
     'About': '/about',
-    'Info': '/info',
+    'Reviews': '/reviews',
     'Contact': '/contact-us',
     'Our Team': '/our-team',
 };
@@ -25,15 +25,15 @@ const NavLink = ({ children, href, currentPath }) => {
     return (
         <Box
             as="a"
-            px={4}
-            py={2}
-            rounded="lg"
+            px={{ base: 3, md: 4, lg: 3.5, xl: 6 }}
+            py={2.5}
+            rounded="xl"
             textDecoration="none"
             _hover={{
                 textDecoration: 'none',
-                bg: useColorModeValue('gray.200', 'gray.400'),
+                bg: useColorModeValue('yellow.400', 'yellow.700'),
             }}
-            bg={isActive ? useColorModeValue('gray.400', 'gray.500') : useColorModeValue('gray.200', 'gray.800')}
+            bg={isActive ? useColorModeValue('yellow.400', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
             href={href}
         >
             {children}
@@ -56,33 +56,54 @@ export default function Navbar() {
                 bg={useColorModeValue("#ffffff40", "#20202300")}
                 css={{ backdropFilter: "blur(10px)" }}
                 px={4}
+                py={2}
                 zIndex={2}
+                onScroll={onClose}
+                borderBottom="0.1px solid"
+                borderColor={useColorModeValue('gray.300', 'gray.900')}
             >
-                <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+                <Flex
+                    h={16}
+                    alignItems={'center'}
+                    justifyContent={'space-between'}
+                >
                     <IconButton
-                        size={'md'}
+                        size={'lg'}
                         icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
                         aria-label={'Open Menu'}
-                        display={{ md: 'none' }}
+                        display={{ lg: 'none' }}
                         onClick={isOpen ? onClose : onOpen}
                     />
-                    <HStack w={"100%"} spacing={9} alignItems={'center'} justifyContent={'space-between'}>
+                    <HStack
+                        w={"100%"}
+                        spacing={9}
+                        alignItems={'center'}
+                        justifyContent={'space-between'}
+                    >
                         <Box><Logo /></Box>
-                        <HStack as={'nav'} spacing={5} fontFamily={'"Rajdhani", sans-serif'} fontSize={"xl"} fontWeight={"medium"} display={{ base: 'none', md: 'flex' }}>
+                        <HStack
+                            as={'nav'}
+                            spacing={{ lg: 4, xl: 5 }}
+                            fontFamily={'"Etna", sans-serif'}
+                            fontSize={{ lg: 'lg', xl: 'xl' }}
+                            fontWeight={"medium"}
+                            display={{ base: 'none', lg: 'flex' }}
+                        >
                             {linksArray.map(([label, link]) => (
                                 <NavLink key={label} href={link} currentPath={currentPath}>
                                     {label}
                                 </NavLink>
                             ))}
 
-                            <ThemeToggleButton />
                         </HStack>
+
                     </HStack>
+                    <ThemeToggleButton />
                 </Flex>
 
                 {isOpen ? (
-                    <Box pb={4} display={{ md: 'none' }}>
-                        <Stack as={'nav'} spacing={4}>
+                    <Box p={6} display={{ lg: 'none' }}>
+                        <Stack as={'nav'} spacing={6}>
                             {linksArray.map(([label, link]) => (
                                 <NavLink key={label} href={link} currentPath={currentPath}>
                                     {label}
