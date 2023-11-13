@@ -20,11 +20,10 @@ export default function SimpleAccordion() {
             <Container>
                 <Accordion
                     allowMultiple
-                    width="100%"
-                    maxW="lg"
-                    rounded="lg"
-                    fontFamily={"'Rajdhani', sans-serif"}
-                    fontSize={"lg"}
+                    maxW="8xl"
+                    rounded="3xl"
+                    fontFamily={"'Etna', sans-serif"}
+                    fontSize={"xl"}
                     fontWeight={"medium"}
                 >
                     <AccordionItem>
@@ -34,7 +33,7 @@ export default function SimpleAccordion() {
                             justifyContent="space-between"
                             p={5}>
                             <Text fontSize="md">What is Chakra UI?</Text>
-                            <ChevronDownIcon fontSize="24px" />
+                            <ChevronDownIcon fontSize="md" />
                         </AccordionButton>
                         <AccordionPanel pb={4}>
                             <Text color="gray.600">
@@ -50,7 +49,7 @@ export default function SimpleAccordion() {
                             justifyContent="space-between"
                             p={4}>
                             <Text fontSize="md">What advantages to use?</Text>
-                            <ChevronDownIcon fontSize="24px" />
+                            <ChevronDownIcon fontSize="md" />
                         </AccordionButton>
                         <AccordionPanel pb={4}>
                             <Text color="gray.600">
@@ -67,7 +66,7 @@ export default function SimpleAccordion() {
                             justifyContent="space-between"
                             p={4}>
                             <Text fontSize="md">How to start using Chakra UI?</Text>
-                            <ChevronDownIcon fontSize="24px" />
+                            <ChevronDownIcon fontSize="md" />
                         </AccordionButton>
                         <AccordionPanel pb={4}>
                             <Text color="gray.600">
