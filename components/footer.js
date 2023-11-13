@@ -10,10 +10,11 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 import Logo from '../components/logo.js';
+// import { BsInstagram, BsTelegram, BsReddit } from 'react-icons/bs';
 
 const ListHeader = ({ children }) => {
     return (
-        <Text fontWeight={'500'} fontSize={'lg'} mb={1}>
+        <Text color={useColorModeValue('yellow.500', 'yellow.700')} fontWeight={'bold'} fontSize={'xl'} mb={2}>
             {children}
         </Text>
     );
@@ -24,11 +25,13 @@ export default function Footer() {
         <Box
             rounded="2xl"
             as="footer"
-            fontFamily={"'Rajdhani', sans-serif"}
+            fontFamily={"'Etna', sans-serif"}
             fontWeight={"medium"}
             fontSize="lg"
-            bg={useColorModeValue("#ffffff40", "#20202380")}
+            bg={useColorModeValue("#ffffffa40", "#20202380")}
             css={{ backdropFilter: "blur(10px)" }}
+            border="0.1px solid"
+            borderColor={useColorModeValue('gray.300', 'black')}
             zIndex={2}
             mx="auto"
         >
@@ -43,13 +46,6 @@ export default function Footer() {
                             <Box as="a" href={'#'}>
                                 Features
                             </Box>
-                            <Tag
-                                size={'sm'}
-                                bg={useColorModeValue('green.300', 'green.800')}
-                                ml={2}
-                                color={'white'}>
-                                New
-                            </Tag>
                         </Stack>
                         <Box as="a" href={'#'}>
                             Tutorials
@@ -98,21 +94,15 @@ export default function Footer() {
                         </Box>
                     </Stack>
                     <Stack align={'flex-start'}>
-                        <ListHeader>Follow Us</ListHeader>
+                        <ListHeader>Contact Us</ListHeader>
                         <Box as="a" href={'#'}>
-                            Facebook
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Twitter
-                        </Box>
-                        <Box as="a" href={'#'}>
-                            Dribbble
+                            Telegram
                         </Box>
                         <Box as="a" href={'#'}>
                             Instagram
                         </Box>
                         <Box as="a" href={'#'}>
-                            LinkedIn
+                            Signal
                         </Box>
                     </Stack>
                 </SimpleGrid>
