@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { Text, useColorModeValue } from "@chakra-ui/react";
-import FootprintIcon from "./icons/footprint";
+import Image from "next/image";
 import styled from "@emotion/styled";
 
 const LogoBox = styled.span`
 font-weight: bold;
-font-size: 35px;
+font-size: 45px;
 display: inline-flex;
 align-items: center;
-height: 40px;
+height: 55px;
 line-height: 20px;
 padding: 10px;
 
@@ -23,21 +23,24 @@ padding: 10px;
 
 const Logo = () => {
     return (
-        (
-            <Link href="/" scroll={false}>
-                <LogoBox>
-                    <FootprintIcon />
-                    <Text
-                        color={useColorModeValue("gray.800", "whiteAlpha.900")}
-                        fontFamily='"Rajdhani", sans-serif'
-                        fontWeight="medium"
-                        ml={3}
-                    >
-                        Alt Corporation
-                    </Text>
-                </LogoBox>
-            </Link>
-        )
+        <Link href="/" scroll={false}>
+            <LogoBox>
+                <Image
+                    src="/images/logo.png"
+                    width={50}
+                    height={50}
+                />
+                <Text
+                    color={useColorModeValue("gray.800", "whiteAlpha.900")}
+                    fontFamily='"Etna", sans-serif'
+                    fontWeight="medium"
+                    fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+                    ml={2}
+                >
+                    Alt Corporation
+                </Text>
+            </LogoBox>
+        </Link>
     );
 };
 
