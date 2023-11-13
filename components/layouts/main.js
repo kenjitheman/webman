@@ -37,7 +37,7 @@ const Main = ({ children, router }) => {
 
             <NavBar path={router.asPath} />
 
-            <Container maxW="container.3xl" pt={14}>
+            <Container maxW={'100%'} pt={14}>
                 <AnimatePresence initial={true} mode="wait">
                     {children}
                 </AnimatePresence>
