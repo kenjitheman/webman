@@ -1,149 +1,93 @@
-import * as React from 'react';
 import {
-    chakra,
-    Container,
-    Stack,
-    HStack,
-    Text,
-    useColorModeValue,
-    Button,
-    Image,
-    Skeleton,
     Box,
-    Link,
-    Icon
+    Heading,
+    Container,
+    Text,
+    Button,
+    Stack,
+    useColorModeValue,
 } from '@chakra-ui/react';
-import { GoChevronRight } from 'react-icons/go';
-import { MdBolt } from 'react-icons/md';
 
-const Hero = () => {
+export default function Hero() {
     return (
-        <Container 
-        maxW="6xl" 
-        px={{ base: 22 }} 
-        py={24}
-        fontFamily={"'Rajdhani', sans-serif"}
-        fontWeight={"medium"}
-        fontSize="lg"
+        <Box
+            display={{ md: 'flex', justifyContent: 'center', alignItems: 'center' }}
+            w={'100%'}
+            h={{ base: 'xl', sm: '2xl', md: '850px' }}
+            mx={'auto'}
+            mt={10}
+            rounded={'3xl'}
+            border={'0.1px solid'}
+            borderColor={useColorModeValue('', 'gray.900')}
+            style={{
+                backgroundImage: `url(/images/background.jpg)`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+            }}
         >
-            <Stack direction={{ base: 'column', md: 'row' }} justifyContent="flex-start">
-                <Stack direction="column" spacing={10} justifyContent="center" maxW="800px">
-                    <HStack
-                        as={Link}
-                        p={1}
-                        rounded="full"
-                        fontSize="lg"
-                        w="100%"
-                        bg={useColorModeValue('gray.300', 'gray.700')}
+            <Container maxW={'4xl'}>
+                <Stack
+                    as={Box}
+                    textAlign={'center'}
+                    spacing={{ base: 8, md: 14 }}
+                    py={{ base: 20, md: 36 }}
+                >
+                    <Heading
+                        fontWeight={600}
+                        fontSize={{ base: '3xl', sm: '5xl', md: '7xl' }}
+                        color={'gray.50'}
                     >
-                        <Box
-                            py={2}
-                            px={5}
-                            lineHeight={1}
-                            rounded="md"
-                            color="white"
-                        >
-                            What's new
-                        </Box>
-                        <HStack spacing={1} alignItems="center" justifyContent="center">
-                            <Text lineHeight={1}>See our recent updates</Text>
-                            <Icon as={GoChevronRight} w={4} h={4} />
-                        </HStack>
-                    </HStack>
-                    <chakra.h1 fontSize="5xl" lineHeight={1} fontWeight="bold" textAlign="left">
-                        Crypto provides many<br />
-                        <chakra.span color="teal">Alt Corporation</chakra.span>
-                    </chakra.h1>
+                        Make money from <br />
+                        <Text as={'span'} color={useColorModeValue('yellow.400', 'yellow.700')}>
+                            your audience
+                        </Text>
+                    </Heading>
                     <Text
-                        fontSize="1.2rem"
-                        textAlign="left"
-                        lineHeight="1.375"
-                        fontWeight="medium"
-                        color="gray.500"
+                        fontSize={{ base: 'md', lg: 'xl' }}
+                        color={'gray.300'}
                     >
-                        TemplatesKart provides the best ChakraUI templates. Focus on your business, not on the
-                        boilerplate.
+                        Monetize your content by charging your most loyal readers and reward them
+                        loyalty points. Give back to your loyal readers by granting them access to
+                        your pre-releases and sneak-peeks.
                     </Text>
-                    <HStack
-                        spacing={{ base: 0, sm: 2 }}
-                        mb={{ base: '3rem !important', sm: 0 }}
-                        flexWrap="wrap"
+                    <Stack
+                        direction={{ base: 'column', sm: 'row', md: 'row' }}
+                        spacing={{ base: 7, sm: 5, md: 7 }}
+                        align={'center'}
+                        alignSelf={'center'}
+                        position={'relative'}
                     >
-                        <chakra.button
-                            w={{ base: '100%', sm: 'auto' }}
-                            h={12}
-                            px={6}
-                            color="white"
-                            size="lg"
-                            rounded="md"
-                            mb={{ base: 2, sm: 0 }}
-                            zIndex={5}
-                            lineHeight={1}
-                            bgGradient="linear(to-l, #0ea5e9,#2563eb)"
-                            _hover={{ bgGradient: 'linear(to-l, #0ea5e9,#2563eb)', opacity: 0.9 }}
+                        <Button
+                            colorScheme={'yellow'}
+                            bg={useColorModeValue('yellow.500', 'yellow.700')}
+                            rounded={'3xl'}
+                            py={6}
+                            px={8}
+                            fontSize={'xl'}
+                            color={'gray.900'}
+                            _hover={{
+                                bg: 'yellow.300',
+                            }}
                         >
-                            <chakra.span> Explore ComponentsKart </chakra.span>
-                            <Icon as={MdBolt} h={4} w={4} ml={1} />
-                        </chakra.button>
-                        <Box
-                            d="flex"
-                            justifyContent="center"
-                            bg={useColorModeValue('white', 'gray.800')}
-                            w={{ base: '100%', sm: 'auto' }}
-                            border="1px solid"
-                            borderColor="gray.300"
-                            p={3}
-                            lineHeight={1.18}
-                            rounded="md"
-                            boxShadow="md"
-                            as={Link}
-                            zIndex={55555555}
+                            Get Started →
+                        </Button>
+                        <Button
+                            colorScheme={'yellow'}
+                            bg={useColorModeValue('gray.500', 'gray.600')}
+                            rounded={'3xl'}
+                            py={6}
+                            px={8}
+                            fontSize={'xl'}
+                            _hover={{
+                                bg: 'gray.300',
+                            }}
                         >
-                            Watch Video
-                        </Box>
-                    </HStack>
+                            Learn more
+                        </Button>
+                    </Stack>
                 </Stack>
-                <Box ml={{ base: 0, md: 5 }} pos="relative">
-                    <DottedBox />
-                    <Image
-                        w="100%"
-                        h="100%"
-                        minW={{ base: 'auto', md: '30rem' }}
-                        objectFit="cover"
-                        src="../public/images/CoinCrypto2 (2).jpg"
-                        rounded="md"
-                        fallback={<Skeleton />}
-                    />
-                </Box>
-            </Stack>
-        </Container>
-    );
-};
-
-function DottedBox() {
-    return (
-        <Box position="absolute" left="-450px" top="-30px" height="full" w="100%" zIndex={-1}>
-            <svg
-                color={useColorModeValue('rgba(55,65,81, 0.1)', 'rgba(55,65,81, 0.7)')}
-                width="800"
-                height="800"
-            >
-                <defs>
-                    <pattern
-                        id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b"
-                        x="0"
-                        y="0"
-                        width="20"
-                        height="20"
-                        patternUnits="userSpaceOnUse"
-                    >
-                        <rect x="0" y="0" width="4" height="4" fill="currentColor"></rect>
-                    </pattern>
-                </defs>
-                <rect width="1000" height="1000" fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"></rect>
-            </svg>
+            </Container>
         </Box>
     );
 }
-
-export default Hero;
