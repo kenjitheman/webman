@@ -16,14 +16,14 @@ const Layout = ({ children, title }) => {
             animate="enter"
             exit="exit"
             variants={variants}
-            transition={{ duration: 0.4, type: "easeInOut" }}
+            transition={{ duration: 0.5, type: "easeInOut" }}
             style={{ position: "relative" }}
         >
             <>
                 {title && (
                     <Head>
                         <title>{t}</title>
-                        <meta name="twitter:title" content={t} />
+                        <meta name="og:title" content={t} />
                         <meta property="og:title" content={t} />
                     </Head>
                 )}
