@@ -7,6 +7,7 @@ import {
     Container,
     useColorModeValue,
 } from '@chakra-ui/react';
+import { ScaleImage } from "../components/custom_animations.js";
 
 const Testimonial = (props) => {
     const { children } = props;
@@ -24,8 +25,7 @@ const TestimonialContent = (props) => {
             rounded={'3xl'}
             bg={useColorModeValue('white', 'gray.900')}
             align={'center'}
-            mb={5}
-            pos={'relative'}
+            mb={{base: 5, md: 10}}
         >
             {children}
         </Stack>
@@ -67,7 +67,7 @@ export default function WithSpeechBubbles() {
                 maxW={'10xl'}
                 as={Stack}
                 spacing={12}
-                p={{ base: 7, md: 10}}
+                p={{ base: 7, md: 10 }}
             >
                 <Stack spacing={0} align={'center'}>
                     <Heading fontFamily={"'Etna', sans-serif"}>Our Clients Speak</Heading>
@@ -85,14 +85,16 @@ export default function WithSpeechBubbles() {
                                 imperdiet nibh lectus feugiat nunc sem.
                             </TestimonialText>
                         </TestimonialContent>
-                        <Image
-                            rounded={'3xl'}
-                            alt={'feature image'}
-                            src={
-                                '/images/gold.jpg'
-                            }
-                            objectFit={'cover'}
-                        />
+                        <ScaleImage>
+                            <Image
+                                rounded={'3xl'}
+                                alt={'feature image'}
+                                src={
+                                    '/images/yellow_logo_with_background.jpg'
+                                }
+                                objectFit={'cover'}
+                            />
+                        </ScaleImage>
                     </Testimonial>
                     <Testimonial>
                         <TestimonialContent>
@@ -102,14 +104,16 @@ export default function WithSpeechBubbles() {
                                 imperdiet nibh lectus feugiat nunc sem.
                             </TestimonialText>
                         </TestimonialContent>
-                        <Image
-                            rounded={'3xl'}
-                            alt={'feature image'}
-                            src={
-                                '/images/gold.jpg'
-                            }
-                            objectFit={'cover'}
-                        />
+                        <ScaleImage>
+                            <Image
+                                rounded={'3xl'}
+                                alt={'feature image'}
+                                src={
+                                    '/images/yellow_logo_with_background.jpg'
+                                }
+                                objectFit={'cover'}
+                            />
+                        </ScaleImage>
                     </Testimonial>
                     <Testimonial>
                         <TestimonialContent>
@@ -119,14 +123,16 @@ export default function WithSpeechBubbles() {
                                 imperdiet nibh lectus feugiat nunc sem.
                             </TestimonialText>
                         </TestimonialContent>
-                        <Image
-                            rounded={'3xl'}
-                            alt={'feature image'}
-                            src={
-                                '/images/gold.jpg'
-                            }
-                            objectFit={'cover'}
-                        />
+                        <ScaleImage>
+                            <Image
+                                rounded={'3xl'}
+                                alt={'feature image'}
+                                src={
+                                    '/images/yellow_logo_with_background.jpg'
+                                }
+                                objectFit={'cover'}
+                            />
+                        </ScaleImage>
                     </Testimonial>
                 </Stack>
 
@@ -135,34 +141,40 @@ export default function WithSpeechBubbles() {
                     spacing={{ base: 10, md: 4, lg: 10 }}
                 >
                     <Testimonial>
-                        <Image
-                            rounded={'3xl'}
-                            alt={'feature image'}
-                            src={
-                                '/images/gold.jpg'
-                            }
-                            objectFit={'cover'}
-                        />
+                        <ScaleImage>
+                            <Image
+                                rounded={'3xl'}
+                                alt={'feature image'}
+                                src={
+                                    '/images/yellow_logo_with_background.jpg'
+                                }
+                                objectFit={'cover'}
+                            />
+                        </ScaleImage>
                     </Testimonial>
                     <Testimonial>
-                        <Image
-                            rounded={'3xl'}
-                            alt={'feature image'}
-                            src={
-                                '/images/gold.jpg'
-                            }
-                            objectFit={'cover'}
-                        />
+                        <ScaleImage>
+                            <Image
+                                rounded={'3xl'}
+                                alt={'feature image'}
+                                src={
+                                    '/images/yellow_logo_with_background.jpg'
+                                }
+                                objectFit={'cover'}
+                            />
+                        </ScaleImage>
                     </Testimonial>
                     <Testimonial>
-                        <Image
-                            rounded={'3xl'}
-                            alt={'feature image'}
-                            src={
-                                '/images/gold.jpg'
-                            }
-                            objectFit={'cover'}
-                        />
+                        <ScaleImage>
+                            <Image
+                                rounded={'3xl'}
+                                alt={'feature image'}
+                                src={
+                                    '/images/yellow_logo_with_background.jpg'
+                                }
+                                objectFit={'cover'}
+                            />
+                        </ScaleImage>
                     </Testimonial>
                 </Stack>
 
@@ -171,34 +183,41 @@ export default function WithSpeechBubbles() {
                     spacing={{ base: 10, md: 4, lg: 10 }}
                 >
                     <Testimonial>
-                        <Image
-                            rounded={'3xl'}
-                            alt={'feature image'}
-                            src={
-                                '/images/gold.jpg'
-                            }
-                            objectFit={'cover'}
-                        />
+                        <ScaleImage>
+                            <Image
+                                rounded={'3xl'}
+                                alt={'feature image'}
+                                src={
+                                    '/images/yellow_logo_with_background.jpg'
+                                }
+                                objectFit={'cover'}
+                            />
+                        </ScaleImage>
                     </Testimonial>
                     <Testimonial>
-                        <Image
-                            rounded={'3xl'}
-                            alt={'feature image'}
-                            src={
-                                '/images/gold.jpg'
-                            }
-                            objectFit={'cover'}
-                        />
+                        <ScaleImage>
+                            <Image
+                                rounded={'3xl'}
+                                alt={'feature image'}
+                                src={
+                                    '/images/yellow_logo_with_background.jpg'
+                                }
+                                objectFit={'cover'}
+                            />
+                        </ScaleImage>
                     </Testimonial>
                     <Testimonial>
-                        <Image
-                            rounded={'3xl'}
-                            alt={'feature image'}
-                            src={
-                                '/images/gold.jpg'
-                            }
-                            objectFit={'cover'}
-                        />
+                        <ScaleImage>
+                            <Image
+                                rounded={'3xl'}
+                                alt={'feature image'}
+                                src={
+                                    '/images/yellow_logo_with_background.jpg'
+                                }
+                                objectFit={'cover'}
+                                
+                            />
+                        </ScaleImage>
                     </Testimonial>
                 </Stack>
             </Container>
