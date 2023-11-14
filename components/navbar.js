@@ -25,7 +25,7 @@ const NavLink = ({ children, href, currentPath }) => {
     return (
         <Box
             as="a"
-            px={{ base: 3, md: 4, lg: 3.5, xl: 6 }}
+            px={{ base: 2, md: 4, lg: 3.5, xl: 6 }}
             py={2.5}
             rounded="2xl"
             textDecoration="none"
@@ -84,7 +84,7 @@ export default function Navbar() {
                         <Box><Logo /></Box>
                         <HStack
                             as={'nav'}
-                            spacing={{ lg: 4, xl: 5 }}
+                            spacing={{ lg: 3, xl: 5 }}
                             fontFamily={'"Etna", sans-serif'}
                             fontSize={{ lg: 'lg', xl: 'xl' }} nav
                             fontWeight={"medium"}
