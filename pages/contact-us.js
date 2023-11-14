@@ -1,11 +1,14 @@
-import { Container, Box, Heading, Flex } from '@chakra-ui/react'
+import { Container, Box, Heading } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import CallToAction from '../components/call_to_action.js'
 
 const ContactUs = () => (
-    <Layout title="Contact Us | Alt Corporation">
+    <Layout
+        title="Contact Us | Alt Corporation"
+        description="Alt Corporation contact page. Here you can find all the information about ways to contact us."
+    >
         <Container maxW="7xl">
             <Heading as="h1" fontSize={35} mt={12} mb={12} textAlign={"center"}>
                 Contact Us
