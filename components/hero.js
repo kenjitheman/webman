@@ -7,6 +7,7 @@ import {
     Stack,
     useColorModeValue,
 } from '@chakra-ui/react';
+import { AnimateOnHover } from '../components/custom_animations';
 
 export default function Hero() {
     return (
@@ -26,7 +27,7 @@ export default function Hero() {
                 backgroundRepeat: 'no-repeat',
             }}
         >
-            <Container maxW={'4xl'}>
+            <Container maxW={'5xl'}>
                 <Stack
                     as={Box}
                     textAlign={'center'}
@@ -39,7 +40,7 @@ export default function Hero() {
                         color={'gray.50'}
                     >
                         Make money from <br />
-                        <Text as={'span'} color={useColorModeValue('yellow.400', 'yellow.700')}>
+                        <Text as={'span'} color={useColorModeValue('yellow.500', 'yellow.700')}>
                             your audience
                         </Text>
                     </Heading>
@@ -58,33 +59,37 @@ export default function Hero() {
                         alignSelf={'center'}
                         position={'relative'}
                     >
-                        <Button
-                            colorScheme={'yellow'}
-                            bg={useColorModeValue('yellow.500', 'yellow.700')}
-                            rounded={'3xl'}
-                            py={6}
-                            px={8}
-                            fontSize={'xl'}
-                            color={'gray.900'}
-                            _hover={{
-                                bg: 'yellow.300',
-                            }}
-                        >
-                            Get Started →
-                        </Button>
-                        <Button
-                            colorScheme={'yellow'}
-                            bg={useColorModeValue('gray.500', 'gray.600')}
-                            rounded={'3xl'}
-                            py={6}
-                            px={8}
-                            fontSize={'xl'}
-                            _hover={{
-                                bg: 'gray.300',
-                            }}
-                        >
-                            Learn more
-                        </Button>
+                        <AnimateOnHover>
+                            <Button
+                                colorScheme={'yellow'}
+                                bg={useColorModeValue('yellow.500', 'yellow.700')}
+                                rounded={'3xl'}
+                                py={6}
+                                px={8}
+                                fontSize={'xl'}
+                                color={'gray.900'}
+                                _hover={{
+                                    bg: 'yellow.300',
+                                }}
+                            >
+                                Get Started →
+                            </Button>
+                        </AnimateOnHover>
+                        <AnimateOnHover>
+                            <Button
+                                colorScheme={'yellow'}
+                                bg={useColorModeValue('gray.400', 'gray.500')}
+                                rounded={'3xl'}
+                                py={6}
+                                px={8}
+                                fontSize={'xl'}
+                                _hover={{
+                                    bg: 'gray.300',
+                                }}
+                            >
+                                Learn more
+                            </Button>
+                        </AnimateOnHover>
                     </Stack>
                 </Stack>
             </Container>
