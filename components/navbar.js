@@ -27,17 +27,18 @@ const NavLink = ({ children, href, currentPath }) => {
             as="a"
             px={{ base: 3, md: 4, lg: 3.5, xl: 6 }}
             py={2.5}
-            rounded="xl"
+            rounded="2xl"
             textDecoration="none"
             _hover={{
                 textDecoration: 'none',
-                bg: useColorModeValue('yellow.400', 'yellow.700'),
+                bg: useColorModeValue('yellow.500', 'yellow.700'),
+                animationDuration: '',
             }}
-            bg={isActive ? useColorModeValue('yellow.400', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
+            bg={isActive ? useColorModeValue('yellow.500', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
             href={href}
         >
             {children}
-        </Box>
+        </Box >
     );
 };
 
@@ -85,7 +86,7 @@ export default function Navbar() {
                             as={'nav'}
                             spacing={{ lg: 4, xl: 5 }}
                             fontFamily={'"Etna", sans-serif'}
-                            fontSize={{ lg: 'lg', xl: 'xl' }}
+                            fontSize={{ lg: 'lg', xl: 'xl' }} nav
                             fontWeight={"medium"}
                             display={{ base: 'none', lg: 'flex' }}
                         >
