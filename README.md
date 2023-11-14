@@ -1,9 +1,9 @@
-## webman
+## altcorp.org
 
 ## installation
 
 ```
-git clone https://github.com/kenjitheman/webman
+git clone https://github.com/kenjitheman/altcorp.org
 ```
 
 - install all dependencies
@@ -33,4 +33,4 @@ yarn dev
 
 ## license
 
-- [MIT](https://choosealicense.com/licenses/mit/)
+- [KPL](https://github.com/kenjitheman/altcorp.org/LICENSE)
