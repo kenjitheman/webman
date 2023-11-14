@@ -28,15 +28,15 @@ yarn dev
 
 - To build
 
-'''
+```
 yarn build
-'''
+```
 
 ### TECH STACK
 
 - Web frameworks:
     - Next.js (Next.js is a React framework for developing single page Javascript applications)
-- JavaScript frameworks:
+- JavaScript frameworks/libraries:
     - Next.js 
     - Emotion (Emotion is a library designed for writing CSS styles with JavaScript)
     - React (React is an open-source JavaScript library for building user interfaces or UI components)
@@ -59,34 +59,34 @@ yarn build
 
 ### Advantages of this tech stack:
 
-    - Next.js:
-        - Server-side rendering: Provides improved performance and SEO optimization with server-side rendering (SSR)
-        - Routing: Offers a straightforward and efficient routing system
-        - Code splitting: Allows for optimized loading of assets to improve site performance
-    - Emotion:
-        - CSS in JavaScript: Emotion simplifies the styling process by allowing you to write CSS within your JavaScript components
-        - Theming support: Offers theming capabilities for consistent UI design
-    - React:
-        - Component-based architecture: Facilitates modular and reusable UI development
-        - Large ecosystem: A vast community and a multitude of libraries and tools available for React
-    - Node.js:
-        - Server-side JavaScript: Allows for running JavaScript on the server, which can streamline development and foster code reuse
-        - Scalability: Node.js is known for its ability to handle concurrent connections efficiently
-    - Vercel:
-        - Serverless deployment: Offers serverless functions, which can help with cost efficiency and scaling
-        - Continuous deployment: Facilitates seamless and automated deployments
-        - HSTS (HTTP Strict Transport Security):
-        - Enhanced security: Ensures that your website is only accessed over secure HTTPS connections, reducing the risk of data breaches and man-in-the-middle attacks
-    - Chakra UI:
-        - Accessibility: Provides a component library with accessibility considerations, making it easier to create web applications that are usable by a wide audience
-        - Modular: Allows you to pick and choose components to fit your project's needs
-    - HTTP/2:
-        - Performance improvement: Reduces latency, speeds up website loading times, and allows for multiplexing, resulting in more efficient data transfer
-    - Open Graph:
-        - Social integration: Helps your website display rich, structured information when shared on social media platforms, enhancing the user experience and visibility
-    - Webpack:
-        - Module bundling: Webpack efficiently bundles and optimizes your JavaScript and assets
-        - Module Federation: Allows for dynamic loading of independently deployed builds, enhancing modularity and reducing load times
+- Next.js:
+    - Server-side rendering: Provides improved performance and SEO optimization with server-side rendering (SSR)
+    - Routing: Offers a straightforward and efficient routing system
+    - Code splitting: Allows for optimized loading of assets to improve site performance
+- Emotion:
+    - CSS in JavaScript: Emotion simplifies the styling process by allowing you to write CSS within your JavaScript components
+    - Theming support: Offers theming capabilities for consistent UI design
+- React:
+    - Component-based architecture: Facilitates modular and reusable UI development
+    - Large ecosystem: A vast community and a multitude of libraries and tools available for React
+- Node.js:
+    - Server-side JavaScript: Allows for running JavaScript on the server, which can streamline development and foster code reuse
+    - Scalability: Node.js is known for its ability to handle concurrent connections efficiently
+- Vercel:
+    - Serverless deployment: Offers serverless functions, which can help with cost efficiency and scaling
+    - Continuous deployment: Facilitates seamless and automated deployments
+    - HSTS (HTTP Strict Transport Security):
+    - Enhanced security: Ensures that your website is only accessed over secure HTTPS connections, reducing the risk of data breaches and man-in-the-middle attacks
+- Chakra UI:
+    - Accessibility: Provides a component library with accessibility considerations, making it easier to create web applications that are usable by a wide audience
+    - Modular: Allows you to pick and choose components to fit your project's needs
+- HTTP/2:
+    - Performance improvement: Reduces latency, speeds up website loading times, and allows for multiplexing, resulting in more efficient data transfer
+- Open Graph:
+    - Social integration: Helps your website display rich, structured information when shared on social media platforms, enhancing the user experience and visibility
+- Webpack:
+    - Module bundling: Webpack efficiently bundles and optimizes your JavaScript and assets
+    - Module Federation: Allows for dynamic loading of independently deployed builds, enhancing modularity and reducing load times
 
 In summary, this tech stack provides a robust set of tools and technologies for building modern web applications with strong performance, scalability, security, and developer experience. It combines powerful front-end and back-end technologies and services, making it suitable for a wide range of web development projects
 
