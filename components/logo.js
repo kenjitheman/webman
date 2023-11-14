@@ -11,14 +11,6 @@ align-items: center;
 height: 55px;
 line-height: 20px;
 padding: 10px;
-
-> svg {
-    transition: 200ms ease;
-}
-
-    &:hover > svg {
-        transform: rotate(360deg);
-    }
 `;
 
 const Logo = () => {
@@ -34,7 +26,7 @@ const Logo = () => {
                     color={useColorModeValue("gray.800", "whiteAlpha.900")}
                     fontFamily='"Etna", sans-serif'
                     fontWeight="medium"
-                    fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+                    fontSize={{ base: 'xl', sm: '2xl', md: '4xl' }}
                     ml={2}
                 >
                     Alt Corporation
