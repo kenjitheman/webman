@@ -14,8 +14,8 @@ const Main = ({ children, router }) => {
                     content="Alt Corporation"
                 />
                 <meta
-                    name="author"
-                    content="Alt Corporation"
+                    name="Alt Corporation"
+                    content="Alt Corporation is a company that does stuff."
                 />
                 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
