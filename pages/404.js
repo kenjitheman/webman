@@ -6,32 +6,38 @@ import {
     Divider,
     Heading,
 } from "@chakra-ui/react";
+import Layout from '../components/layouts/article'
 
 const NotFound = () => {
     return (
-        <Container>
-            <Heading
-                as="h1"
-                mt={12}
-                fontFamily={'"Etna", sans-serif'}
-                align="center"
-            >
-                page not found | 404</Heading>
-            <Divider my={6} />
-            <Box my={6} align="center">
-                <Button
-                    as={NextLink}
-                    href="/"
-                    colorScheme="gray"
-                    p={"7"}
-                    rounded={"lg"}
-                    fontSize={"xl"}
+        <Layout
+            title="Not Found | 404"
+            description="Page you are looking for is not found."
+        >
+            <Container>
+                <Heading
+                    as="h1"
+                    my={12}
                     fontFamily={'"Etna", sans-serif'}
+                    align="center"
                 >
-                    home
-                </Button>
-            </Box>
-        </Container>
+                    Not Found | 404</Heading>
+                <Divider my={6} />
+                <Box my={6} align="center">
+                    <Button
+                        as={NextLink}
+                        href="/"
+                        colorScheme="gray"
+                        p={"7"}
+                        rounded={"lg"}
+                        fontSize={"xl"}
+                        fontFamily={'"Etna", sans-serif'}
+                    >
+                        Back To Home
+                    </Button>
+                </Box>
+            </Container>
+        </Layout>
     );
 };
 
