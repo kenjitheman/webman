@@ -4,7 +4,10 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 
 const OurTeam = () => (
-    <Layout title="Our Team | Alt Corporation">
+    <Layout
+        title="Our Team | Alt Corporation"
+        description="Alt Corporation team page. Here you can find all the information about our team."
+    >
         <Container>
             <Heading as="h1" fontSize={35} mt={12} mb={12} textAlign={"center"}>
                 Our Team
@@ -28,4 +31,3 @@ const OurTeam = () => (
 )
 
 export default OurTeam;
-export { getServerSideProps } from '../components/chakra';
