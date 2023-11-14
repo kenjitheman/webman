@@ -11,26 +11,28 @@ import {
     StatNumber,
     useColorModeValue,
 } from '@chakra-ui/react';
+import { AnimateOnHover } from './custom_animations';
 
 function StatsCard(props) {
     const { title, stat } = props;
     return (
-        <Stat
-            px={{ base: 4, md: 15 }}
-            py={10}
-            shadow={'xl'}
-            border={'1px solid'}
-            borderColor={useColorModeValue('gray.300', 'gray.900')}
-            rounded={'3xl'}
-            borderRadius={'3xl'}
-        >
-            <StatLabel fontSize={'md'} fontWeight={'medium'} isTruncated>
-                {title}
-            </StatLabel>
-            <StatNumber fontSize={'3xl'} fontWeight={'regular'}>
-                {stat}
-            </StatNumber>
-        </Stat>
+        <AnimateOnHover>
+            <Stat
+                px={{ base: 4, md: 15 }}
+                py={10}
+                shadow={'lg'}
+                border={'1px solid'}
+                borderColor={useColorModeValue('gray.300', 'gray.700')}
+                rounded={'3xl'}
+            >
+                <StatLabel fontSize={'2xl'} fontWeight={'medium'} isTruncated>
+                    {title}
+                </StatLabel>
+                <StatNumber fontSize={'3xl'} fontWeight={'regular'}>
+                    {stat}
+                </StatNumber>
+            </Stat>
+        </AnimateOnHover>
     );
 }
 
@@ -43,11 +45,11 @@ export default function Stats() {
             w={'100%'}
         >
             <Text
-                as = "a"
-                href = "/"
+                as="a"
+                href="/"
                 color={useColorModeValue('yellow.300', 'yellow.600')}
-                fontWeight={600}
-                fontSize={'sm'}
+                fontWeight={'medium'}
+                fontSize={'md'}
                 bg={useColorModeValue('yellow.600', 'yellow.900')}
                 p={3}
                 alignSelf={'flex-start'}
@@ -56,7 +58,7 @@ export default function Stats() {
             >
                 OUR ECOSYSTEM →
             </Text>
-            <chakra.h1 py={3} textAlign={'left'} fontSize={'4xl'} fontWeight={'bold'}>
+            <chakra.h1 py={5} textAlign={'left'} fontSize={'4xl'} fontWeight={'medium'}>
                 What is our company doing?
             </chakra.h1>
             <Flex
@@ -70,14 +72,14 @@ export default function Stats() {
                     pb={{ base: 12, md: 0 }}
                 >
                     <Image
-                        src="/images/gold.jpg"
+                        src="/images/background.jpg"
                         rounded={'3xl'}
                         alt={'stats image'}
                         border={'1px solid'}
                         borderColor={useColorModeValue('gray.300', 'gray.900')}
                         objectFit={'cover'}
                         w={'100%'}
-                        h={{ base: 80, md: 'md' }}
+                        h={{ base: 80, md: 'lg' }}
                     />
                 </Box>
 
@@ -87,13 +89,13 @@ export default function Stats() {
                     w={{ base: '100%', md: '50%' }}
                     columns={1}
                 >
-                    <GridItem rowSpan={4} colSpan={{ base: 0, md: 4 }} >
-                        <StatsCard title={'We serve'} stat={'50,000 people'} />
+                    <GridItem p={3} rowSpan={4} colSpan={{ base: 0, md: 4 }} >
+                        <StatsCard p={3} title={'We serve'} stat={'50,000 people'} />
                     </GridItem>
-                    <GridItem rowSpan={0} colSpan={{ base: 0, md: 4 }}>
+                    <GridItem p={3} rowSpan={4} colSpan={{ base: 0, md: 4 }}>
                         <StatsCard title={'In'} stat={'30 different countries'} />
                     </GridItem>
-                    <GridItem rowSpan={4} colSpan={{ base: 0, md: 4 }} >
+                    <GridItem p={3} rowSpan={4} colSpan={{ base: 0, md: 4 }} >
                         <StatsCard title={'We serve'} stat={'50,000 people'} />
                     </GridItem>
                 </Grid>
