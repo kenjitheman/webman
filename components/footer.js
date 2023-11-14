@@ -6,7 +6,6 @@ import {
     Stack,
     Text,
     Flex,
-    Tag,
     useColorModeValue,
 } from '@chakra-ui/react';
 import Logo from '../components/logo.js';
@@ -28,6 +27,7 @@ export default function Footer() {
             fontFamily={"'Etna', sans-serif"}
             fontWeight={"medium"}
             fontSize="lg"
+            shadow="lg"
             bg={useColorModeValue("#ffffffa40", "#20202380")}
             css={{ backdropFilter: "blur(10px)" }}
             border="0.1px solid"
