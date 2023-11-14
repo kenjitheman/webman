@@ -20,7 +20,7 @@ export default function SimpleAccordion() {
             <Container>
                 <Accordion
                     allowMultiple
-                    maxW="8xl"
+                    maxW="10xl"
                     rounded="3xl"
                     fontFamily={"'Etna', sans-serif"}
                     fontSize={"xl"}
@@ -32,7 +32,7 @@ export default function SimpleAccordion() {
                             alignItems="center"
                             justifyContent="space-between"
                             p={5}>
-                            <Text fontSize="md">What is Chakra UI?</Text>
+                            <Text fontSize="xl">What is Chakra UI?</Text>
                             <ChevronDownIcon fontSize="md" />
                         </AccordionButton>
                         <AccordionPanel pb={4}>
@@ -48,7 +48,7 @@ export default function SimpleAccordion() {
                             alignItems="center"
                             justifyContent="space-between"
                             p={4}>
-                            <Text fontSize="md">What advantages to use?</Text>
+                            <Text fontSize="xl">What advantages to use?</Text>
                             <ChevronDownIcon fontSize="md" />
                         </AccordionButton>
                         <AccordionPanel pb={4}>
@@ -65,7 +65,7 @@ export default function SimpleAccordion() {
                             alignItems="center"
                             justifyContent="space-between"
                             p={4}>
-                            <Text fontSize="md">How to start using Chakra UI?</Text>
+                            <Text fontSize="xl">How to start using Chakra UI?</Text>
                             <ChevronDownIcon fontSize="md" />
                         </AccordionButton>
                         <AccordionPanel pb={4}>
