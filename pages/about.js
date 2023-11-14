@@ -5,17 +5,35 @@ import Paragraph from '../components/paragraph'
 import SimpleAccordion from '../components/accordion.js'
 
 const About = () => (
-    <Layout title="About | Alt Corporation">
-        <Container maxW="7xl">
-            <Heading as="h1" fontSize={35} mt={12} mb={12} textAlign={"center"}>
+    <Layout
+        title="About | Alt Corporation"
+        description="Alt Corporation is a organization that is focused on creating a better future for everyone."
+    >
+        <Container maxW="7xl" fontFamily={"'Etna', sans-serif"}>
+            <Heading
+                as="h1"
+                fontSize={'2xl'}
+                mt={12}
+                mb={12}
+                textAlign={"center"}
+            >
                 About Us
             </Heading>
-            <Section delay={0.1} mb={7} >
+            <Section
+                delay={0.1}
+                mb={7}
+            >
                 <Paragraph >
                     Welcome to our little project!
                 </Paragraph>
             </Section>
-            <Section delay={0.3} mb={12} >
+            <Section delay={0.3}>
+                <Paragraph>
+                    Thanks for chenking us out. We are Next Space Lab! A small startup and hackaton team from Ukraine. We are spread all around the globe but still gathering every so often to do something cool.
+                </Paragraph>
+                <Paragraph>
+                    Thanks for chenking us out. We are Next Space Lab! A small startup and hackaton team from Ukraine. We are spread all around the globe but still gathering every so often to do something cool.
+                </Paragraph>
                 <Paragraph>
                     Thanks for chenking us out. We are Next Space Lab! A small startup and hackaton team from Ukraine. We are spread all around the globe but still gathering every so often to do something cool.
                 </Paragraph>
@@ -38,4 +56,3 @@ const About = () => (
 )
 
 export default About
-export { getServerSideProps } from '../components/chakra'
