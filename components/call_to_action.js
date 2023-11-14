@@ -8,12 +8,14 @@ import {
     Grid,
     GridItem,
     Container,
+    useColorModeValue,
 } from '@chakra-ui/react';
 
 const Feature = ({ heading, text }) => {
     return (
         <GridItem>
-            <chakra.h3 fontSize="xl" fontWeight="600">
+
+            <chakra.h3 fontSize="2xl" fontWeight="regular">
                 {heading}
             </chakra.h3>
             <chakra.p>{text}</chakra.p>
@@ -23,7 +25,7 @@ const Feature = ({ heading, text }) => {
 
 export default function gridListWithCTA() {
     return (
-        <Box as={Container} maxW="7xl" mt={14} p={4}>
+        <Box as={Container} maxW="7xl" fontFamily={"'Etna', sans-serif"} mt={14} p={4}>
             <Grid
                 templateColumns={{
                     base: 'repeat(1, 1fr)',
@@ -34,10 +36,10 @@ export default function gridListWithCTA() {
             >
                 <GridItem colSpan={1}>
                     <VStack alignItems="flex-start" spacing="20px">
-                        <chakra.h2 fontSize="3xl" fontWeight="700">
+                        <chakra.h2 fontSize="3xl" fontWeight="medium">
                             Medium length title
                         </chakra.h2>
-                        <Button colorScheme="green" size="md">
+                        <Button color={useColorModeValue("yellow.500", "yellow.700")} size="lg">
                             Call To Action
                         </Button>
                     </VStack>
