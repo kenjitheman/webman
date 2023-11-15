@@ -1,15 +1,16 @@
 import {
     Box,
     VStack,
-    Button,
     Flex,
+    Button,
+    useColorModeValue,
     Divider,
     chakra,
     Grid,
     GridItem,
     Container,
-    useColorModeValue,
 } from '@chakra-ui/react';
+import { AnimateOnHover } from '../components/custom_animations';
 
 const Feature = ({ heading, text }) => {
     return (
@@ -39,9 +40,15 @@ export default function gridListWithCTA() {
                         <chakra.h2 fontSize="3xl" fontWeight="medium">
                             Medium length title
                         </chakra.h2>
-                        <Button color={useColorModeValue("yellow.500", "yellow.700")} size="lg">
-                            Call To Action
-                        </Button>
+                        <AnimateOnHover>
+                            <Button
+                                color={useColorModeValue("yellow.300", "gray.300")}
+                                size="lg"
+                                rounded="2xl"
+                            >
+                                Call To Action
+                            </Button>
+                        </AnimateOnHover>
                     </VStack>
                 </GridItem>
                 <GridItem>
