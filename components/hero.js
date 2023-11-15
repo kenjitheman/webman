@@ -3,11 +3,10 @@ import {
     Heading,
     Container,
     Text,
-    Button,
     Stack,
     useColorModeValue,
 } from '@chakra-ui/react';
-import { AnimateOnHover } from '../components/custom_animations';
+import { GetStartedButton, LearnMoreButton } from '../components/buttons';
 
 export default function Hero() {
     return (
@@ -40,59 +39,28 @@ export default function Hero() {
                         color={'gray.50'}
                     >
                         Make money from <br />
-                        <Text as={'span'} color={useColorModeValue('yellow.500', 'yellow.700')}>
-                            your audience
-                        </Text>
-                    </Heading>
-                    <Text
-                        fontSize={{ base: 'md', lg: 'xl' }}
-                        color={'gray.300'}
-                    >
-                        Monetize your content by charging your most loyal readers and reward them
-                        loyalty points. Give back to your loyal readers by granting them access to
-                        your pre-releases and sneak-peeks.
-                    </Text>
-                    <Stack
-                        direction={{ base: 'column', sm: 'row', md: 'row' }}
-                        spacing={{ base: 7, sm: 5, md: 7 }}
-                        align={'center'}
-                        alignSelf={'center'}
-                        position={'relative'}
-                    >
-                        <AnimateOnHover>
-                            <Button
-                                colorScheme={'yellow'}
-                                bg={useColorModeValue('yellow.500', 'yellow.700')}
-                                rounded={'3xl'}
-                                py={6}
-                                px={8}
-                                fontSize={'xl'}
-                                color={'gray.900'}
-                                _hover={{
-                                    bg: 'yellow.300',
-                                }}
-                            >
-                                Get Started →
-                            </Button>
-                        </AnimateOnHover>
-                        <AnimateOnHover>
-                            <Button
-                                colorScheme={'yellow'}
-                                bg={useColorModeValue('gray.400', 'gray.500')}
-                                rounded={'3xl'}
-                                py={6}
-                                px={8}
-                                fontSize={'xl'}
-                                _hover={{
-                                    bg: 'gray.300',
-                                }}
-                            >
-                                Learn more
-                            </Button>
-                        </AnimateOnHover>
-                    </Stack>
+                        your audience
+                </Heading>
+                <Text
+                    fontSize={{ base: 'md', lg: 'xl' }}
+                    color={'gray.300'}
+                >
+                    Monetize your content by charging your most loyal readers and reward them
+                    loyalty points. Give back to your loyal readers by granting them access to
+                    your pre-releases and sneak-peeks.
+                </Text>
+                <Stack
+                    direction={{ base: 'column', sm: 'row', md: 'row' }}
+                    spacing={{ base: 7, sm: 5, md: 7 }}
+                    align={'center'}
+                    alignSelf={'center'}
+                    position={'relative'}
+                >
+                    <GetStartedButton />
+                    <LearnMoreButton />
                 </Stack>
-            </Container>
-        </Box>
+            </Stack>
+        </Container>
+        </Box >
     );
 }
