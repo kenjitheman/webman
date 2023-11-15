@@ -31,3 +31,4 @@ const OurTeam = () => (
 )
 
 export default OurTeam;
+export { getServerSideProps } from '../components/chakra';
