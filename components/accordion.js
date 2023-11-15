@@ -10,6 +10,24 @@ import {
 
 import { ChevronDownIcon } from '@chakra-ui/icons';
 
+const questions = {
+    'question_1': {
+        'question': 'What is Chakra UI?',
+        'answer': 'Chakra UI is a simple and modular component library that gives developers the building blocks they need to create web applications.',
+    },
+    'question_2': {
+        'question': 'What advantages to use?',
+        'answer': 'Chakra UI offers a variety of advantages including ease of use, accessibility, and customization options. It also provides a comprehensive set of UI components and is fully compatible with React.',
+    },
+    'question_3': {
+        'question': 'How to start using Chakra UI?',
+        'answer': 'To get started with Chakra UI, you can install it via npm or yarn, and then import the components you need in your project. The Chakra UI documentation is also a great resource for getting started and learning more about the library.',
+    },
+};
+
+
+
+
 export default function SimpleAccordion() {
     return (
         <Flex
