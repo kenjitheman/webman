@@ -22,13 +22,28 @@ function StatsCard(props) {
                 py={10}
                 shadow={'lg'}
                 border={'1px solid'}
-                borderColor={useColorModeValue('gray.300', 'gray.700')}
+                borderColor={useColorModeValue('gray.300', 'gray.900')}
                 rounded={'3xl'}
+                style={{
+                    backgroundImage: `url(/images/background.jpg)`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }}
             >
-                <StatLabel fontSize={'2xl'} fontWeight={'medium'} isTruncated>
+                <StatLabel
+                    fontSize={'2xl'}
+                    fontWeight={'medium'}
+                    isTruncated
+                    color={useColorModeValue('gray.300', 'gray.300')}
+                >
                     {title}
                 </StatLabel>
-                <StatNumber fontSize={'3xl'} fontWeight={'regular'}>
+                <StatNumber
+                    fontSize={'3xl'}
+                    fontWeight={'regular'}
+                    color={useColorModeValue('gray.300', 'gray.300')}
+                >
                     {stat}
                 </StatNumber>
             </Stat>
@@ -51,14 +66,25 @@ export default function Stats() {
                 fontWeight={'medium'}
                 fontSize={'md'}
                 bg={useColorModeValue('yellow.600', 'yellow.900')}
-                p={3}
+                px={5}
+                py={3}
                 alignSelf={'flex-start'}
                 rounded={'2xl'}
                 w={'fit-content'}
+                _hover={{
+                    textDecoration: 'none',
+                    bg: useColorModeValue('yellow.500', 'yellow.800'),
+                }}
             >
                 OUR ECOSYSTEM →
             </Text>
-            <chakra.h1 py={5} textAlign={'left'} fontSize={'4xl'} fontWeight={'medium'}>
+            <chakra.h1
+                py={5}
+                textAlign={'left'}
+                fontSize={'4xl'}
+                fontWeight={'medium'}
+                color={useColorModeValue('black', 'gray.300')}
+            >
                 What is our company doing?
             </chakra.h1>
             <Flex
@@ -100,7 +126,7 @@ export default function Stats() {
                     </GridItem>
                 </Grid>
             </Flex>
-        </Box>
+        </Box >
     );
 };
 
