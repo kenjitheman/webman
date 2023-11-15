@@ -23,8 +23,14 @@ const StatFullyGrid = ({ text, icon }) => {
                 py={10}
                 shadow={'lg'}
                 border={'1px solid'}
-                borderColor={useColorModeValue('gray.300', 'gray.700')}
+                borderColor={useColorModeValue('gray.300', 'gray.900')}
                 rounded={'3xl'}
+                style={{
+                    backgroundImage: `url(/images/background.jpg)`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }}
             >
                 <Flex
                     w={12}
@@ -35,11 +41,15 @@ const StatFullyGrid = ({ text, icon }) => {
                 >
                     {icon}
                 </Flex>
-                <Text fontSize={'2xl'} fontWeight={'medium'}>
+                <Text
+                    fontSize={'2xl'}
+                    fontWeight={'medium'}
+                    color={useColorModeValue('gray.300', 'gray.300')}
+                >
                     {text}
                 </Text>
             </Flex>
-        </AnimateOnHover>
+        </AnimateOnHover >
     );
 };
 
@@ -56,6 +66,8 @@ export default function StatsFullyGrid() {
                 py={3}
                 textAlign={'left'}
                 fontSize={'4xl'}
+                fontWeight={'bold'}
+                color={useColorModeValue('gray.300', 'gray.300')}
             >
                 A digital Product design agency</Heading>
             <Text color={'gray.500'} fontSize={'2xl'}>
@@ -76,43 +88,43 @@ export default function StatsFullyGrid() {
                 >
                     <GridItem rowSpan={4} colSpan={{ base: 0, md: 4 }} >
                         <StatFullyGrid
-                            icon={<Icon as={IoAnalyticsSharp} color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                            icon={<Icon as={IoAnalyticsSharp} color={useColorModeValue('gray.300', 'gray.300')} w={12} h={12} />}
                             text={'Business Planning'}
                         />
                     </GridItem>
                     <GridItem rowSpan={4} colSpan={{ base: 0, md: 2 }} >
                         <StatFullyGrid
-                            icon={<Icon as={IoLogoBitcoin} color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                            icon={<Icon as={IoLogoBitcoin} color={useColorModeValue('gray.300', 'gray.300')} w={12} h={12} />}
                             text={'Financial Planning'}
                         />
                     </GridItem>
                     <GridItem rowSpan={4} colSpan={{ base: 0, md: 2 }} >
                         <StatFullyGrid
-                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('gray.300', 'gray.300')} w={12} h={12} />}
                             text={'Market Analysis'}
                         />
                     </GridItem>
                     <GridItem rowSpan={4} colSpan={{ base: 0, md: 1 }} >
                         <StatFullyGrid
-                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('gray.300', 'gray.300')} w={12} h={12} />}
                             text={'Market Analysis'}
                         />
                     </GridItem>
                     <GridItem rowSpan={4} colSpan={{ base: 0, md: 3 }} >
                         <StatFullyGrid
-                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('gray.300', 'gray.300')} w={12} h={12} />}
                             text={'Market Analysis'}
                         />
                     </GridItem>
                     <GridItem rowSpan={4} colSpan={{ base: 0, md: 3 }} >
                         <StatFullyGrid
-                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('gray.300', 'gray.300')} w={12} h={12} />}
                             text={'Market Analysis'}
                         />
                     </GridItem>
                     <GridItem rowSpan={4} colSpan={{ base: 0, md: 1 }} >
                         <StatFullyGrid
-                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                            icon={<Icon as={IoSearchSharp} color={useColorModeValue('gray.300', 'gray.300')} w={12} h={12} />}
                             text={'Market Analysis'}
                         />
                     </GridItem>
