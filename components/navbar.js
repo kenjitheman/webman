@@ -20,6 +20,7 @@ const Links = {
     'Our Team': '/our-team',
 };
 
+
 const NavLink = ({ children, href, currentPath }) => {
     const isActive = href === currentPath;
     return (
@@ -97,7 +98,6 @@ export default function Navbar() {
                             ))}
 
                         </HStack>
-
                     </HStack>
                     <ThemeToggleButton />
                 </Flex>
