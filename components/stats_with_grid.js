@@ -22,6 +22,12 @@ export default function StatsWithGrid() {
                     maxW={'8xl'}
                     w={'100%'}
                     p={20}
+                //style={{
+                //  backgroundImage: `url(/images/background.jpg)`,
+                //  backgroundSize: 'cover',
+                // backgroundPosition: 'center',
+                //  backgroundRepeat: 'no-repeat',
+                //}}
                 >
                     <Stack direction={{ base: 'column', lg: 'row' }}>
                         <Stack
