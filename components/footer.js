@@ -9,6 +9,7 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 import Logo from '../components/logo.js';
+import LanguageSwitcher from './language_switcher.js';
 // import { BsInstagram, BsTelegram, BsReddit } from 'react-icons/bs';
 
 const ListHeader = ({ children }) => {
@@ -103,6 +104,9 @@ export default function Footer() {
                         </Box>
                         <Box as="a" href={'#'}>
                             Signal
+                        </Box>
+                        <Box>
+                            <LanguageSwitcher />
                         </Box>
                     </Stack>
                 </SimpleGrid>
