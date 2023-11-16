@@ -30,4 +30,4 @@ function Website({ Component, pageProps, router }) {
     );
 }
 
-export default appWithTranslation(Website);
+export default Website;
