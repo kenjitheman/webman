@@ -1,4 +1,5 @@
 import { Select } from '@chakra-ui/react';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const LanguageSwitcher = ({ currentLanguage, languages }) => {
     languages = ['en', 'uk', 'ru'];
@@ -7,9 +8,9 @@ const LanguageSwitcher = ({ currentLanguage, languages }) => {
             size="md"
             rounded="2xl"
             variant="outline"
+            borderColor={useColorModeValue('gray.300', 'gray.700')}
             defaultValue={currentLanguage}
             w={20}
-            mx={2}
             onChange={(e) => {
                 const locale = e.target.value;
                 window.location.href = `/${locale}`;
