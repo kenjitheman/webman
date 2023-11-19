@@ -22,27 +22,23 @@ function StatsCard(props) {
                 py={10}
                 shadow={'lg'}
                 border={'1px solid'}
-                borderColor={useColorModeValue('gray.300', 'gray.900')}
+                borderColor={useColorModeValue('gray.300', 'gray.700')}
                 rounded={'3xl'}
-                style={{
-                    backgroundImage: `url(/images/background.jpg)`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
+                _hover={{
+                    cursor: 'pointer',
                 }}
             >
                 <StatLabel
                     fontSize={'2xl'}
                     fontWeight={'medium'}
                     isTruncated
-                    color={useColorModeValue('gray.300', 'gray.300')}
+                    color={useColorModeValue('yellow.500', 'yellow.700')}
                 >
                     {title}
                 </StatLabel>
                 <StatNumber
                     fontSize={'3xl'}
                     fontWeight={'regular'}
-                    color={useColorModeValue('gray.300', 'gray.300')}
                 >
                     {stat}
                 </StatNumber>
@@ -62,19 +58,16 @@ export default function Stats() {
             <Text
                 as="a"
                 href="/"
-                color={useColorModeValue('yellow.300', 'yellow.600')}
+                color={useColorModeValue('yellow.500', 'yellow.700')}
                 fontWeight={'medium'}
                 fontSize={'md'}
-                bg={useColorModeValue('yellow.600', 'yellow.900')}
+                border={'1px solid'}
+                borderColor={useColorModeValue('gray.300', 'gray.700')}
                 px={5}
                 py={3}
                 alignSelf={'flex-start'}
                 rounded={'2xl'}
                 w={'fit-content'}
-                _hover={{
-                    textDecoration: 'none',
-                    bg: useColorModeValue('yellow.500', 'yellow.800'),
-                }}
             >
                 OUR ECOSYSTEM →
             </Text>
@@ -102,7 +95,7 @@ export default function Stats() {
                         rounded={'3xl'}
                         alt={'stats image'}
                         border={'1px solid'}
-                        borderColor={useColorModeValue('gray.300', 'gray.900')}
+                        borderColor={useColorModeValue('gray.300', 'gray.700')}
                         objectFit={'cover'}
                         w={'100%'}
                         h={{ base: 80, md: 'lg' }}
