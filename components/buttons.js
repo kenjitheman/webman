@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import { Button, useColorModeValue } from '@chakra-ui/react';
-import { AnimateOnHover } from '../components/custom_animations';
 
 const MotionButton = dynamic(() => import('framer-motion').then((mod) => mod.motion.button), {
     ssr: false,
@@ -10,20 +9,21 @@ const CustomButton = ({ textColor, children, whileHover, transition }) => {
     return (
         <MotionButton whileHover={whileHover} transition={transition}>
             <Button
-                colorScheme={'none'}
                 borderRadius={'3xl'}
-                py={7}
-                px={9}
-                fontSize={'xl'}
+                py={{ base: 6, md: 7 }}
+                px={{ base: 5, md: 12 }}
+                fontSize={{ base: 'lg', md: 'xl' }}
                 color={textColor}
                 rounded="2xl"
                 fontFamily={"'Etna', sans-serif"}
                 fontWeight={"medium"}
-                shadow="lg"
-                bg={useColorModeValue("#ffffffa40", "#20202380")}
-                css={{ backdropFilter: "blur(1px)" }}
+                bg="gray.900"
+                css={{ backdropFilter: "blur(0px)" }}
                 border="0.1px solid"
-                borderColor={useColorModeValue('gray.900', 'gray.900')}
+                borderColor={useColorModeValue('gray.700', 'gray.700')}
+                _hover={{
+                    rounded: '3xl',
+                }}
             >
                 {children}
             </Button>
@@ -34,9 +34,9 @@ const CustomButton = ({ textColor, children, whileHover, transition }) => {
 const GetStartedButton = () => {
     return (
         <CustomButton
-            textColor={'gray.300'}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.2 }}
+            textColor={'white'}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4 }}
         >
             Get Started →
         </CustomButton>
@@ -46,9 +46,9 @@ const GetStartedButton = () => {
 const LearnMoreButton = () => {
     return (
         <CustomButton
-            textColor={'gray.300'}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.2 }}
+            textColor={'white'}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4 }}
         >
             Learn More →
         </CustomButton>
