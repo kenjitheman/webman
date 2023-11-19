@@ -4,7 +4,6 @@ import {
     Container,
     Flex,
     Text,
-    useColorModeValue,
 } from '@chakra-ui/react';
 import { GetStartedButton, LearnMoreButton } from '../components/buttons';
 
@@ -16,20 +15,16 @@ export default function Hero() {
             alignItems={'flex-end'}
             w={'100%'}
             h={{ base: 'xl', sm: '2xl', md: '850px' }}
-            mx={'auto'}
+            bgImage={'url(/images/background.jpg)'}
+            bgSize={'cover'}
+            bgPosition={'center'}
+            bgRepeat={'no-repeat'}
+            bgAttachment={'fixed'}
             mt={10}
             rounded={'3xl'}
-            border={'0.1px solid'}
-            borderColor={useColorModeValue('gray.300', 'gray.900')}
-            style={{
-                backgroundImage: `url(/images/background.jpg)`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-            }}
         >
             <Container
-                maxW={'10xl'}
+                maxW={'full'}
                 fontFamily={"'Etna', sans-serif"}
                 display={'flex'}
                 justifyContent={'space-between'}
