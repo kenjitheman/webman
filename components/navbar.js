@@ -33,7 +33,6 @@ const NavLink = ({ children, href, currentPath }) => {
             _hover={{
                 textDecoration: 'none',
                 bg: useColorModeValue('yellow.500', 'yellow.700'),
-                animationDuration: '',
             }}
             bg={isActive ? useColorModeValue('yellow.500', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
             href={href}
