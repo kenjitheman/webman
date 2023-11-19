@@ -20,7 +20,7 @@ const Home = () => {
         >
             <Flex flexDirection={'column'}>
                 <Box>
-                    <Container maxW="10xl">
+                    <Container maxW="full">
                         <Section delay={0.5}>
                             <Hero />
                         </Section>
