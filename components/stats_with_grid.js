@@ -19,15 +19,9 @@ export default function StatsWithGrid() {
                     borderColor={useColorModeValue('gray.300', 'black')}
                     backgroundPosition="center"
                     backgroundRepeat="no-repeat"
-                    maxW={'8xl'}
+                    maxW={'10xl'}
                     w={'100%'}
                     p={20}
-                //style={{
-                //  backgroundImage: `url(/images/background.jpg)`,
-                //  backgroundSize: 'cover',
-                // backgroundPosition: 'center',
-                //  backgroundRepeat: 'no-repeat',
-                //}}
                 >
                     <Stack direction={{ base: 'column', lg: 'row' }}>
                         <Stack
@@ -53,7 +47,7 @@ export default function StatsWithGrid() {
                                 >
                                     21st-century agriculture
                                 </Heading>
-                                <Text fontSize={'2xl'} color={'gray.400'}>
+                                <Text fontSize={'2xl'} color={'gray.600'}>
                                     The NewLife™ technology allows you to monitor your crops and get complete
                                     insights at real time. The proprietary software/hardware ecosystem
                                     prevents your plants from getting neglected.
@@ -66,7 +60,7 @@ export default function StatsWithGrid() {
                                         <Text fontFamily={'heading'} fontSize={'5xl'} color={'white'} mb={3}>
                                             {stat.title}
                                         </Text>
-                                        <Text fontSize={'2xl'} color={'gray.400'}>
+                                        <Text fontSize={'2xl'} color={'gray.600'}>
                                             {stat.content}
                                         </Text>
                                     </Box>
