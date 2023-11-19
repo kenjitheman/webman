@@ -1,23 +1,31 @@
 import { Box, SimpleGrid, Icon, Text, Stack, Flex, useColorModeValue } from '@chakra-ui/react';
 import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from 'react-icons/io5';
+import { AnimateOnHover } from '../components/custom_animations';
 
 const Feature = ({ title, text, icon }) => {
     return (
         <Stack>
-            <Flex
-                w={16}
-                h={16}
-                align={'center'}
-                justify={'center'}
-                color={useColorModeValue('yellow.500', 'yellow.700')}
-                bg={useColorModeValue('yellow.700', 'yellow.900')}
-                rounded={'3xl'}
-                mb={1}
-            >
-                {icon}
-            </Flex>
-            <Text fontWeight={"medium"}>{title}</Text>
-            <Text color={'gray.600'}>{text}</Text>
+            <AnimateOnHover>
+                <Flex
+                    w={16}
+                    h={16}
+                    align={'center'}
+                    justify={'center'}
+                    color={useColorModeValue('yellow.500', 'yellow.700')}
+                    border={'1px solid'}
+                    borderColor={useColorModeValue('gray.300', 'gray.700')}
+                    shadow={'lg'}
+                    rounded={'3xl'}
+                    mb={1}
+                    _hover={{
+                        cursor: 'pointer',
+                    }}
+                >
+                    {icon}
+                </Flex>
+                <Text fontWeight={"medium"}>{title}</Text>
+                <Text color={'gray.600'}>{text}</Text>
+            </AnimateOnHover>
         </Stack>
     );
 };
@@ -28,7 +36,7 @@ export default function ThreeColumns() {
             p={4}
             fontFamily={"'Etna', sans-serif"}
             fontSize={"2xl"}
-            fontWeight={"me"}
+            fontWeight={"regular"}
         >
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
                 <Feature
