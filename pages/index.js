@@ -34,28 +34,28 @@ const Home = () => {
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="8xl">
+                    <Container maxW="10xl">
                         <Section delay={0.9}>
                             <StatsFullyGrid />
                         </Section>
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="8xl">
+                    <Container maxW="10xl">
                         <Section delay={1}>
                             <Features />
                         </Section>
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="8xl">
+                    <Container maxW="10xl">
                         <Section delay={1.2}>
                             <StatsWithGrid />
                         </Section>
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="8xl">
+                    <Container maxW="10xl">
                         <Section delay={1.4}>
                             <Community />
                         </Section>
