@@ -19,7 +19,7 @@ const ThemeToggleButton = () => {
                     whileTap={{ scale: 0.9 }}
                     justifyContent="space-between"
                     alignItems="center"
-                    px={2}
+                    px={3}
                 >
                     <FaSun size="1rem" />
                     <Switch
@@ -27,7 +27,7 @@ const ThemeToggleButton = () => {
                         isChecked={useColorModeValue(false, true)}
                         onChange={toggleColorMode}
                         colorScheme={useColorModeValue('blackAlpha', 'whiteAlpha')}
-                        px={2}
+                        px={1}
                     />
                     <BsMoonStarsFill size="1rem" />
                 </Flex >
