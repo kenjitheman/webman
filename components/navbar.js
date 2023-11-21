@@ -11,6 +11,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Logo from '../components/logo.js';
 import { useRouter } from 'next/router';
 import ThemeToggleButton from '../components/theme-toggle-button.js';
+import { FaDiscord, FaTelegram, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Links = {
     'Home': '/',
@@ -68,18 +69,11 @@ export default function Navbar() {
                     alignItems={'center'}
                     justifyContent={'space-between'}
                 >
-                    <IconButton
-                        size={'lg'}
-                        icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                        aria-label={'Open Menu'}
-                        display={{ lg: 'none' }}
-                        onClick={isOpen ? onClose : onOpen}
-                    />
                     <HStack
                         w={"100%"}
-                        spacing={9}
+                        spacing={2}
                         alignItems={'center'}
-                        justifyContent={'space-between'}
+                        justifyContent={'flex-start'}
                     >
                         <Box><Logo /></Box>
                         <HStack
@@ -99,6 +93,13 @@ export default function Navbar() {
                         </HStack>
                     </HStack>
                     <ThemeToggleButton />
+                    <IconButton
+                        size={'lg'}
+                        icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+                        aria-label={'Open Menu'}
+                        display={{ lg: 'none' }}
+                        onClick={isOpen ? onClose : onOpen}
+                    />
                 </Flex>
 
                 {isOpen ? (
