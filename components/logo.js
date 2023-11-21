@@ -1,38 +1,17 @@
 import Link from "next/link";
-import { Text, useColorModeValue } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Image from "next/image";
-import styled from "@emotion/styled";
-
-const LogoBox = styled.span`
-font-weight: bold;
-font-size: 45px;
-display: inline-flex;
-align-items: center;
-height: 55px;
-line-height: 20px;
-padding: 10px;
-cursor: pointer;
-`;
 
 const Logo = () => {
     return (
         <Link href="/" scroll={false}>
-            <LogoBox>
+            <Box p={2}>
                 <Image
                     src="/images/logo.png"
-                    width={50}
-                    height={50}
+                    width={60}
+                    height={60}
                 />
-                <Text
-                    color={useColorModeValue("gray.800", "whiteAlpha.900")}
-                    fontFamily='"Etna", sans-serif'
-                    fontWeight="medium"
-                    fontSize={{ base: 'xl', sm: '2xl', md: '4xl' }}
-                    ml={2}
-                >
-                    Alt Corporation
-                </Text>
-            </LogoBox>
+            </Box>
         </Link >
     );
 };
