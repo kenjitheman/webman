@@ -2,7 +2,6 @@ import React from 'react';
 import {
     Box,
     Flex,
-    SimpleGrid,
     Stat,
     StatLabel,
     StatNumber,
@@ -47,7 +46,8 @@ const WelcomeStat = (props) => {
 };
 
 // stats_fully_grid.js
-const StatFullyGrid = ({ text, icon }) => {
+const StatFullyGrid = (props) => {
+    const { text, icon } = props;
     return (
         <AnimateOnHover>
             <Flex
@@ -116,83 +116,4 @@ const StatsCard = (props) => {
     );
 };
 
-// stats_with_grid.js
-const StatsWithGrid = (pre_title, title, description) => {
-    return (
-        <Box>
-            <Flex
-                display={{ base: 'none', lg: 'flex' }}
-                justifyContent={'center'}
-                alignItems={'center'}
-            >
-                <Container
-                    rounded={'3xl'}
-                    backgroundSize={'cover'}
-                    bg={useColorModeValue("#ffffffa40", "#20202380")}
-                    boxShadow={'lg'}
-                    css={{ backdropFilter: "blur(10px)" }}
-                    border="0.1px solid"
-                    borderColor={useColorModeValue('gray.300', 'black')}
-                    backgroundPosition="center"
-                    backgroundRepeat="no-repeat"
-                    maxW={'10xl'}
-                    w={'100%'}
-                    p={20}
-                >
-                    <Stack direction={{ base: 'column', lg: 'row' }}>
-                        <Stack
-                            justify={{ lg: 'center' }}>
-                            <Box>
-                                <Text
-                                    fontFamily={'heading'}
-                                    fontWeight={'medium'}
-                                    textTransform={'uppercase'}
-                                    mb={3}
-                                    fontSize={'2xl'}
-                                    color={useColorModeValue('yellow.500', 'yellow.700')}
-                                >
-                                    {pre_title}
-                                </Text>
-                                <Heading
-                                    color={useColorModeValue('yellow.500', 'yellow.700')}
-                                    mb={5}
-                                    fontSize={{
-                                        base: '3xl',
-                                        md: '5xl'
-                                    }}
-                                >
-                                    {title}
-                                </Heading>
-                                <Text fontSize={'2xl'} color={'gray.600'}>
-                                    {description}
-                                </Text>
-                            </Box>
-
-                            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                                {stats.map((stat) => (
-                                    <Box key={stat.title}>
-                                        <Text fontFamily={'heading'} fontSize={'5xl'} color={'white'} mb={3}>
-                                            {stat.title}
-                                        </Text>
-                                        <Text fontSize={'2xl'} color={'gray.600'}>
-                                            {stat.content}
-                                        </Text>
-                                    </Box>
-                                ))}
-                            </SimpleGrid>
-                        </Stack>
-                        <Flex flex={1} />
-                    </Stack>
-                </Container>
-            </Flex >
-        </Box>
-    );
-}
-
-const StatsText = ({ children }) => (
-    <Text as={'span'} fontWeight={700} color={useColorModeValue('yellow.500', 'yellow.700')}>
-        {children}
-    </Text>
-);
-
-export { WelcomeStat, StatFullyGrid, StatsCard, StatsWithGrid, StatsText };
+export { WelcomeStat, StatFullyGrid, StatsCard };
