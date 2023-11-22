@@ -17,10 +17,11 @@ const CustomButton = ({ textColor, children, whileHover, transition }) => {
                 rounded="2xl"
                 fontFamily={"'Etna', sans-serif"}
                 fontWeight={"medium"}
-                bg="gray.900"
-                css={{ backdropFilter: "blur(0px)" }}
                 border="0.1px solid"
-                borderColor={useColorModeValue('gray.700', 'gray.700')}
+                borderColor={useColorModeValue('gray.300', 'gray.700')}
+                backdropFilter={'blur(10px)'}
+                bg={'transparent'}
+                textColor={useColorModeValue('black', 'white')}
                 _hover={{
                     rounded: '3xl',
                 }}
@@ -34,7 +35,6 @@ const CustomButton = ({ textColor, children, whileHover, transition }) => {
 const GetStartedButton = () => {
     return (
         <CustomButton
-            textColor={'white'}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
         >
@@ -46,7 +46,6 @@ const GetStartedButton = () => {
 const LearnMoreButton = () => {
     return (
         <CustomButton
-            textColor={'white'}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
         >
