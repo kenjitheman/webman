@@ -1,26 +1,10 @@
 import React from "react";
-import {
-    Box,
-    Container,
-    Grid,
-    GridItem,
-    Icon,
-    useColorModeValue,
-    Flex,
-    Heading,
-    SimpleGrid,
-    Text,
-    Image,
-} from "@chakra-ui/react";
-import {
-    IoAnalyticsSharp,
-    IoLogoBitcoin,
-    IoSearchSharp,
-} from "react-icons/io5";
+import { Box, Container, Icon, useColorModeValue, Flex, Heading, SimpleGrid, Text, Image, } from "@chakra-ui/react";
+import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp, } from "react-icons/io5";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
-import Hero from "../components/hero.js";
-import Features from "../components/features.js";
+import { Hero } from "../components/hero.js";
+import { Feature } from "../components/features.js";
 import { WelcomeStat, StatFullyGrid, StatsCard } from "../components/stats.js";
 
 const Home = () => {
@@ -33,7 +17,12 @@ const Home = () => {
                 <Box>
                     <Container maxW="full">
                         <Section delay={0.5}>
-                            <Hero />
+                            <Hero
+                                title={'Welcome to the future of DeFi'}
+                                text={`
+         NewLife™ is a decentralized finance (DeFi) platform that aims to 
+        provide a complete solution for the agricultural industry.`}
+                            />
                         </Section>
                     </Container>
                 </Box>
@@ -45,7 +34,11 @@ const Home = () => {
                                     flexDirection={{ base: "column", md: "row" }}
                                     justifyContent={"space-between"}
                                 >
-                                    <SimpleGrid w={'100%'} columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
+                                    <SimpleGrid
+                                        w={'full'}
+                                        columns={{ base: 1, md: 3 }}
+                                        spacing={6}
+                                    >
                                         <WelcomeStat
                                             title={"Users"}
                                             stat={"5,000+"}
@@ -93,92 +86,35 @@ const Home = () => {
                                     flexDirection={{ base: 'column', md: 'row' }}
                                     alignItems={'center'}
                                 >
-                                    <Grid
-                                        rounded={'3xl'}
-                                        gap={4}
-                                        w={'100%'}
-                                        columns={1}
+                                    <SimpleGrid
+                                        w={'full'}
+                                        columns={{ base: 1, md: 2 }}
+                                        spacing={6}
                                     >
-                                        <GridItem rowSpan={4} colSpan={{ base: 0, md: 4 }} >
-                                            <StatFullyGrid
-                                                icon={
-                                                    <Icon as={IoAnalyticsSharp}
-                                                        color={useColorModeValue('yellow.500', 'yellow.700')}
-                                                        w={12} h={12}
-                                                    />
-                                                }
-                                                text={'Business Planning'}
-                                            />
-                                        </GridItem>
-                                        <GridItem rowSpan={4} colSpan={{ base: 0, md: 2 }} >
-                                            <StatFullyGrid
-                                                icon={
-                                                    <Icon as={IoLogoBitcoin}
-                                                        color={useColorModeValue('yellow.500', 'yellow.700')}
-                                                        w={12}
-                                                        h={12}
-                                                    />
-                                                }
-                                                text={'Financial Planning'}
-                                            />
-                                        </GridItem>
-                                        <GridItem rowSpan={4} colSpan={{ base: 0, md: 2 }} >
-                                            <StatFullyGrid
-                                                icon={
-                                                    <Icon as={IoSearchSharp}
-                                                        color={useColorModeValue('yellow.500', 'yellow.700')}
-                                                        w={12}
-                                                        h={12}
-                                                    />
-                                                }
-                                                text={'Market Analysis'}
-                                            />
-                                        </GridItem>
-                                        <GridItem rowSpan={4} colSpan={{ base: 0, md: 1 }} >
-                                            <StatFullyGrid
-                                                icon={<Icon as={IoSearchSharp}
-                                                    color={useColorModeValue('yellow.500', 'yellow.700')}
-                                                    w={12}
-                                                    h={12}
-                                                />
-                                                }
-                                                text={'Market Analysis'}
-                                            />
-                                        </GridItem>
-                                        <GridItem rowSpan={4} colSpan={{ base: 0, md: 3 }} >
-                                            <StatFullyGrid
-                                                icon={
-                                                    <Icon as={IoSearchSharp}
-                                                        color={useColorModeValue('yellow.500', 'yellow.700')}
-                                                        w={12}
-                                                        h={12}
-                                                    />}
-                                                text={'Market Analysis'}
-                                            />
-                                        </GridItem>
-                                        <GridItem rowSpan={4} colSpan={{ base: 0, md: 3 }} >
-                                            <StatFullyGrid
-                                                icon={<Icon as={IoSearchSharp}
-                                                    color={useColorModeValue('yellow.500', 'yellow.700')}
-                                                    w={12}
-                                                    h={12}
-                                                />
-                                                }
-                                                text={'Market Analysis'}
-                                            />
-                                        </GridItem>
-                                        <GridItem rowSpan={4} colSpan={{ base: 0, md: 1 }} >
-                                            <StatFullyGrid
-                                                icon={<Icon as={IoSearchSharp}
-                                                    color={useColorModeValue('yellow.500', 'yellow.700')}
-                                                    w={12}
-                                                    h={12}
-                                                />
-                                                }
-                                                text={'Market Analysis'}
-                                            />
-                                        </GridItem>
-                                    </Grid>
+                                        <StatFullyGrid
+                                            icon={
+                                                <Icon as={IoAnalyticsSharp}
+                                                    color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                                            text={'Business Planning'}
+                                        />
+                                        <StatFullyGrid
+                                            icon={
+                                                <Icon as={IoLogoBitcoin}
+                                                    color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                                            text={'Financial Planning'}
+                                        />
+                                        <StatFullyGrid
+                                            icon={
+                                                <Icon as={IoSearchSharp}
+                                                    color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                                            text={'Market Analysis'}
+                                        />
+                                        <StatFullyGrid
+                                            icon={<Icon as={IoSearchSharp}
+                                                color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
+                                            text={'Market Analysis'}
+                                        />
+                                    </SimpleGrid>
                                 </Flex>
                             </Box>
                         </Section>
@@ -187,14 +123,39 @@ const Home = () => {
                 <Box>
                     <Container maxW="10xl">
                         <Section delay={1}>
-                            <Features />
-                        </Section>
-                    </Container>
-                </Box>
-                <Box>
-                    <Container maxW="10xl">
-                        <Section delay={1.2}>
-
+                            <Box
+                                p={4}
+                                fontFamily={"'Etna', sans-serif"}
+                                fontSize={"2xl"}
+                                fontWeight={"regular"}
+                            >
+                                <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+                                    <Feature
+                                        icon={<Icon as={IoAnalyticsSharp} w={10} h={10} />}
+                                        title={'Lifetime Support'}
+                                        text={
+                                            `Lorem ipsum dolor sit amet,
+                                            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...`
+                                        }
+                                    />
+                                    <Feature
+                                        icon={<Icon as={IoLogoBitcoin} w={10} h={10} />}
+                                        title={'Unlimited Donations'}
+                                        text={
+                                            `Lorem ipsum dolor sit amet,
+                                            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...`
+                                        }
+                                    />
+                                    <Feature
+                                        icon={<Icon as={IoSearchSharp} w={10} h={10} color={""} />}
+                                        title={'Instant Delivery'}
+                                        text={
+                                            `Lorem ipsum dolor sit amet,
+                                            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...`
+                                        }
+                                    />
+                                </SimpleGrid>
+                            </Box>
                         </Section>
                     </Container>
                 </Box>
@@ -239,7 +200,7 @@ const Home = () => {
                                     alignItems={'center'}
                                 >
                                     <Box
-                                        w={{ base: '100%', md: '45%' }}
+                                        w={{ base: '100%', md: '50%' }}
                                         pb={{ base: 12, md: 0 }}
                                     >
                                         <Image
@@ -253,30 +214,22 @@ const Home = () => {
                                             h={{ base: 80, md: 'lg' }}
                                         />
                                     </Box>
-
-                                    <Grid
-                                        borderRadius={'5xl'}
-                                        gap={4}
-                                        w={{ base: '100%', md: '50%' }}
-                                        columns={1}
+                                    <SimpleGrid
+                                        w={{ base: '100%', md: '45%' }}
+                                        columns={{ base: 1, md: 1 }}
+                                        spacing={6}
                                     >
-                                        <GridItem p={3} rowSpan={4} colSpan={{ base: 0, md: 4 }} >
-                                            <StatsCard p={3} title={'We serve'} stat={'50,000 people'} />
-                                        </GridItem>
-                                        <GridItem p={3} rowSpan={4} colSpan={{ base: 0, md: 4 }}>
-                                            <StatsCard title={'In'} stat={'30 different countries'} />
-                                        </GridItem>
-                                        <GridItem p={3} rowSpan={4} colSpan={{ base: 0, md: 4 }} >
-                                            <StatsCard title={'We serve'} stat={'50,000 people'} />
-                                        </GridItem>
-                                    </Grid>
+                                        <StatsCard title={'We serve'} stat={'50,000 people'} />
+                                        <StatsCard title={'In'} stat={'30 different countries'} />
+                                        <StatsCard title={'We serve'} stat={'50,000 people'} />
+                                    </SimpleGrid>
                                 </Flex>
                             </Box >
                         </Section>
                     </Container>
                 </Box>
             </Flex>
-        </Layout>
+        </Layout >
     );
 };
 
