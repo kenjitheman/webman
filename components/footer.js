@@ -2,15 +2,11 @@ import React from 'react';
 import {
     Box,
     Container,
-    SimpleGrid,
     Stack,
     Text,
-    Flex,
-    useColorModeValue,
 } from '@chakra-ui/react';
-import Logo from '../components/logo.js';
 import LanguageSwitcher from './language_switcher.js';
-import { FaDiscord, FaTelegram, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaDiscord, FaTelegram, FaTwitter, FaGithub, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
     return (
@@ -40,10 +36,13 @@ export default function Footer() {
                             <FaTelegram size={35} />
                         </a>
                         <a href="#" target="_blank" rel="noopener noreferrer">
-                            <FaInstagram size={35} />
+                            <FaTwitter size={35} />
                         </a>
                         <a href="#" target="_blank" rel="noopener noreferrer">
-                            <FaTwitter size={35} />
+                            <FaGithub size={35} />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <FaYoutube size={35} />
                         </a>
                     </Stack>
 
