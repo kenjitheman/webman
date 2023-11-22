@@ -11,13 +11,12 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Logo from '../components/logo.js';
 import { useRouter } from 'next/router';
 import ThemeToggleButton from '../components/theme-toggle-button.js';
-import { FaDiscord, FaTelegram, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Links = {
     'Home': '/',
     'About': '/about',
     'Reviews': '/reviews',
-    'Contact': '/contact-us',
     'Our Team': '/our-team',
 };
 
@@ -27,13 +26,13 @@ const NavLink = ({ children, href, currentPath }) => {
     return (
         <Box
             as="a"
-            px={{ base: 2, md: 4, lg: 3.5, xl: 6 }}
-            py={2.5}
+            px={5}
+            py={2}
             rounded="2xl"
             textDecoration="none"
             _hover={{
                 textDecoration: 'none',
-                bg: useColorModeValue('yellow.500', 'yellow.700'),
+                bg: useColorModeValue('gray.400', 'yellow.700'),
             }}
             bg={isActive ? useColorModeValue('yellow.500', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
             href={href}
@@ -78,9 +77,9 @@ export default function Navbar() {
                         <Box><Logo /></Box>
                         <HStack
                             as={'nav'}
-                            spacing={{ lg: 3, xl: 5 }}
+                            spacing={4}
                             fontFamily={'"Etna", sans-serif'}
-                            fontSize={{ lg: 'lg', xl: 'xl' }} nav
+                            fontSize={{ lg: 'lg', xl: 'xl' }}
                             fontWeight={"medium"}
                             display={{ base: 'none', lg: 'flex' }}
                         >
@@ -92,7 +91,23 @@ export default function Navbar() {
 
                         </HStack>
                     </HStack>
-                    <ThemeToggleButton />
+                    <HStack
+                        display={{ base: 'none', lg: 'flex' }}
+                        spacing={3}
+                        alignItems={'center'}
+                        justifyContent={'flex-end'}
+                    >
+                        <ThemeToggleButton />
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <FaDiscord size={30} />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <FaTwitter size={30} />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <FaGithub size={30} />
+                        </a>
+                    </HStack>
                     <IconButton
                         size={'lg'}
                         icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -110,6 +125,20 @@ export default function Navbar() {
                                     {label}
                                 </NavLink>
                             ))}
+                            <Box justifyContent={'space-between'} display={'flex'} alignItems={'center'} >
+                                <Stack direction={'row'} spacing={3}>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <FaDiscord size={30} />
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <FaTwitter size={30} />
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <FaGithub size={30} />
+                                    </a>
+                                </Stack>
+                                <ThemeToggleButton />
+                            </Box>
                         </Stack>
                     </Box>
                 ) : null}
