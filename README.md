@@ -2,13 +2,13 @@
 
 ## Installation
 
-```
+```sh
 git clone https://github.com/kenjitheman/altcorp.org
 ```
 
 - Install all dependencies
 
-```
+```sh
 yarn install
 ```
 
@@ -16,19 +16,19 @@ yarn install
 
 - Run
 
-```
+```sh
 yarn start
 ```
 
 - Run in dev mode
 
-```
+```sh
 yarn dev
 ```
 
 - To build
 
-```
+```sh
 yarn build
 ```
 
@@ -93,8 +93,8 @@ In summary, this tech stack provides a robust set of tools and technologies for 
 
 ## Contributing
 
-- pull requests are welcome, for major changes, please open an issue first to
-  discuss what you would like to change
+- Pull requests are welcome, for major changes, please open an issue first to
+  discuss what you would like to change.
 
 ## License
 
