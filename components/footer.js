@@ -29,19 +29,19 @@ export default function Footer() {
                 >
                     <Stack direction={'row'} spacing={5}>
                         <LanguageSwitcher />
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord">
                             <FaDiscord size={35} />
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
                             <FaTelegram size={35} />
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                             <FaTwitter size={35} />
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Github">
                             <FaGithub size={35} />
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
                             <FaYoutube size={35} />
                         </a>
                     </Stack>

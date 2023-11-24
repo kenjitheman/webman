@@ -15,6 +15,7 @@ const ThemeToggleButton = () => {
                 <Flex
                     borderRadius="2xl"
                     cursor="pointer"
+                    aria-label="Toggle Theme"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     justifyContent="space-between"
