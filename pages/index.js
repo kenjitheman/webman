@@ -206,7 +206,7 @@ const Home = () => {
                                         <Image
                                             src="/images/background.jpg"
                                             rounded={'3xl'}
-                                            alt={'stats image'}
+                                            alt={'Stats Image'}
                                             border={'1px solid'}
                                             borderColor={useColorModeValue('gray.300', 'gray.700')}
                                             objectFit={'cover'}

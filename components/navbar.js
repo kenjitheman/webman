@@ -98,13 +98,14 @@ export default function Navbar() {
                         justifyContent={'flex-end'}
                     >
                         <ThemeToggleButton />
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+
                             <FaDiscord size={30} />
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                             <FaTwitter size={30} />
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Github">
                             <FaGithub size={30} />
                         </a>
                     </HStack>
@@ -142,7 +143,7 @@ export default function Navbar() {
                         </Stack>
                     </Box>
                 ) : null}
-            </Box>
+            </Box >
         </>
     );
 }

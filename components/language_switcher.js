@@ -5,6 +5,8 @@ const LanguageSwitcher = ({ currentLanguage, languages }) => {
     languages = ['en', 'uk', 'ru'];
     return (
         <Select
+            id="language-select"
+            aria-label="Language"
             size="md"
             rounded="2xl"
             variant="outline"

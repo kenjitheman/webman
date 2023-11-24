@@ -4,7 +4,7 @@
   "description": "Alt Corporation's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
-    "build": "next build",
+    "build": "ANALYZE=true next build",
     "start": "next start",
     "prettier": "prettier --write .",
     "lint": "next lint"
@@ -28,8 +28,10 @@
     "vanta": "^0.5.24"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.3",
     "eslint": "^8.31.0",
     "eslint-config-next": "^13.1.1",
-    "prettier": "^2.8.2"
+    "prettier": "^2.8.2",
+    "webpack-bundle-analyzer": "^4.10.1"
   }
 }
