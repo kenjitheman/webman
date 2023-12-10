@@ -14,10 +14,9 @@ import ThemeToggleButton from '../components/theme-toggle-button.js';
 import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Links = {
-    'Home': '/',
-    'About': '/about',
-    'Reviews': '/reviews',
-    'Our Team': '/our-team',
+    'About': '#about',
+    'Reviews': 'https://t.me/alt_corp',
+    'Our Team': '#our-team',
 };
 
 
@@ -56,8 +55,7 @@ export default function Navbar() {
                 w="100%"
                 bg={useColorModeValue("#ffffff40", "#20202300")}
                 css={{ backdropFilter: "blur(10px)" }}
-                px={4}
-                py={2}
+                px={4} py={2}
                 zIndex={2}
                 onScroll={onClose}
                 borderBottom="0.1px solid"
@@ -98,7 +96,11 @@ export default function Navbar() {
                         justifyContent={'flex-end'}
                     >
                         <ThemeToggleButton />
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer" aria-label="Discord"
+                        >
 
                             <FaDiscord size={30} />
                         </a>
@@ -120,7 +122,7 @@ export default function Navbar() {
 
                 {isOpen ? (
                     <Box p={6} display={{ lg: 'none' }}>
-                        <Stack as={'nav'} spacing={6}>
+                        <Stack as={'nav'} spacing={7}>
                             {linksArray.map(([label, link]) => (
                                 <NavLink key={label} href={link} currentPath={currentPath}>
                                     {label}
@@ -128,7 +130,11 @@ export default function Navbar() {
                             ))}
                             <Box justifyContent={'space-between'} display={'flex'} alignItems={'center'} >
                                 <Stack direction={'row'} spacing={3}>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <FaDiscord size={30} />
                                     </a>
                                     <a href="#" target="_blank" rel="noopener noreferrer">
@@ -141,8 +147,9 @@ export default function Navbar() {
                                 <ThemeToggleButton />
                             </Box>
                         </Stack>
-                    </Box>
-                ) : null}
+                    </Box >
+                ) : null
+                }
             </Box >
         </>
     );
