@@ -1,15 +1,9 @@
-import {
-    Box,
-    Heading,
-    Container,
-    Flex,
-    Text,
-    useColorModeValue,
-} from '@chakra-ui/react';
-import { GetStartedButton, LearnMoreButton } from '../components/buttons';
+import { Box, Heading, Container, Flex, Text, useColorModeValue } from '@chakra-ui/react';
+import { CustomButton } from './buttons.js';
 
 const Hero = (props) => {
-    const { title, text } = props;
+    const { title, text, button_1_text, button_2_text } = props;
+
     return (
         <Box
             display={'flex'}
@@ -17,13 +11,14 @@ const Hero = (props) => {
             alignItems={'flex-end'}
             w={'100%'}
             h={{ base: 'xl', sm: '2xl', md: '850px' }}
-            bgImage={useColorModeValue('url(/images/background_white.jpg)', 'url(/images/background.jpg)')}
-            bgSize={'cover'}
+            bgImage={useColorModeValue('images/bg_white.jpg', 'images/bg_dark.jpg')}
+            bgSize={'100%'}
             bgPosition={'center'}
             bgRepeat={'no-repeat'}
             bgAttachment={'fixed'}
             mt={10}
             rounded={'3xl'}
+            overflow={'hidden'}
         >
             <Container
                 maxW={'full'}
@@ -64,15 +59,25 @@ const Hero = (props) => {
                         p={3}
                     >
                         <Box mb={{ base: 2, sm: 0 }}>
-                            <GetStartedButton />
+                            <CustomButton
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.4 }}
+                            >
+                                {button_1_text}
+                            </CustomButton>
                         </Box>
                         <Box px={4}></Box>
-                        <LearnMoreButton />
+                        <CustomButton
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.4 }}
+                        >
+                            {button_2_text}
+                        </CustomButton>
                     </Flex>
                 </Box>
-            </Container >
-        </Box >
+            </Container>
+        </Box>
     );
-}
+};
 
 export { Hero };
