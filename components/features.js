@@ -8,6 +8,7 @@ const Feature = (props) => {
             <Box
                 w="100%"
                 border={'1px solid'}
+                minHeight={'100%'}
                 borderColor={useColorModeValue('gray.300', 'gray.700')}
                 shadow={'lg'}
                 _hover={{
@@ -30,11 +31,43 @@ const Feature = (props) => {
                         {icon}
                     </Flex>
                     <Text fontWeight={"medium"}>{title}</Text>
-                    <Text color={'gray.600'}>{text}</Text>
+                    <Text color={'gray.500'}>{text}</Text>
                 </Stack >
             </Box >
         </AnimateOnHover>
     );
 };
 
-export { Feature };
+
+const Info = (props) => {
+    const { title, text } = props;
+    return (
+        <AnimateOnHover>
+            <Box
+                w="100%"
+                h="100%"
+                minHeight={'100%'}
+                border={'1px solid'}
+                borderColor={useColorModeValue('gray.300', 'gray.700')}
+                shadow={'lg'}
+                _hover={{
+                    cursor: 'pointer',
+                }}
+                rounded={'3xl'}
+                p={4}
+            >
+                <Stack>
+                    <Text
+                        fontWeight={"medium"}
+                        color={useColorModeValue('yellow.500', 'yellow.700')}
+                    >
+                        {title}
+                    </Text>
+                    <Text color={'gray.500'}>{text}</Text>
+                </Stack >
+            </Box >
+        </AnimateOnHover>
+    );
+};
+
+export { Feature, Info };
