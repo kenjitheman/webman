@@ -12,14 +12,14 @@ import { AnimateOnHover } from '../components/custom_animations';
 
 // welcome_stats.js
 const WelcomeStat = (props) => {
-    const { title, stat, icon } = props;
+    const { title, text, icon } = props;
     return (
         <AnimateOnHover>
             <Stat
-                px={{ base: 2, md: 12 }}
-                py={8}
-                shadow={'xl'}
+                p={10}
+                shadow={'lg'}
                 border={'1px solid'}
+                minHeight={'100%'}
                 borderColor={useColorModeValue('gray.300', 'gray.700')}
                 css={{ backdropFilter: 'blur(10px)' }}
                 rounded={'3xl'}
@@ -28,15 +28,27 @@ const WelcomeStat = (props) => {
                 }}
             >
                 <Flex justifyContent={'space-evenly'}>
-                    <Box pl={{ base: 2, md: 4 }}>
-                        <StatNumber fontSize={{ base: '2xl', xl: '3xl' }} fontWeight={'bold'}>
-                            {stat}
-                        </StatNumber>
-                        <StatLabel fontSize={{ base: 'xl', md: 'xl', xl: '2xl' }} fontWeight={'regular'} isTruncated>
+                    <Box>
+                        <StatNumber
+                            fontSize={{ base: '2xl', xl: '3xl' }}
+                            fontWeight={'bold'}
+                            color={useColorModeValue('yellow.500', 'yellow.700')}
+                        >
                             {title}
+                        </StatNumber>
+                        <StatLabel
+                            fontSize={{ base: 'xl', xl: '2xl' }}
+                            fontWeight={'regular'}
+                            color={"gray.500"}
+                        >
+                            {text}
                         </StatLabel>
                     </Box>
-                    <Box my={'auto'} color={useColorModeValue('yellow.500', 'yellow.700')} alignContent={'center'}>
+                    <Box
+                        my={'auto'}
+                        color={useColorModeValue('yellow.500', 'yellow.700')}
+                        alignContent={'center'}
+                    >
                         {icon}
                     </Box>
                 </Flex>
@@ -65,13 +77,12 @@ const StatFullyGrid = (props) => {
                 }}
             >
                 <Flex
-                    w={12}
-                    h={12}
-                    p={12}
                     align={'center'}
                     justify={'space-evenly'}
                 >
-                    {icon}
+                    <Box m={4} color={useColorModeValue('yellow.500', 'yellow.700')} alignContent={'start'}>
+                        {icon}
+                    </Box>
                 </Flex>
                 <Text fontSize={'2xl'} fontWeight={'medium'}>
                     {text}
@@ -83,7 +94,7 @@ const StatFullyGrid = (props) => {
 
 // community.js
 const StatsCard = (props) => {
-    const { title, stat } = props;
+    const { title, text } = props;
     return (
         <AnimateOnHover>
             <Stat
@@ -91,26 +102,27 @@ const StatsCard = (props) => {
                 py={10}
                 shadow={'lg'}
                 border={'1px solid'}
+                minHeight={'100%'}
                 borderColor={useColorModeValue('gray.300', 'gray.700')}
                 rounded={'3xl'}
                 _hover={{
                     cursor: 'pointer',
                 }}
             >
-                <StatLabel
-                    fontSize={'2xl'}
-                    fontWeight={'medium'}
-                    isTruncated
-                    color={useColorModeValue('yellow.500', 'yellow.700')}
-                >
-                    {title}
-                </StatLabel>
                 <StatNumber
                     fontSize={'3xl'}
                     fontWeight={'regular'}
+                    color={useColorModeValue('yellow.500', 'yellow.700')}
                 >
-                    {stat}
+                    {title}
                 </StatNumber>
+                <StatLabel
+                    fontSize={'2xl'}
+                    fontWeight={'medium'}
+                    color={"gray.500"}
+                >
+                    {text}
+                </StatLabel>
             </Stat>
         </AnimateOnHover>
     );
