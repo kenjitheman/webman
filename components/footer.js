@@ -8,7 +8,8 @@ import {
 import LanguageSwitcher from './language_switcher.js';
 import { FaDiscord, FaTelegram, FaTwitter, FaGithub, FaYoutube } from "react-icons/fa";
 
-export default function Footer() {
+const Footer = (props) => {
+    const { text } = props;
     return (
         <Box
             as="footer"
@@ -47,10 +48,12 @@ export default function Footer() {
                     </Stack>
 
                     <Text pt={6} fontSize={'md'} textAlign={'center'}>
-                        &copy; {new Date().getFullYear()} Alt Corporation | All Rights Reserved
+                        &copy; {new Date().getFullYear()} Alt Corporation | All rights reserved
                     </Text>
                 </Stack>
             </Container>
         </Box>
     );
 }
+
+export default Footer;
