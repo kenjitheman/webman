@@ -1,7 +1,9 @@
-import Layout from "../components/layouts/main";
-import Fonts from "../components/fonts";
-import { AnimatePresence } from "framer-motion";
+import React from 'react';
+import { appWithTranslation } from 'next-i18next';
 import Chakra from "../components/chakra";
+import Fonts from "../components/fonts";
+import Layout from "../components/layouts/main";
+import { AnimatePresence } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";
 
 if (typeof window !== "undefined") {
@@ -10,7 +12,7 @@ if (typeof window !== "undefined") {
 
 function Website({ Component, pageProps, router }) {
     return (
-        < Chakra cookies={pageProps.cookies} >
+        <Chakra cookies={pageProps.cookies}>
             <Fonts />
             <Layout router={router}>
                 <AnimatePresence
@@ -30,4 +32,4 @@ function Website({ Component, pageProps, router }) {
     );
 }
 
-export default Website;
+export default appWithTranslation(Website);

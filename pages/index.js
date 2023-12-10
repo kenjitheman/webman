@@ -4,32 +4,35 @@ import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp, } from "react-icons/io5
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { Hero } from "../components/hero.js";
-import { Feature } from "../components/features.js";
+import { Feature, Info } from "../components/features.js";
 import { WelcomeStat, StatFullyGrid, StatsCard } from "../components/stats.js";
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Home = () => {
+    const { t } = useTranslation('common');
     return (
         <Layout
-            title="Home | Alt Corporation"
-            description="Welcome to Alt Corporation home page."
+            title="Alt Corporation"
+            description={t('website_description')}
         >
             <Flex flexDirection={"column"}>
-                <Box>
-                    <Container maxW="full">
-                        <Section delay={0.5}>
+                <Section delay={0.1}>
+                    <Box>
+                        <Container maxW="full">
                             <Hero
-                                title={'Welcome to the future of DeFi'}
-                                text={`
-         NewLife™ is a decentralized finance (DeFi) platform that aims to 
-        provide a complete solution for the agricultural industry.`}
+                                title={t('welcome.title')}
+                                text={t('welcome.description')}
+                                button_1_text={t('welcome.button_1_text')}
+                                button_2_text={t('welcome.button_2_text')}
                             />
-                        </Section>
-                    </Container>
-                </Box>
+                        </Container>
+                    </Box>
+                </Section>
                 <Box>
                     <Container maxW="10xl">
-                        <Section delay={0.8}>
-                            <Box maxW="10x" pt={5} px={{ base: 2, sm: 12, md: 17 }}>
+                        <Section delay={0.2}>
+                            <Box pt={5} px={{ base: 2, sm: 12, md: 17 }}>
                                 <Flex
                                     flexDirection={{ base: "column", md: "row" }}
                                     justifyContent={"space-between"}
@@ -40,18 +43,18 @@ const Home = () => {
                                         spacing={6}
                                     >
                                         <WelcomeStat
-                                            title={"Users"}
-                                            stat={"5,000+"}
+                                            title={t('stats.users.title')}
+                                            text={t('stats.users.text')}
                                             icon={<IoSearchSharp size={"4rem"} />}
                                         />
                                         <WelcomeStat
-                                            title={"All Time Trades"}
-                                            stat={"1,000+"}
+                                            title={t('stats.trades.title')}
+                                            text={t('stats.trades.text')}
                                             icon={<IoLogoBitcoin size={"4rem"} />}
                                         />
                                         <WelcomeStat
-                                            title={"Integrations"}
-                                            stat={"7+"}
+                                            title={t('stats.integrations.title')}
+                                            text={t('stats.integrations.text')}
                                             icon={<IoAnalyticsSharp size={"4rem"} />}
                                         />
                                     </SimpleGrid>
@@ -62,7 +65,7 @@ const Home = () => {
                 </Box>
                 <Box>
                     <Container maxW="10xl">
-                        <Section delay={0.9}>
+                        <Section delay={0.3}>
                             <Box
                                 fontFamily={"'Etna', sans-serif"}
                                 rounded={'3xl'}
@@ -74,11 +77,12 @@ const Home = () => {
                                     py={3}
                                     textAlign={'left'}
                                     fontSize={'4xl'}
+                                    color={useColorModeValue('yellow.500', 'yellow.700')}
                                 >
-                                    A digital Product design agency</Heading>
+                                    {t('agency.title')}
+                                </Heading>
                                 <Text color={'gray.500'} fontSize={'2xl'}>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                    eirmod tempor invidunt ut labore
+                                    {t('agency.description')}
                                 </Text>
                                 <Flex
                                     maxW={'10xl'}
@@ -92,27 +96,20 @@ const Home = () => {
                                         spacing={6}
                                     >
                                         <StatFullyGrid
-                                            icon={
-                                                <Icon as={IoAnalyticsSharp}
-                                                    color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
-                                            text={'Business Planning'}
+                                            icon={<IoAnalyticsSharp size={"4rem"} />}
+                                            text={t('services.business_planning')}
                                         />
                                         <StatFullyGrid
-                                            icon={
-                                                <Icon as={IoLogoBitcoin}
-                                                    color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
-                                            text={'Financial Planning'}
+                                            icon={<IoLogoBitcoin size={"4rem"} />}
+                                            text={t('services.financial_planning')}
                                         />
                                         <StatFullyGrid
-                                            icon={
-                                                <Icon as={IoSearchSharp}
-                                                    color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
-                                            text={'Market Analysis'}
+                                            icon={<IoAnalyticsSharp size={"4rem"} />}
+                                            text={t('services.market_analysis')}
                                         />
                                         <StatFullyGrid
-                                            icon={<Icon as={IoSearchSharp}
-                                                color={useColorModeValue('yellow.500', 'yellow.700')} w={12} h={12} />}
-                                            text={'Market Analysis'}
+                                            icon={<IoLogoBitcoin size={"4rem"} />}
+                                            text={t('services.instant_delivery')}
                                         />
                                     </SimpleGrid>
                                 </Flex>
@@ -122,7 +119,7 @@ const Home = () => {
                 </Box>
                 <Box>
                     <Container maxW="10xl">
-                        <Section delay={1}>
+                        <Section delay={0.4}>
                             <Box
                                 p={4}
                                 fontFamily={"'Etna', sans-serif"}
@@ -132,27 +129,18 @@ const Home = () => {
                                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
                                     <Feature
                                         icon={<Icon as={IoAnalyticsSharp} w={10} h={10} />}
-                                        title={'Lifetime Support'}
-                                        text={
-                                            `Lorem ipsum dolor sit amet,
-                                            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...`
-                                        }
+                                        title={t('features.lifetime_support.title')}
+                                        text={t('features.lifetime_support.text')}
                                     />
                                     <Feature
                                         icon={<Icon as={IoLogoBitcoin} w={10} h={10} />}
-                                        title={'Unlimited Donations'}
-                                        text={
-                                            `Lorem ipsum dolor sit amet,
-                                            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...`
-                                        }
+                                        title={t('features.unlimited_donations.title')}
+                                        text={t('features.unlimited_donations.text')}
                                     />
                                     <Feature
-                                        icon={<Icon as={IoSearchSharp} w={10} h={10} color={""} />}
-                                        title={'Instant Delivery'}
-                                        text={
-                                            `Lorem ipsum dolor sit amet,
-                                            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...`
-                                        }
+                                        icon={<Icon as={IoSearchSharp} w={10} h={10} />}
+                                        title={t('features.instant_delivery.title')}
+                                        text={t('features.instant_delivery.text')}
                                     />
                                 </SimpleGrid>
                             </Box>
@@ -161,7 +149,47 @@ const Home = () => {
                 </Box>
                 <Box>
                     <Container maxW="10xl">
-                        <Section delay={1.4}>
+                        <Section delay={0.5} id="#about">
+                            <Box
+                                p={4}
+                                fontFamily={"'Etna', sans-serif"}
+                                fontSize={"2xl"}
+                                fontWeight={"regular"}
+                            >
+                                <Heading
+                                    fontFamily={"'Etna', sans-serif"}
+                                    py={3}
+                                    textAlign={'left'}
+                                    fontSize={'4xl'}
+                                    color={useColorModeValue('yellow.500', 'yellow.700')}
+                                >
+                                    {t('company.about_us.title')}
+                                </Heading>
+                                <Text color={'gray.500'} fontSize={'2xl'}>
+                                    {t('company.about_us.description')}
+                                </Text>
+                                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mt={5}>
+                                    <SimpleGrid columns={{ base: 1, md: 1 }} spacing={10}>
+                                        <Info
+                                            title={t('company.about_us.title')}
+                                            text={t('company.about_us.text_1')}
+                                        />
+                                        <Info
+                                            title={t('company.about_us.title')}
+                                            text={t('company.about_us.text_2')}
+                                        />
+                                    </SimpleGrid>
+                                    <Info
+                                        title={t('company.about_us.title')}
+                                        text={t('company.about_us.text_3')}
+                                    />
+
+                                </SimpleGrid>
+                            </Box>
+                        </Section>
+                    </Container>
+                    <Container maxW="10xl">
+                        <Section delay={0.6}>
                             <Box
                                 fontFamily={"'Etna', sans-serif"}
                                 py={12}
@@ -171,7 +199,7 @@ const Home = () => {
                                 <Text
                                     as="a"
                                     href="/"
-                                    color={useColorModeValue('yellow.500', 'yellow.700')}
+                                    color={useColorModeValue('gray.900', 'gray.200')}
                                     fontWeight={'medium'}
                                     fontSize={'md'}
                                     border={'1px solid'}
@@ -182,16 +210,16 @@ const Home = () => {
                                     rounded={'2xl'}
                                     w={'fit-content'}
                                 >
-                                    OUR ECOSYSTEM →
+                                    {t('company.ecosystem')}
                                 </Text>
                                 <Heading
                                     py={5}
                                     textAlign={'left'}
                                     fontSize={'4xl'}
                                     fontWeight={'medium'}
-                                    color={useColorModeValue('black', 'gray.300')}
+                                    color={useColorModeValue('yellow.500', 'yellow.700')}
                                 >
-                                    What is our company doing?
+                                    {t('company.description')}
                                 </Heading>
                                 <Flex
                                     w={'100%'}
@@ -204,7 +232,7 @@ const Home = () => {
                                         pb={{ base: 12, md: 0 }}
                                     >
                                         <Image
-                                            src="/images/background.jpg"
+                                            src={useColorModeValue('images/bg_white.jpg', 'images/bg_dark.jpg')}
                                             rounded={'3xl'}
                                             alt={'Stats Image'}
                                             border={'1px solid'}
@@ -219,9 +247,14 @@ const Home = () => {
                                         columns={{ base: 1, md: 1 }}
                                         spacing={6}
                                     >
-                                        <StatsCard title={'We serve'} stat={'50,000 people'} />
-                                        <StatsCard title={'In'} stat={'30 different countries'} />
-                                        <StatsCard title={'We serve'} stat={'50,000 people'} />
+                                        <StatsCard
+                                            title={t('company.we_serve.title')}
+                                            text={t('company.we_serve.text')}
+                                        />
+                                        <StatsCard
+                                            title={t('company.our_mission.title')}
+                                            text={t('company.our_mission.text')}
+                                        />
                                     </SimpleGrid>
                                 </Flex>
                             </Box >
@@ -232,5 +265,11 @@ const Home = () => {
         </Layout >
     );
 };
+
+export const getServerSideProps = async ({ locale }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ['common'])),
+    },
+});
 
 export default Home;
