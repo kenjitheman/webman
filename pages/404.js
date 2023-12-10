@@ -11,17 +11,18 @@ import Layout from '../components/layouts/article'
 const NotFound = () => {
     return (
         <Layout
-            title="Not Found | 404"
-            description="Page you are looking for is not found."
+            title="404 | Alt Corporation"
+            description="404 page"
         >
-            <Container>
+            <Container my={"17%"}>
                 <Heading
                     as="h1"
                     my={12}
                     fontFamily={'"Etna", sans-serif'}
                     align="center"
                 >
-                    Not Found | 404</Heading>
+                    404 | Not Found
+                </Heading>
                 <Divider my={6} />
                 <Box my={6} align="center">
                     <Button
@@ -33,7 +34,7 @@ const NotFound = () => {
                         fontSize={"xl"}
                         fontFamily={'"Etna", sans-serif'}
                     >
-                        Back To Home
+                        Home
                     </Button>
                 </Box>
             </Container>
