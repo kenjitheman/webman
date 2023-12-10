@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
-import NavBar from "../navbar";
+import Navbar from "../navbar";
 import { Box, Container } from "@chakra-ui/react";
 import Footer from "../footer";
 
@@ -9,10 +9,6 @@ const Main = ({ children, router }) => {
         <Box as="main" pb={8}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta
-                    name="description"
-                    content="Alt Corporation"
-                />
                 <meta
                     name="Alt Corporation"
                     content="Alt Corporation is a company that does stuff."
@@ -35,7 +31,7 @@ const Main = ({ children, router }) => {
                 <title>Alt Corporation</title>
             </Head>
 
-            <NavBar path={router.asPath} />
+            <Navbar path={router.asPath} />
 
             <Container maxW={'100%'} pt={14}>
                 <AnimatePresence initial={true} mode="wait">
