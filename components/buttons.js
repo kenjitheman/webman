@@ -32,26 +32,4 @@ const CustomButton = ({ textColor, children, whileHover, transition }) => {
     );
 };
 
-const GetStartedButton = () => {
-    return (
-        <CustomButton
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.4 }}
-        >
-            Get Started →
-        </CustomButton>
-    );
-};
-
-const LearnMoreButton = () => {
-    return (
-        <CustomButton
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.4 }}
-        >
-            Learn More →
-        </CustomButton>
-    );
-};
-
-export { GetStartedButton, LearnMoreButton };
+export { CustomButton };
