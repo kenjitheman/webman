@@ -12,32 +12,69 @@ import Logo from '../components/logo.js';
 import { useRouter } from 'next/router';
 import ThemeToggleButton from '../components/theme-toggle-button.js';
 import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
+import LanguageSwitcher from './language_switcher.js';
+import dynamic from 'next/dynamic';
+
+const ScrollLink = dynamic(() => import('react-scroll').then((module) => module.Link), {
+    ssr: false,
+    loading: () => null,
+});
 
 const Links = {
-    'About': '#about',
+    'About': '#about-us',
     'Reviews': 'https://t.me/alt_corp',
-    'Our Team': '#our-team',
+    'Our Team': '#services',
 };
 
 
 const NavLink = ({ children, href, currentPath }) => {
     const isActive = href === currentPath;
+    const isExternal = href.startsWith('http');
+
+    if (isExternal) {
+        return (
+            <Box
+                as="a"
+                px={5}
+                py={2}
+                rounded="2xl"
+                textDecoration="none"
+                _hover={{
+                    textDecoration: 'none',
+                    bg: useColorModeValue('yellow.500', 'yellow.700'),
+                }}
+                bg={isActive ? useColorModeValue('yellow.500', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
+                href={href}
+                target="_blank" rel="noopener noreferrer"
+            >
+                {children}
+            </Box>
+        );
+    }
+
     return (
-        <Box
+        <ScrollLink
+            to={href.replace('#', '')}
+            smooth={true}
+            duration={500}
             as="a"
-            px={5}
-            py={2}
-            rounded="2xl"
-            textDecoration="none"
-            _hover={{
-                textDecoration: 'none',
-                bg: useColorModeValue('gray.400', 'yellow.700'),
-            }}
-            bg={isActive ? useColorModeValue('yellow.500', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
-            href={href}
         >
-            {children}
-        </Box >
+            <Box
+                px={5}
+                py={2}
+                rounded="2xl"
+                textDecoration="none"
+                _hover={{
+                    textDecoration: 'none',
+                    bg: useColorModeValue('yellow.500', 'yellow.700'),
+                    cursor: 'pointer',
+                }}
+                bg={isActive ? useColorModeValue('yellow.500', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
+                href={href}
+            >
+                {children}
+            </Box >
+        </ScrollLink>
     );
 };
 
@@ -95,6 +132,7 @@ export default function Navbar() {
                         alignItems={'center'}
                         justifyContent={'flex-end'}
                     >
+                        <LanguageSwitcher width={'20'} />
                         <ThemeToggleButton />
                         <a
                             href="#"
