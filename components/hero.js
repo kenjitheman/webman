@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Box, Heading, Container, Flex, Text, useColorModeValue } from '@chakra-ui/react';
 import { CustomButton } from './buttons.js';
 
@@ -11,15 +12,19 @@ const Hero = (props) => {
             alignItems={'flex-end'}
             w={'100%'}
             h={{ base: 'xl', sm: '2xl', md: '850px' }}
-            bgImage={useColorModeValue('images/bg_white.jpg', 'images/bg_dark.jpg')}
-            bgSize={'100%'}
-            bgPosition={'center'}
-            bgRepeat={'no-repeat'}
-            bgAttachment={'fixed'}
+            position="relative"
             mt={10}
             rounded={'3xl'}
             overflow={'hidden'}
         >
+            <Image
+                src={useColorModeValue('/images/bg_white.jpg', '/images/bg_dark.jpg')}
+                alt="Background Image"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                fetchPriority="high"
+            />
             <Container
                 maxW={'full'}
                 fontFamily={"'Etna', sans-serif"}
@@ -30,7 +35,7 @@ const Hero = (props) => {
                 p={5}
             >
                 <Box
-                    py={5}
+                    py={4}
                     px={{ base: 0, sm: 5 }}
                     rounded={'3xl'}
                     backdropFilter={'blur(5px)'}
