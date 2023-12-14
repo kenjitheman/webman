@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 const languages = { en: 'English', uk: 'Українська', ru: 'Русский' };
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ width }) => {
     const router = useRouter();
 
     const handleChangeLanguage = async (locale) => {
@@ -20,7 +20,7 @@ const LanguageSwitcher = () => {
             variant="outline"
             borderColor={useColorModeValue('gray.300', 'gray.700')}
             value={router.locale}
-            width='auto'
+            width={width}
             onChange={(e) => handleChangeLanguage(e.target.value)}
         >
             {Object.entries(languages).map(([locale, language]) => (
