@@ -8,8 +8,7 @@ import {
 import LanguageSwitcher from './language_switcher.js';
 import { FaDiscord, FaTelegram, FaTwitter, FaGithub, FaYoutube } from "react-icons/fa";
 
-const Footer = (props) => {
-    const { text } = props;
+const Footer = () => {
     return (
         <Box
             as="footer"
@@ -29,7 +28,7 @@ const Footer = (props) => {
                     align={{ base: 'center', md: 'center' }}
                 >
                     <Stack direction={'row'} spacing={5}>
-                        <LanguageSwitcher />
+                        <LanguageSwitcher width={'auto'} />
                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord">
                             <FaDiscord size={35} />
                         </a>
