@@ -72,7 +72,7 @@ const Home = () => {
                                 maxW={'10xl'}
                                 py={10}
                             >
-                                <Heading
+                                <Heading id="services"
                                     fontFamily={"'Etna', sans-serif"}
                                     py={3}
                                     textAlign={'left'}
@@ -149,14 +149,14 @@ const Home = () => {
                 </Box>
                 <Box>
                     <Container maxW="10xl">
-                        <Section delay={0.5} id="#about">
+                        <Section delay={0.5}>
                             <Box
                                 p={4}
                                 fontFamily={"'Etna', sans-serif"}
                                 fontSize={"2xl"}
                                 fontWeight={"regular"}
                             >
-                                <Heading
+                                <Heading id="about-us"
                                     fontFamily={"'Etna', sans-serif"}
                                     py={3}
                                     textAlign={'left'}
