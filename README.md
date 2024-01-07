@@ -1,5 +1,3 @@
-# altcorp.org
-
 ## Installation
 
 ```sh
