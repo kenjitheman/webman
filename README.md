@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-git clone https://github.com/kenjitheman/altcorp.org
+git clone https://github.com/btwkenji/altcorp.org
 ```
 
 - Install all dependencies
@@ -98,4 +98,4 @@ In summary, this tech stack provides a robust set of tools and technologies for 
 
 ## License
 
-- [KPL](https://github.com/kenjitheman/altcorp.org/blob/master/LICENSE)
+- [KPL](./LICENSE)
