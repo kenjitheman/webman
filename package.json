@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "keywords": [],
-  "author": "kenjitheman",
+  "author": "btwkenji",
   "license": "KPL",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.15",
