@@ -77,7 +77,7 @@ const Home = () => {
                                     py={3}
                                     textAlign={'left'}
                                     fontSize={'4xl'}
-                                    color={useColorModeValue('yellow.500', 'yellow.700')}
+                                    color={useColorModeValue('white_yellow', 'dark_yellow')}
                                 >
                                     {t('agency.title')}
                                 </Heading>
@@ -161,7 +161,7 @@ const Home = () => {
                                     py={3}
                                     textAlign={'left'}
                                     fontSize={'4xl'}
-                                    color={useColorModeValue('yellow.500', 'yellow.700')}
+                                    color={useColorModeValue('white_yellow', 'dark_yellow')}
                                 >
                                     {t('company.about_us.title')}
                                 </Heading>
@@ -217,7 +217,7 @@ const Home = () => {
                                     textAlign={'left'}
                                     fontSize={'4xl'}
                                     fontWeight={'medium'}
-                                    color={useColorModeValue('yellow.500', 'yellow.700')}
+                                    color={useColorModeValue('white_yellow', 'dark_yellow')}
                                 >
                                     {t('company.description')}
                                 </Heading>
@@ -232,7 +232,7 @@ const Home = () => {
                                         pb={{ base: 12, md: 0 }}
                                     >
                                         <Image
-                                            src={useColorModeValue('images/bg_white.jpg', 'images/bg_dark.jpg')}
+                                            src={useColorModeValue('images/bg_white.png', 'images/bg_dark.png')}
                                             rounded={'3xl'}
                                             alt={'Stats Image'}
                                             border={'1px solid'}

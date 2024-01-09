@@ -41,9 +41,9 @@ const NavLink = ({ children, href, currentPath }) => {
                 textDecoration="none"
                 _hover={{
                     textDecoration: 'none',
-                    bg: useColorModeValue('yellow.500', 'yellow.700'),
+                    bg: useColorModeValue('white_yellow', 'dark_yellow'),
                 }}
-                bg={isActive ? useColorModeValue('yellow.500', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
+                bg={isActive ? useColorModeValue('white_yellow', 'dark_yellow') : useColorModeValue('gray.200', 'gray.900')}
                 href={href}
                 target="_blank" rel="noopener noreferrer"
             >
@@ -66,10 +66,10 @@ const NavLink = ({ children, href, currentPath }) => {
                 textDecoration="none"
                 _hover={{
                     textDecoration: 'none',
-                    bg: useColorModeValue('yellow.500', 'yellow.700'),
+                    bg: useColorModeValue('white_yellow', 'dark_yellow'),
                     cursor: 'pointer',
                 }}
-                bg={isActive ? useColorModeValue('yellow.500', 'yellow.700') : useColorModeValue('gray.200', 'gray.900')}
+                bg={isActive ? useColorModeValue('white_yellow', 'dark_yellow') : useColorModeValue('gray.200', 'gray.900')}
                 href={href}
             >
                 {children}

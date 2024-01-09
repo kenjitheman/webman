@@ -32,7 +32,7 @@ const WelcomeStat = (props) => {
                         <StatNumber
                             fontSize={{ base: '2xl', xl: '3xl' }}
                             fontWeight={'bold'}
-                            color={useColorModeValue('yellow.500', 'yellow.700')}
+                            color={useColorModeValue('white_yellow', 'dark_yellow')}
                         >
                             {title}
                         </StatNumber>
@@ -46,7 +46,7 @@ const WelcomeStat = (props) => {
                     </Box>
                     <Box
                         my={'auto'}
-                        color={useColorModeValue('yellow.500', 'yellow.700')}
+                        color={useColorModeValue('white_yellow', 'dark_yellow')}
                         alignContent={'center'}
                     >
                         {icon}
@@ -80,7 +80,7 @@ const StatFullyGrid = (props) => {
                     align={'center'}
                     justify={'space-evenly'}
                 >
-                    <Box m={4} color={useColorModeValue('yellow.500', 'yellow.700')} alignContent={'start'}>
+                    <Box m={4} color={useColorModeValue('white_yellow', 'dark_yellow')} alignContent={'start'}>
                         {icon}
                     </Box>
                 </Flex>
@@ -112,7 +112,7 @@ const StatsCard = (props) => {
                 <StatNumber
                     fontSize={'3xl'}
                     fontWeight={'regular'}
-                    color={useColorModeValue('yellow.500', 'yellow.700')}
+                    color={useColorModeValue('white_yellow', 'dark_yellow')}
                 >
                     {title}
                 </StatNumber>

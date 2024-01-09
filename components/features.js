@@ -23,7 +23,7 @@ const Feature = (props) => {
                         h={16}
                         align={'center'}
                         justify={'center'}
-                        color={useColorModeValue('yellow.500', 'yellow.700')}
+                        color={useColorModeValue('white_yellow', 'dark_yellow')}
                         border={'1px solid'}
                         borderColor={useColorModeValue('gray.300', 'gray.700')}
                         rounded={'3xl'}
@@ -59,7 +59,7 @@ const Info = (props) => {
                 <Stack>
                     <Text
                         fontWeight={"medium"}
-                        color={useColorModeValue('yellow.500', 'yellow.700')}
+                        color={useColorModeValue('white_yellow', 'dark_yellow')}
                     >
                         {title}
                     </Text>

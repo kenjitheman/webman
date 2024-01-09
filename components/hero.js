@@ -18,7 +18,7 @@ const Hero = (props) => {
             overflow={'hidden'}
         >
             <Image
-                src={useColorModeValue('/images/bg_white.jpg', '/images/bg_dark.jpg')}
+                src={useColorModeValue('/images/bg_white.png', '/images/bg_dark.png')}
                 alt="Background Image"
                 layout="fill"
                 objectFit="cover"
