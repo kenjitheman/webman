@@ -1,8 +1,8 @@
-import { Select } from '@chakra-ui/react';
-import { useColorModeValue } from '@chakra-ui/color-mode';
-import { useRouter } from 'next/router';
+import { Select } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/color-mode";
+import { useRouter } from "next/router";
 
-const languages = { en: 'English', uk: 'Українська', ru: 'Русский' };
+const languages = { en: "English", uk: "Українська", ru: "Русский" };
 
 const LanguageSwitcher = ({ width }) => {
     const router = useRouter();
@@ -18,7 +18,7 @@ const LanguageSwitcher = ({ width }) => {
             size="md"
             rounded="2xl"
             variant="outline"
-            borderColor={useColorModeValue('gray.300', 'gray.700')}
+            borderColor={useColorModeValue("gray.300", "gray.700")}
             value={router.locale}
             width={width}
             onChange={(e) => handleChangeLanguage(e.target.value)}
