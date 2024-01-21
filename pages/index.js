@@ -12,10 +12,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 const Home = () => {
     const { t } = useTranslation('common');
     return (
-        <Layout
-            title="Alt Corporation"
-            description={t('website_description')}
-        >
+        <Layout title="Alt Corporation" description={t('website_description')}>
             <Flex flexDirection={"column"}>
                 <Section delay={0.1}>
                     <Box>
@@ -33,15 +30,8 @@ const Home = () => {
                     <Container maxW="10xl">
                         <Section delay={0.2}>
                             <Box pt={5} px={{ base: 2, sm: 12, md: 17 }}>
-                                <Flex
-                                    flexDirection={{ base: "column", md: "row" }}
-                                    justifyContent={"space-between"}
-                                >
-                                    <SimpleGrid
-                                        w={'full'}
-                                        columns={{ base: 1, md: 3 }}
-                                        spacing={6}
-                                    >
+                                <Flex flexDirection={{ base: "column", md: "row" }} justifyContent={"space-between"}>
+                                    <SimpleGrid w={'full'} columns={{ base: 1, md: 3 }} spacing={6}>
                                         <WelcomeStat
                                             title={t('stats.users.title')}
                                             text={t('stats.users.text')}
@@ -227,26 +217,22 @@ const Home = () => {
                                     flexDirection={{ base: 'column', md: 'row' }}
                                     alignItems={'center'}
                                 >
-                                    <Box
-                                        w={{ base: '100%', md: '50%' }}
-                                        pb={{ base: 12, md: 0 }}
-                                    >
+                                    <Box w={{ base: '100%', md: '50%' }} pb={{ base: 12, md: 0 }}>
                                         <Image
-                                            src={useColorModeValue('images/bg_white.png', 'images/bg_dark.png')}
+                                            src={useColorModeValue('images/bg_white.webp', 'images/bg_dark.webp')}
+                                            loading={'lazy'}
                                             rounded={'3xl'}
                                             alt={'Stats Image'}
                                             border={'1px solid'}
                                             borderColor={useColorModeValue('gray.300', 'gray.700')}
                                             objectFit={'cover'}
+                                            fill={true}
+                                            quality={100}
                                             w={'100%'}
                                             h={{ base: 80, md: 'lg' }}
                                         />
                                     </Box>
-                                    <SimpleGrid
-                                        w={{ base: '100%', md: '45%' }}
-                                        columns={{ base: 1, md: 1 }}
-                                        spacing={6}
-                                    >
+                                    <SimpleGrid w={{ base: '100%', md: '45%' }} columns={{ base: 1, md: 1 }} spacing={6}>
                                         <StatsCard
                                             title={t('company.we_serve.title')}
                                             text={t('company.we_serve.text')}

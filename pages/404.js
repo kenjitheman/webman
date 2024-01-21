@@ -1,12 +1,6 @@
 import NextLink from "next/link";
-import {
-    Box,
-    Button,
-    Container,
-    Divider,
-    Heading,
-} from "@chakra-ui/react";
-import Layout from '../components/layouts/article'
+import { Box, Button, Container, Divider, Heading } from "@chakra-ui/react";
+import Layout from "../components/layouts/article"
 
 const NotFound = () => {
     return (
@@ -18,7 +12,7 @@ const NotFound = () => {
                 <Heading
                     as="h1"
                     my={12}
-                    fontFamily={'"Etna", sans-serif'}
+                    fontFamily={"'Etna', sans-serif"}
                     align="center"
                 >
                     404 | Not Found
@@ -32,13 +26,13 @@ const NotFound = () => {
                         p={"7"}
                         rounded={"lg"}
                         fontSize={"xl"}
-                        fontFamily={'"Etna", sans-serif'}
+                        fontFamily={"'Etna', sans-serif"}
                     >
                         Home
                     </Button>
                 </Box>
             </Container>
-        </Layout>
+        </Layout >
     );
 };
 
