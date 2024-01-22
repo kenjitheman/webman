@@ -194,8 +194,7 @@ const Home = () => {
                                     fontSize={"md"}
                                     border={"1px solid"}
                                     borderColor={useColorModeValue("gray.300", "gray.700")}
-                                    px={5}
-                                    py={3}
+                                    p={2}
                                     alignSelf={"flex-start"}
                                     rounded={"2xl"}
                                     w={"fit-content"}
@@ -205,7 +204,7 @@ const Home = () => {
                                 <Heading
                                     py={5}
                                     textAlign={"left"}
-                                    fontSize={"4xl"}
+                                    fontSize={"xl"}
                                     fontWeight={"medium"}
                                     color={useColorModeValue("white_yellow", "dark_yellow")}
                                 >
