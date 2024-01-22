@@ -8,7 +8,7 @@ const ThemeToggleButton = () => {
 
     return (
         <AnimatePresence mode="wait" initial={false}>
-            <motion.div style={{ display: "inline-block" }} key={useColorModeValue("light", "dark")}>
+            <motion.div style={{ display: "block" }} key={useColorModeValue("light", "dark")}>
                 <Flex
                     borderRadius="2xl"
                     cursor="pointer"
