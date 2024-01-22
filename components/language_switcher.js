@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 const languages = { en: "English", uk: "Українська", ru: "Русский" };
 
-const LanguageSwitcher = ({ width }) => {
+const LanguageSwitcher = ({ width, id }) => {
     const router = useRouter();
 
     const handleChangeLanguage = async(locale) => {
@@ -13,7 +13,7 @@ const LanguageSwitcher = ({ width }) => {
 
     return (
         <Select
-            id="language-select"
+            id={id}
             aria-label="Language"
             size="md"
             rounded="2xl"

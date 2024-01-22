@@ -149,7 +149,7 @@ export default function Navbar() {
                         alignItems={"center"}
                         justifyContent={"flex-end"}
                     >
-                        <LanguageSwitcher width={"20"} />
+                        <LanguageSwitcher width={"20"} id={"language-switcher-nav"} />
                         <ThemeToggleButton />
                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord">
                             <FaDiscord size={30} />
