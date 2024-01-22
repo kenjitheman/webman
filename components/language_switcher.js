@@ -2,7 +2,7 @@ import { Select } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { useRouter } from "next/router";
 
-const languages = { en: "English", uk: "Українська", ru: "Русский" };
+const languages = { en: "ENG", uk: "UA", ru: "RU" };
 
 const LanguageSwitcher = ({ id }) => {
     const router = useRouter();
@@ -25,7 +25,7 @@ const LanguageSwitcher = ({ id }) => {
         >
             {Object.entries(languages).map(([locale, language]) => (
                 <option key={locale} value={locale}>
-                    {language.slice(0, 3).toUpperCase()}
+                    {language}
                 </option>
             ))}
         </Select>

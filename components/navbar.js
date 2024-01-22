@@ -14,7 +14,7 @@ const ScrollLink = dynamic(() => import("react-scroll").then((module) => module.
 
 const Links = {
     "About": "#about-us",
-    "Reviews": "https://t.me/alt_corp",
+    "Reviews": "https://t.me/alt_portfolio",
     "Services": "#services"
 };
 
