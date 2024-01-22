@@ -1,9 +1,11 @@
 import Image from "next/image";
-import { Box, Heading, Container, Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Heading, Container, Flex, Text, useColorModeValue, useColorMode } from "@chakra-ui/react";
 import { CustomButton } from "./buttons.js";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = (props) => {
     const { title, text, button_1_text, button_2_text } = props;
+    const { colorMode } = useColorMode();
 
     return (
         <Box
@@ -17,14 +19,25 @@ const Hero = (props) => {
             rounded={"3xl"}
             overflow={"hidden"}
         >
-            <Image
-                src={useColorModeValue("/images/bg_white.webp", "/images/bg_dark.webp")}
-                alt="Background Image"
-                objectFit="cover"
-                fill={true}
-                priority={true}
-                quality={100}
-            />
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={colorMode}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                >
+                    <Image
+                        src={useColorModeValue("/images/bg_white.webp", "/images/bg_dark.webp")}
+                        alt="Background Image"
+                        objectFit="cover"
+                        fill={true}
+                        priority={true}
+                        quality={100}
+                    />
+                </motion.div>
+            </AnimatePresence>
+
             <Container
                 maxW={"full"}
                 fontFamily={"'Etna', sans-serif"}
