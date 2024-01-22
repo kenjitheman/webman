@@ -15,7 +15,7 @@ const ScrollLink = dynamic(() => import("react-scroll").then((module) => module.
 const Links = {
     "About": "#about-us",
     "Reviews": "https://t.me/alt_corp",
-    "Our Team": "#services"
+    "Services": "#services"
 };
 
 
@@ -145,11 +145,10 @@ export default function Navbar() {
                     </HStack>
                     <HStack
                         display={{ base: "none", lg: "flex" }}
-                        spacing={3}
                         alignItems={"center"}
                         justifyContent={"flex-end"}
                     >
-                        <LanguageSwitcher width={"20"} id={"language-switcher-nav"} />
+                        <LanguageSwitcher id={"language-switcher-nav"} />
                         <ThemeToggleButton />
                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord">
                             <FaDiscord size={30} />

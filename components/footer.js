@@ -18,7 +18,7 @@ const Footer = () => {
                     align={{ base: "center", md: "center" }}
                 >
                     <Stack direction={"row"} spacing={5}>
-                        <LanguageSwitcher width={"auto"} id={"language-switcher-footer"} />
+                        <LanguageSwitcher id={"language-switcher-footer"} />
                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord">
                             <FaDiscord size={35} />
                         </a>

@@ -4,10 +4,10 @@ import { useRouter } from "next/router";
 
 const languages = { en: "English", uk: "Українська", ru: "Русский" };
 
-const LanguageSwitcher = ({ width, id }) => {
+const LanguageSwitcher = ({ id }) => {
     const router = useRouter();
 
-    const handleChangeLanguage = async(locale) => {
+    const handleChangeLanguage = async (locale) => {
         await router.push(router.pathname, router.asPath, { locale });
     };
 
@@ -20,12 +20,12 @@ const LanguageSwitcher = ({ width, id }) => {
             variant="outline"
             borderColor={useColorModeValue("gray.300", "gray.700")}
             value={router.locale}
-            width={width}
+            width={{ base: "auto", md: "90px" }}
             onChange={(e) => handleChangeLanguage(e.target.value)}
         >
             {Object.entries(languages).map(([locale, language]) => (
                 <option key={locale} value={locale}>
-                    {language}
+                    {language.slice(0, 3).toUpperCase()}
                 </option>
             ))}
         </Select>
