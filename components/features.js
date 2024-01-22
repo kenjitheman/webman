@@ -12,7 +12,7 @@ const Feature = (props) => {
                 borderColor={useColorModeValue("gray.300", "gray.700")}
                 shadow={"lg"}
                 _hover={{
-                    cursor: "pointer",
+                    cursor: "pointer"
                 }}
                 rounded={"3xl"}
                 p={4}
@@ -51,7 +51,7 @@ const Info = (props) => {
                 borderColor={useColorModeValue("gray.300", "gray.700")}
                 shadow={"lg"}
                 _hover={{
-                    cursor: "pointer",
+                    cursor: "pointer"
                 }}
                 rounded={"3xl"}
                 p={4}

@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import { Button, useColorModeValue } from "@chakra-ui/react";
 
 const MotionButton = dynamic(() => import("framer-motion").then((mod) => mod.motion.button), {
-    ssr: false,
+    ssr: false
 });
 
 const CustomButton = ({ textColor, children, whileHover, transition }) => {
@@ -23,7 +23,7 @@ const CustomButton = ({ textColor, children, whileHover, transition }) => {
                 bg={"transparent"}
                 textColor={useColorModeValue("black", "white")}
                 _hover={{
-                    rounded: "3xl",
+                    rounded: "3xl"
                 }}
             >
                 {children}
