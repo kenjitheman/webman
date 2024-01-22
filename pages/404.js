@@ -1,6 +1,6 @@
 import NextLink from "next/link";
 import { Box, Button, Container, Divider, Heading } from "@chakra-ui/react";
-import Layout from "../components/layouts/article"
+import Layout from "../components/layouts/article";
 
 const NotFound = () => {
     return (

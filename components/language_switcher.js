@@ -7,7 +7,7 @@ const languages = { en: "English", uk: "Українська", ru: "Русски
 const LanguageSwitcher = ({ width }) => {
     const router = useRouter();
 
-    const handleChangeLanguage = async (locale) => {
+    const handleChangeLanguage = async(locale) => {
         await router.push(router.pathname, router.asPath, { locale });
     };
 

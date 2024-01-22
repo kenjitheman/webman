@@ -16,7 +16,7 @@ const WelcomeStat = (props) => {
                 css={{ backdropFilter: "blur(10px)" }}
                 rounded={"3xl"}
                 _hover={{
-                    cursor: "pointer",
+                    cursor: "pointer"
                 }}
             >
                 <Flex justifyContent={"space-evenly"}>
@@ -61,7 +61,7 @@ const StatFullyGrid = (props) => {
                 borderColor={useColorModeValue("gray.300", "gray.700")}
                 rounded={"3xl"}
                 _hover={{
-                    cursor: "pointer",
+                    cursor: "pointer"
                 }}
             >
                 <Flex align={"center"} justify={"space-evenly"}>
@@ -91,7 +91,7 @@ const StatsCard = (props) => {
                 borderColor={useColorModeValue("gray.300", "gray.700")}
                 rounded={"3xl"}
                 _hover={{
-                    cursor: "pointer",
+                    cursor: "pointer"
                 }}
             >
                 <StatNumber

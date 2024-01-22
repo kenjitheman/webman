@@ -6,7 +6,7 @@ export default function Chakra({ cookies, children }) {
         ? cookieStorageManagerSSR(cookies, {
             path: "/",
             SameSite: "none",
-            secure: true,
+            secure: true
         })
         : localStorageManager;
 
@@ -20,7 +20,7 @@ export default function Chakra({ cookies, children }) {
 export async function getServerSideProps({ req }) {
     return {
         props: {
-            cookies: req.headers.cookie ?? "",
-        },
+            cookies: req.headers.cookie ?? ""
+        }
     };
 }

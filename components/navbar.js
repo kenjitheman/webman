@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, IconButton, useDisclosure, useColorModeValue, Stack, } from "@chakra-ui/react";
+import { Box, Flex, HStack, IconButton, useDisclosure, useColorModeValue, Stack } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "../components/logo.js";
 import { useRouter } from "next/router";
@@ -9,13 +9,13 @@ import dynamic from "next/dynamic";
 
 const ScrollLink = dynamic(() => import("react-scroll").then((module) => module.Link), {
     ssr: false,
-    loading: () => null,
+    loading: () => null
 });
 
 const Links = {
     "About": "#about-us",
     "Reviews": "https://t.me/alt_corp",
-    "Our Team": "#services",
+    "Our Team": "#services"
 };
 
 
@@ -34,7 +34,7 @@ const NavLink = ({ children, href, currentPath }) => {
                 textDecoration="none"
                 _hover={{
                     textDecoration: "none",
-                    bg: useColorModeValue("white_yellow", "dark_yellow"),
+                    bg: useColorModeValue("white_yellow", "dark_yellow")
                 }}
                 bg={isActive ? useColorModeValue("white_yellow", "dark_yellow") : useColorModeValue("gray.200", "gray.900")}
                 href={href}
@@ -59,8 +59,8 @@ const NavLink = ({ children, href, currentPath }) => {
                     textDecoration: "none",
                     color: useColorModeValue("gray.900", "gray.300"),
                     _hover: {
-                        cursor: "pointer",
-                    },
+                        cursor: "pointer"
+                    }
                 }}
             >
                 <Box
@@ -70,7 +70,7 @@ const NavLink = ({ children, href, currentPath }) => {
                     _hover={{
                         textDecoration: "none",
                         bg: useColorModeValue("white_yellow", "dark_yellow"),
-                        cursor: "pointer",
+                        cursor: "pointer"
                     }}
                     bg={isActive ? useColorModeValue("white_yellow", "dark_yellow") : useColorModeValue("gray.200", "gray.900")}
                 >
@@ -89,7 +89,7 @@ const NavLink = ({ children, href, currentPath }) => {
             textDecoration="none"
             _hover={{
                 textDecoration: "none",
-                bg: useColorModeValue("white_yellow", "dark_yellow"),
+                bg: useColorModeValue("white_yellow", "dark_yellow")
             }}
             bg={isActive ? useColorModeValue("white_yellow", "dark_yellow") : useColorModeValue("gray.200", "gray.900")}
             href={href}

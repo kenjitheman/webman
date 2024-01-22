@@ -3,7 +3,7 @@ import {
     Box,
     Container,
     Stack,
-    Text,
+    Text
 } from "@chakra-ui/react";
 import LanguageSwitcher from "./language_switcher.js";
 import { FaDiscord, FaTelegram, FaTwitter, FaGithub, FaYoutube } from "react-icons/fa";
@@ -43,6 +43,6 @@ const Footer = () => {
             </Container>
         </Box>
     );
-}
+};
 
 export default Footer;
