@@ -2,9 +2,9 @@ import Link from "next/link";
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
 
-const Logo = () => {
+const Logo = ({ href }) => {
     return (
-        <Link href="/" scroll={false} aria-label="Home" label="Home">
+        <Link href={href} passHref scroll={false} aria-label="Home" label="Home">
             <Box p={2}>
                 <Image
                     src="/images/logo.png"
