@@ -11,8 +11,8 @@ const ThemeToggleButton = () => {
             <motion.div style={{ display: "block" }} key={useColorModeValue("light", "dark")}>
                 <Flex
                     borderRadius="2xl"
-                    cursor="pointer"
                     aria-label="Toggle Theme"
+                    cursor="pointer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     justifyContent="space-between"
