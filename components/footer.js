@@ -1,9 +1,14 @@
 import React from "react";
 import { Box, Container, Stack, Text } from "@chakra-ui/react";
 import LanguageSwitcher from "./language_switcher.js";
-import { FaDiscord, FaTelegram, FaTwitter, FaGithub, FaYoutube } from "react-icons/fa";
+import { FaDiscord, FaTelegram, FaInstagram } from "react-icons/fa";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { IoMail } from "react-icons/io5";
+import Link from "next/link.js";
 
 const Footer = () => {
+    const { t } = useTranslation("common");
     return (
         <Box as="footer" fontFamily={"'Etna', sans-serif"} fontWeight={"medium"} fontSize="lg" zIndex={2} mx="auto">
             <Container maxW={"10xl"} py={5}>
@@ -27,31 +32,54 @@ const Footer = () => {
                             justify="center"
                             pb={{ base: 4, md: 0 }}
                         >
-                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                            <Link
+                                href="https://discord.gg/XY2rMVUFhR"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Discord"
+                            >
                                 <FaDiscord size={35} />
-                            </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                            </Link>
+                            <Link
+                                href="https://t.me/alt_portfolio"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Telegram"
+                            >
                                 <FaTelegram size={35} />
-                            </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                                <FaTwitter size={35} />
-                            </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Github">
-                                <FaGithub size={35} />
-                            </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
-                                <FaYoutube size={35} />
-                            </a>
+                            </Link>
+                            <Link
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                            >
+                                <FaInstagram size={35} />
+                            </Link>
+                            <Link
+                                href="mailto:"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Email"
+                            >
+                                <IoMail size={35} />
+                            </Link>
                         </Stack>
                     </Stack>
 
                     <Text pt={{ base: 5, md: 0 }} fontSize={"md"} textAlign={{ base: "center", md: "left" }}>
-                        &copy; {new Date().getFullYear()} Alt Corporation | All rights reserved
+                        &copy; {new Date().getFullYear()} Alt Corporation. {t("footer.copyright")}
                     </Text>
                 </Stack>
             </Container>
         </Box>
     );
 };
+
+export const getStaticProps = async ({ locale }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ["common"]))
+    }
+});
 
 export default Footer;
