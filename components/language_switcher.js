@@ -2,7 +2,7 @@ import { Select } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { useRouter } from "next/router";
 
-const languages = { en: "ENG", uk: "UA", ru: "RU" };
+const languages = { en: "EN", uk: "UA", ru: "RU" };
 
 const LanguageSwitcher = ({ id }) => {
     const router = useRouter();
@@ -18,6 +18,10 @@ const LanguageSwitcher = ({ id }) => {
             size="md"
             rounded="2xl"
             variant="outline"
+            _hover={{
+                borderColor: useColorModeValue("gray.400", "gray.600"),
+                cursor: "pointer"
+            }}
             borderColor={useColorModeValue("gray.300", "gray.700")}
             value={router.locale}
             width={{ base: "auto", md: "90px" }}
