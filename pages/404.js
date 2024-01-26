@@ -1,39 +1,48 @@
 import NextLink from "next/link";
 import { Box, Button, Container, Divider, Heading } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const NotFound = () => {
+    const { t } = useTranslation("common");
     return (
         <Layout
             title="404 | Alt Corporation"
-            description="404 page"
+            description={t("404.description")}
         >
-            <Container my={"17%"}>
+            <Container my={"30vh"}>
                 <Heading
                     as="h1"
-                    my={12}
+                    fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
                     fontFamily={"'Etna', sans-serif"}
                     align="center"
                 >
-                    404 | Not Found
+                    404 | {t("404.description")}
                 </Heading>
-                <Divider my={6} />
-                <Box my={6} align="center">
+                <Divider my={5} />
+                <Box my={5} align="center">
                     <Button
                         as={NextLink}
                         href="/"
                         colorScheme="gray"
-                        p={"7"}
-                        rounded={"lg"}
-                        fontSize={"xl"}
+                        rounded={{ base: "2xl", md: "3xl" }}
+                        fontSize={{ base: "md", md: "lg", lg: "xl" }}
+                        p={{ base: 5, md: 7 }}
                         fontFamily={"'Etna', sans-serif"}
                     >
-                        Home
+                        {t("404.back")}
                     </Button>
                 </Box>
             </Container>
         </Layout >
     );
 };
+
+export const getStaticProps = async ({ locale }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ["common"]))
+    }
+});
 
 export default NotFound;
