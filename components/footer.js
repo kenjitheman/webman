@@ -1,10 +1,12 @@
 import React from "react";
 import { Box, Container, Stack, Text } from "@chakra-ui/react";
 import LanguageSwitcher from "./language_switcher.js";
-import { FaDiscord, FaTelegram, FaInstagram } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { ImTelegram } from "react-icons/im";
 import { useTranslation } from "next-i18next";
+import { PiInstagramLogoBold } from "react-icons/pi";
+import { RiTelegramLine } from "react-icons/ri";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { IoMail } from "react-icons/io5";
 import Link from "next/link.js";
 
 const Footer = () => {
@@ -38,15 +40,23 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Discord"
                             >
-                                <FaDiscord size={35} />
+                                <FaDiscord size={40} />
                             </Link>
                             <Link
                                 href="https://t.me/alt_portfolio"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Telegram"
+                                aria-label="Telegram-main"
                             >
-                                <FaTelegram size={35} />
+                                <ImTelegram size={35} />
+                            </Link>
+                            <Link
+                                href="https://t.me/alt_corp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Telegram-reviews"
+                            >
+                                <RiTelegramLine size={43} />
                             </Link>
                             <Link
                                 href="#"
@@ -54,21 +64,23 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Instagram"
                             >
-                                <FaInstagram size={35} />
-                            </Link>
-                            <Link
-                                href="mailto:"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Email"
-                            >
-                                <IoMail size={35} />
+                                <PiInstagramLogoBold size={40} />
                             </Link>
                         </Stack>
                     </Stack>
 
                     <Text pt={{ base: 5, md: 0 }} fontSize={"md"} textAlign={{ base: "center", md: "left" }}>
-                        &copy; {new Date().getFullYear()} Alt Corporation. {t("footer.copyright")}
+                        &copy; {new Date().getFullYear()} Alt Corporation. {t("footer.copyright")} {" Contact: "}
+                        <Link
+                            href="mailto:"
+                            isExternal
+                            alt="Email link"
+                            aria-label="Email"
+                            color="gray.500"
+                            fontWeight="semibold"
+                        >
+                            mail@alt-corp.org
+                        </Link>
                     </Text>
                 </Stack>
             </Container>
