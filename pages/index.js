@@ -1,5 +1,6 @@
-import React from "react";
-import { Box, Container, Icon, useColorModeValue, Flex, Heading, SimpleGrid, Text, Image } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { Box, Container, Icon, useColorModeValue, Flex, Heading, SimpleGrid, Text, Image, List } from "@chakra-ui/react";
+import { CheckIcon } from "@chakra-ui/icons";
 import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from "react-icons/io5";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
@@ -14,10 +15,39 @@ import {
 } from "../components/stats.js";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { FaTelegram } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+import { MdBusinessCenter } from "react-icons/md";
+import { IoIosPeople } from "react-icons/io";
+import Link from "next/link.js";
+import {
+    incrementExperience,
+    incrementHappyClients,
+    incrementReviews,
+    incrementCapital
+} from "../utils/incrementor.js";
 
 const Home = () => {
     const { t } = useTranslation("common");
+
+    let [lastMonth, setLastMonth] = useState(new Date().getMonth());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setLastMonth(new Date().getMonth());
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
+    const yearOfBeginning = 2018;
+    const happyClientsNow = 400;
+    const reviewsNow = 200;
+    const capitalNow = 200;
+
+    const experience = incrementExperience(yearOfBeginning);
+    const happyClients = incrementHappyClients(happyClientsNow, lastMonth);
+    const reviews = incrementReviews(reviewsNow, lastMonth);
+    const capital = incrementCapital(capitalNow, lastMonth);
+
     return (
         <Layout title="Alt Corporation" description={t("website_description")}>
             <Flex flexDirection={"column"}>
@@ -38,24 +68,20 @@ const Home = () => {
                                 <Flex flexDirection={{ base: "column", md: "row" }} justifyContent={"space-between"}>
                                     <SimpleGrid w={"full"} columns={{ base: 1, md: 4 }} spacing={6}>
                                         <WelcomeStat
-                                            title={t("stats.1.title")}
+                                            title={experience + "+"}
                                             text={t("stats.1.text")}
-                                        // icon={<IoSearchSharp size={"4rem"} />}
                                         />
                                         <WelcomeStat
-                                            title={t("stats.2.title")}
+                                            title={happyClients + "+"}
                                             text={t("stats.2.text")}
-                                        // icon={<IoLogoBitcoin size={"4rem"} />}
                                         />
                                         <WelcomeStat
-                                            title={t("stats.3.title")}
+                                            title={reviews + "+"}
                                             text={t("stats.3.text")}
-                                        // icon={<IoAnalyticsSharp size={"4rem"} />}
                                         />
                                         <WelcomeStat
-                                            title={t("stats.3.title")}
-                                            text={t("stats.3.text")}
-                                        // icon={<IoAnalyticsSharp size={"4rem"} />}
+                                            title={capital + "k+"}
+                                            text={t("stats.4.text")}
                                         />
                                     </SimpleGrid>
                                 </Flex>
@@ -79,10 +105,10 @@ const Home = () => {
                                     fontSize={"4xl"}
                                     color={useColorModeValue("white_yellow", "dark_yellow")}
                                 >
-                                    {t("agency.title")}
+                                    {t("services.title")}
                                 </Heading>
-                                <Text color={"gray.500"} fontSize={"2xl"}>
-                                    {t("agency.description")}
+                                <Text color={"gray.500"} fontSize={"2xl"} pb={10}>
+                                    {t("services.description")}
                                 </Text>
                                 <Flex
                                     maxW={"10xl"}
@@ -92,57 +118,42 @@ const Home = () => {
                                 >
                                     <SimpleGrid
                                         w={"full"}
-                                        columns={{ base: 1, md: 2 }}
+                                        columns={{ base: 1, md: 3 }}
                                         spacing={6}
                                     >
-                                        <StatFullyGrid
-                                            icon={<IoAnalyticsSharp size={{ base: "3rem", md: "4rem" }} />}
-                                            text={t("services.business_planning")}
+                                        <Feature
+                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            title={t("services.1.title")}
+                                            text={t("services.1.description")}
                                         />
-                                        <StatFullyGrid
-                                            icon={<IoLogoBitcoin size={{ base: "3rem", md: "4rem" }} />}
-                                            text={t("services.financial_planning")}
+                                        <Feature
+                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            title={t("services.2.title")}
+                                            text={t("services.2.description")}
                                         />
-                                        <StatFullyGrid
-                                            icon={<IoAnalyticsSharp size={{ base: "3rem", md: "4rem" }} />}
-                                            text={t("services.market_analysis")}
+                                        <Feature
+                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            title={t("services.3.title")}
+                                            text={t("services.3.description")}
                                         />
-                                        <StatFullyGrid
-                                            icon={<IoLogoBitcoin size={{ base: "3rem", md: "4rem" }} />}
-                                            text={t("services.instant_delivery")}
+                                        <Feature
+                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            title={t("services.4.title")}
+                                            text={t("services.4.description")}
                                         />
+                                        <Feature
+                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            title={t("services.5.title")}
+                                            text={t("services.5.description")}
+                                        />
+                                        <Feature
+                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            title={t("services.5.title")}
+                                            text={t("services.5.description")}
+                                        />
+
                                     </SimpleGrid>
                                 </Flex>
-                            </Box>
-                        </Section>
-                    </Container>
-                </Box>
-                <Box>
-                    <Container maxW="10xl">
-                        <Section delay={0.4}>
-                            <Box
-                                p={4}
-                                fontFamily={"'Etna', sans-serif"}
-                                fontSize={"2xl"}
-                                fontWeight={"regular"}
-                            >
-                                <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-                                    <Feature
-                                        icon={<Icon as={IoAnalyticsSharp} w={10} h={10} />}
-                                        title={t("features.lifetime_support.title")}
-                                        text={t("features.lifetime_support.text")}
-                                    />
-                                    <Feature
-                                        icon={<Icon as={IoLogoBitcoin} w={10} h={10} />}
-                                        title={t("features.unlimited_donations.title")}
-                                        text={t("features.unlimited_donations.text")}
-                                    />
-                                    <Feature
-                                        icon={<Icon as={IoSearchSharp} w={10} h={10} />}
-                                        title={t("features.instant_delivery.title")}
-                                        text={t("features.instant_delivery.text")}
-                                    />
-                                </SimpleGrid>
                             </Box>
                         </Section>
                     </Container>
@@ -285,21 +296,42 @@ const Home = () => {
                                         columns={{ base: 1, md: 3 }}
                                         spacing={6}
                                     >
-                                        <InfoFullyGrid
-                                            icon={<FaTelegram size={"3rem"} />}
-                                            text={t("contacts.owner.title")}
-                                            title={t("contacts.owner.telegram")}
-                                        />
-                                        <InfoFullyGrid
-                                            icon={<FaTelegram size={"3rem"} />}
-                                            text={t("contacts.leading.title")}
-                                            title={t("contacts.leading.telegram")}
-                                        />
-                                        <InfoFullyGrid
-                                            icon={<FaTelegram size={"3rem"} />}
-                                            text={t("contacts.traffic.title")}
-                                            title={t("contacts.traffic.telegram")}
-                                        />
+                                        <Link
+                                            href="https://t.me/bybitsignals_0"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Telegram"
+                                        >
+                                            <InfoFullyGrid
+                                                icon={<FaStar size={"3rem"} />}
+                                                text={t("contacts.owner.title")}
+                                                title={t("contacts.owner.telegram")}
+                                            />
+                                        </Link>
+                                        <Link
+                                            href="https://t.me/alt_corporation"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Telegram"
+                                        >
+                                            <InfoFullyGrid
+                                                icon={<MdBusinessCenter size={"3rem"} />}
+                                                text={t("contacts.leading.title")}
+                                                title={t("contacts.leading.telegram")}
+                                            />
+                                        </Link>
+                                        <Link
+                                            href="https://t.me/altcorp_traffic"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Telegram"
+                                        >
+                                            <InfoFullyGrid
+                                                icon={<IoIosPeople size={"3rem"} />}
+                                                text={t("contacts.traffic.title")}
+                                                title={t("contacts.traffic.telegram")}
+                                            />
+                                        </Link>
                                     </SimpleGrid>
                                 </Flex>
                             </Box>
