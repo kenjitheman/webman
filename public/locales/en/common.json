@@ -14,40 +14,78 @@
     },
     "stats": {
         "1": {
-            "title": "4+",
             "text": "Years of Experience"
         },
         "2": {
-            "title": "500+",
             "text": "Happy Clients"
         },
         "3": {
-            "title": "200+",
             "text": "Reviews"
+        },
+        "4": {
+            "text": "Capital"
         }
     },
-    "agency": {
-        "title": "Multifunctional range of services",
-        "description": "Alt Corporation is more than just a digital product design agency; we are your strategic partner in navigating the complexities of crypto trading. Our seasoned professionals focus on delivering unparalleled user experiences, transforming virtual transactions into real-world success stories."
-    },
     "services": {
-        "business_planning": "Strategic Trading Plans",
-        "financial_planning": "Risk-Adjusted Financial Planning",
-        "market_analysis": "In-Depth Market Analysis",
-        "instant_delivery": "Swift Transaction Execution"
-    },
-    "features": {
-        "lifetime_support": {
-            "title": "Dedicated Support",
-            "text": "Experience peace of mind with Alt Corporation's commitment to providing unlimited support throughout your trading journey."
+        "title": "Multifunctional range of services",
+        "description": "Alt Corporation is more than just a digital product design agency; we are your strategic partner in navigating the complexities of crypto trading. Our seasoned professionals focus on delivering unparalleled user experiences, transforming virtual transactions into real-world success stories.",
+        "1": {
+            "title": "Maintaining a signal channel",
+            "description": "Services for maintaining a signal channel",
+            "includes": {
+                "1": "Issuing signals (crypto/forex)",
+                "2": "Market Analytics",
+                "3": "Writing posts",
+                "4": "Voice messages",
+                "5": "Live broadcasts",
+                "6": "Mugs with an actor",
+                "7": "Marathons",
+                "8": "Training",
+                "9": "Absolutely any flight of fancy of the customer will be fulfilled instantly"
+            }
         },
-        "unlimited_donations": {
-            "title": "Community Impact",
-            "text": "Join our community-focused initiatives as Alt Corporation contributes to meaningful causes, fostering positive change in the crypto space."
+        "2": {
+            "title": "Traffic arbitrage",
+            "description": "A wide range of services for the development of your channel",
+            "includes": {
+                "1": "Targeted traffic (inst, YouTube, TT, spam)",
+                "2": "Driving traffic from external social networks, exclusively targeted and high-quality audience",
+                "3": "Trial period 20pdp"
+            }
         },
-        "instant_delivery": {
-            "title": "Real-Time Execution",
-            "text": "Alt Corporation ensures instant transaction execution, optimizing your trading strategies in the ever-evolving crypto landscape."
+        "3": {
+            "title": "Turnkey channel",
+            "description": "Development of your channel from scratch",
+            "includes": {
+                "1": "Avatar development",
+                "2": "Description development",
+                "3": "Development of advertising creatives",
+                "4": "Content plan development",
+                "5": "Channel management",
+                "6": "Buying/selling advertising",
+                "7": "Attracting external traffic",
+                "8": "Channel monetization"
+            }
+        },
+        "4": {
+            "title": "Transaction guarantor",
+            "description": "We guarantee the safety of your funds",
+            "includes": {
+                "1": "Any type of transaction is welcome",
+                "2": "Lots of completed transactions",
+                "3": "2-5% of the transaction amount"
+            }
+        },
+        "5": {
+            "title": "Design",
+            "description": "We create unique designs for your business",
+            "includes": {
+                "1": "Avatars",
+                "2": "Logos",
+                "3": "Preview",
+                "4": "Banners",
+                "5": "Stickers"
+            }
         }
     },
     "company": {
@@ -90,7 +128,7 @@
             "telegram": "@bybitsignals_0"
         },
         "leading": {
-            "title": "Leading",
+            "title": "Content",
             "telegram": "@alt_corporation"
         },
         "traffic": {
