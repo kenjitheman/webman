@@ -114,7 +114,6 @@ const StatsCard = (props) => {
                     >
                         {title}
                     </StatNumber>
-                    <FiArrowUpRight size={40} position={"absolute"} right={0} />
                     <StatLabel fontSize={"2xl"} fontWeight={"medium"} color={"gray.500"}>
                         {text}
                     </StatLabel>
@@ -177,7 +176,6 @@ const Feature = (props) => {
                 p={4}
             >
                 <Stack>
-                    <FiArrowUpRight size={40} position={"absolute"} right={0} top={0} />
                     <Flex
                         w={16}
                         h={16}
