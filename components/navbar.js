@@ -3,16 +3,16 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "../components/logo.js";
 import { useRouter } from "next/router";
 import ThemeToggleButton from "../components/theme-toggle-button.js";
-import { FaDiscord, FaTelegram, FaInstagram } from "react-icons/fa";
+import { PiInstagramLogoBold } from "react-icons/pi";
+import { RiTelegramLine } from "react-icons/ri";
+import { FaDiscord, FaTelegram } from "react-icons/fa";
 import LanguageSwitcher from "./language_switcher.js";
 import Scroll from "react-scroll";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { IoMail } from "react-icons/io5";
 import Link from "next/link.js";
 
 const ScrollLink = Scroll.Link;
-
 
 const Links = {
     home: "#home",
@@ -103,7 +103,6 @@ const NavLink = ({ children, href, currentPath }) => {
         </Box>
     );
 
-
 };
 
 const Navbar = () => {
@@ -157,23 +156,31 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             aria-label="Discord"
                         >
-                            <FaDiscord size={30} />
+                            <FaDiscord size={35} />
                         </Link>
                         <Link
                             href="https://t.me/alt_portfolio"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Telegram"
+                            aria-label="Telegram-main"
                         >
                             <FaTelegram size={30} />
+                        </Link>
+                        <Link
+                            href="https://t.me/alt_corp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Telegram-reviews"
+                        >
+                            <RiTelegramLine size={37} />
                         </Link>
                         <Link
                             href="mailto:"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Email"
+                            aria-label="Instagram"
                         >
-                            <IoMail size={35} />
+                            <PiInstagramLogoBold size={35} />
                         </Link>
                     </HStack>
                     <IconButton
@@ -201,11 +208,12 @@ const Navbar = () => {
                                 </NavLink>
                             ))}
                             <Box justifyContent={"space-between"} display={"flex"} w={"100%"}>
-                                <Stack direction={"row"} spacing={3}>
+                                <Stack direction={"row"} spacing={2}>
                                     <Link
                                         href="https://discord.gg/XY2rMVUFhR"
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label="Discord"
                                     >
                                         <FaDiscord size={30} />
                                     </Link>
@@ -213,24 +221,25 @@ const Navbar = () => {
                                         href="https://t.me/alt_portfolio"
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label="Telegram-main"
                                     >
                                         <FaTelegram size={30} />
                                     </Link>
                                     <Link
-                                        href="#"
+                                        href="https://t.me/alt_corp"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Telegram-reviews"
+                                    >
+                                        <RiTelegramLine size={36} />
+                                    </Link>
+                                    <Link
+                                        href="https://www.instagram.com/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Instagram"
                                     >
-                                        <FaInstagram size={35} />
-                                    </Link>
-                                    <Link
-                                        href="mailto:"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label="Email"
-                                    >
-                                        <IoMail size={35} />
+                                        <PiInstagramLogoBold size={30} />
                                     </Link>
                                 </Stack>
                                 <ThemeToggleButton />
