@@ -21,7 +21,7 @@ function incrementReviews(reviewsNow, lastMonth) {
 }
 
 function incrementCapital(capitalNow, lastMonth) {
-    return incrementOncePerMonth(capitalNow, lastMonth, 500, 1500);
+    return incrementOncePerMonth(capitalNow, lastMonth, 5000, 15000);
 }
 
 export { incrementExperience, incrementHappyClients, incrementReviews, incrementCapital };
