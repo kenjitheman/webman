@@ -59,7 +59,7 @@ const Footer = () => {
                                 <RiTelegramLine size={43} />
                             </Link>
                             <Link
-                                href="#"
+                                href="https://www.instagram.com/tema.burovin"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Instagram"

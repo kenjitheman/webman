@@ -176,7 +176,7 @@ const Navbar = () => {
                             <RiTelegramLine size={37} />
                         </Link>
                         <Link
-                            href="mailto:"
+                            href="https://www.instagram.com/tema.burovin"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Instagram"
@@ -235,7 +235,7 @@ const Navbar = () => {
                                         <RiTelegramLine size={36} />
                                     </Link>
                                     <Link
-                                        href="https://www.instagram.com/"
+                                        href="https://www.instagram.com/tema.burovin"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Instagram"
