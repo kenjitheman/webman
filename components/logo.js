@@ -2,15 +2,15 @@ import Link from "next/link";
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
 
-const Logo = ({ href }) => {
+const Logo = () => {
     return (
-        <Link href={href} passHref scroll={false} aria-label="Home" label="Home">
+        <Link href={"#home"} passHref scroll={false} aria-label="Home" label="Home">
             <Box p={2}>
                 <Image
-                    src="/images/logo.png"
+                    src="/images/logo_3d.png"
                     alt="Alt Corporation Logo"
-                    width={60}
-                    height={60}
+                    width={65}
+                    height={65}
                 />
             </Box>
         </Link >
