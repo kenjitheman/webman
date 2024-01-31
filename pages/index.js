@@ -7,7 +7,7 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { Hero } from "../components/hero.js";
-import { WelcomeStat, StatsCard, InfoFullyGrid, Feature, Info } from "../components/stats.js";
+import { WelcomeStat, InfoFullyGrid, Feature, Info } from "../components/custom_components.js";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FaStar } from "react-icons/fa";
@@ -24,6 +24,9 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { GiRingedPlanet } from "react-icons/gi";
 import { FaRankingStar } from "react-icons/fa6";
 import { IoLink } from "react-icons/io5";
+import { FaStarHalfAlt } from "react-icons/fa";
+import { LuGoal } from "react-icons/lu";
+import { PiHandEye } from "react-icons/pi";
 
 const Home = () => {
     const { t } = useTranslation("common");
@@ -245,13 +248,20 @@ const Home = () => {
                                         />
                                     </Box>
                                     <SimpleGrid w={{ base: "100%", md: "45%" }} columns={{ base: 1, md: 1 }} spacing={6}>
-                                        <StatsCard
-                                            title={t("company.we_serve.title")}
-                                            text={t("company.we_serve.text")}
+                                        <Info
+                                            icon={<Icon as={FaStarHalfAlt} w={10} h={10} />}
+                                            title={t("company.1.title")}
+                                            text={t("company.1.text")}
                                         />
-                                        <StatsCard
-                                            title={t("company.our_mission.title")}
-                                            text={t("company.our_mission.text")}
+                                        <Info
+                                            icon={<Icon as={LuGoal} w={10} h={10} />}
+                                            title={t("company.2.title")}
+                                            text={t("company.2.text")}
+                                        />
+                                        <Info
+                                            icon={<Icon as={PiHandEye} w={10} h={10} />}
+                                            title={t("company.3.title")}
+                                            text={t("company.3.text")}
                                         />
                                     </SimpleGrid>
                                 </Flex>
