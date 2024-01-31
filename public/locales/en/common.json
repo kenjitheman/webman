@@ -45,15 +45,6 @@
             }
         },
         "2": {
-            "title": "Traffic arbitrage",
-            "description": "A wide range of services for the development of your channel",
-            "includes": {
-                "1": "Targeted traffic (inst, YouTube, TT, spam)",
-                "2": "Driving traffic from external social networks, exclusively targeted and high-quality audience",
-                "3": "Trial period 20pdp"
-            }
-        },
-        "3": {
             "title": "Turnkey channel",
             "description": "Development of your channel from scratch",
             "includes": {
@@ -64,7 +55,17 @@
                 "5": "Channel management",
                 "6": "Buying/selling advertising",
                 "7": "Attracting external traffic",
-                "8": "Channel monetization"
+                "8": "Channel monetization",
+                "9": "Absolutely any flight of fancy of the customer will be fulfilled instantly"
+            }
+        },
+        "3": {
+            "title": "Traffic arbitrage",
+            "description": "A wide range of services for the development of your channel",
+            "includes": {
+                "1": "Targeted traffic (inst, YouTube, TT, spam)",
+                "2": "Driving traffic from external social networks, exclusively targeted and high-quality audience",
+                "3": "Trial period 20pdp"
             }
         },
         "4": {
@@ -84,12 +85,13 @@
                 "2": "Logos",
                 "3": "Preview",
                 "4": "Banners",
-                "5": "Stickers"
+                "5": "Stickers",
+                "6": "Absolutely any flight of fancy of the customer will be fulfilled instantly"
             }
         }
     },
     "company": {
-        "ecosystem": "EXPLORE OUR ECOSYSTEM →",
+        "ecosystem": "EXPLORE OUR ECOSYSTEM",
         "description": "We redefine crypto trading, setting new standards.",
         "we_serve": {
             "title": "Serving the Finest Traders",
@@ -116,8 +118,8 @@
             "text": "Guaranteeing maximum quality and reliability is what makes us the best in our field. We are committed to continually improving our products and services to meet our customers' needs and exceed their expectations."
         },
         "3": {
-            "title": "Some",
-            "text": "Мы стремимся к постоянному улучшению наших продуктов и услуг, чтобы удовлетворить потребности наших клиентов и превзойти их ожидания."
+            "title": "Commitment",
+            "text": "We strive to continuously improve our products and services to meet our customers' needs and exceed their expectations."
         }
     },
     "contacts": {
@@ -143,5 +145,21 @@
     },
     "footer": {
         "copyright": "All rights reserved."
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "description": "Here you will find answers to the most frequently asked questions",
+        "1": {
+            "title": "What services do you provide?",
+            "text": "We provide services for maintaining a signaling channel, traffic arbitration, turnkey channel creation, transaction guarantor, design."
+        },
+        "2": {
+            "title": "What guarantees do you provide?",
+            "text": "We provide a guarantee of the quality and reliability of our services."
+        },
+        "3": {
+            "title": "What payment methods do you accept?",
+            "text": "We accept payment in BTC, USDT, RUB, UAH, VISA, MasterCard."
+        }
     }
 }
