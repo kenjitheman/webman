@@ -208,7 +208,7 @@ const Navbar = () => {
                                     {t(`navbar.${label}`)}
                                 </NavLink>
                             ))}
-                            <Box justifyContent={"space-between"} display={"flex"} w={"100%"}>
+                            <Box justifyContent={"space-between"} display={"flex"} w={"100%"} alignItems={"center"}>
                                 <Stack direction={"row"} spacing={2} alignItems={"center"} justifyContent={"flex-end"}>
                                     <Link
                                         href="https://discord.gg/XY2rMVUFhR"
