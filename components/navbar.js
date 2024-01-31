@@ -4,8 +4,9 @@ import Logo from "../components/logo.js";
 import { useRouter } from "next/router";
 import ThemeToggleButton from "../components/theme-toggle-button.js";
 import { PiInstagramLogoBold } from "react-icons/pi";
+import { ImTelegram } from "react-icons/im";
 import { RiTelegramLine } from "react-icons/ri";
-import { FaDiscord, FaTelegram } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
 import LanguageSwitcher from "./language_switcher.js";
 import Scroll from "react-scroll";
 import { useTranslation } from "next-i18next";
@@ -126,7 +127,7 @@ const Navbar = () => {
                 <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
                     <HStack w={"100%"} spacing={2} alignItems={"center"} justifyContent={"flex-start"}>
                         <Box>
-                            <Logo href={Links.home} />
+                            <Logo />
                         </Box>
                         <HStack
                             as={"nav"}
@@ -164,7 +165,7 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             aria-label="Telegram-main"
                         >
-                            <FaTelegram size={30} />
+                            <ImTelegram size={30} />
                         </Link>
                         <Link
                             href="https://t.me/alt_corp"
@@ -208,14 +209,14 @@ const Navbar = () => {
                                 </NavLink>
                             ))}
                             <Box justifyContent={"space-between"} display={"flex"} w={"100%"}>
-                                <Stack direction={"row"} spacing={2}>
+                                <Stack direction={"row"} spacing={2} alignItems={"center"} justifyContent={"flex-end"}>
                                     <Link
                                         href="https://discord.gg/XY2rMVUFhR"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Discord"
                                     >
-                                        <FaDiscord size={30} />
+                                        <FaDiscord size={34} />
                                     </Link>
                                     <Link
                                         href="https://t.me/alt_portfolio"
@@ -223,7 +224,7 @@ const Navbar = () => {
                                         rel="noopener noreferrer"
                                         aria-label="Telegram-main"
                                     >
-                                        <FaTelegram size={30} />
+                                        <ImTelegram size={30} />
                                     </Link>
                                     <Link
                                         href="https://t.me/alt_corp"
@@ -239,7 +240,7 @@ const Navbar = () => {
                                         rel="noopener noreferrer"
                                         aria-label="Instagram"
                                     >
-                                        <PiInstagramLogoBold size={30} />
+                                        <PiInstagramLogoBold size={33} />
                                     </Link>
                                 </Stack>
                                 <ThemeToggleButton />
