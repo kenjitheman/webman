@@ -1,30 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { Box, Container, Icon, useColorModeValue, Flex, Heading, SimpleGrid, Text, Image, List } from "@chakra-ui/react";
-import { CheckIcon } from "@chakra-ui/icons";
-import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from "react-icons/io5";
+import {
+    Box, Container, Icon, useColorModeValue, Flex, Heading, SimpleGrid, Text, Image,
+    AccordionButton, AccordionPanel, AccordionItem, Accordion
+} from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { Hero } from "../components/hero.js";
-import {
-    WelcomeStat,
-    StatFullyGrid,
-    StatsCard,
-    InfoFullyGrid,
-    Feature,
-    Info
-} from "../components/stats.js";
+import { WelcomeStat, StatsCard, InfoFullyGrid, Feature, Info } from "../components/stats.js";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FaStar } from "react-icons/fa";
 import { MdBusinessCenter } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
 import Link from "next/link.js";
-import {
-    incrementExperience,
-    incrementHappyClients,
-    incrementReviews,
-    incrementCapital
-} from "../utils/incrementor.js";
+import { incrementExperience, incrementHappyClients, incrementReviews, incrementCapital } from "../utils/incrementor.js";
+import { TiChartLineOutline } from "react-icons/ti";
+import { HiOutlineKey } from "react-icons/hi";
+import { GiTrafficLightsGreen } from "react-icons/gi";
+import { GrTransaction } from "react-icons/gr";
+import { MdDesignServices } from "react-icons/md";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { GiRingedPlanet } from "react-icons/gi";
+import { FaRankingStar } from "react-icons/fa6";
+import { IoLink } from "react-icons/io5";
 
 const Home = () => {
     const { t } = useTranslation("common");
@@ -80,7 +79,7 @@ const Home = () => {
                                             text={t("stats.3.text")}
                                         />
                                         <WelcomeStat
-                                            title={capital + "k+"}
+                                            title={capital + "k$+"}
                                             text={t("stats.4.text")}
                                         />
                                     </SimpleGrid>
@@ -98,60 +97,68 @@ const Home = () => {
                                 maxW={"10xl"}
                                 py={10}
                             >
-                                <Heading id="services"
-                                    fontFamily={"'Etna', sans-serif"}
-                                    py={3}
-                                    textAlign={"left"}
-                                    fontSize={"4xl"}
-                                    color={useColorModeValue("white_yellow", "dark_yellow")}
-                                >
-                                    {t("services.title")}
-                                </Heading>
-                                <Text color={"gray.500"} fontSize={"2xl"} pb={10}>
+                                <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
+                                    <Icon
+                                        as={IoLink}
+                                        w={{ base: 7, md: 10 }} h={{ base: 7, md: 10 }} mx={2}
+                                        alignSelf={"center"}
+                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        display={{ base: "none", sm: "block" }}
+                                    />
+                                    <Heading id="services"
+                                        fontFamily={"'Etna', sans-serif"}
+                                        py={3}
+                                        textAlign={"left"}
+                                        fontSize={{ base: "2xl", md: "3xl" }}
+                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        w={"100%"}
+                                    >
+                                        {t("services.title")}
+                                    </Heading>
+                                </Flex>
+                                <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={10}>
                                     {t("services.description")}
                                 </Text>
                                 <Flex
                                     maxW={"10xl"}
-                                    justifyContent={"space-between"}
                                     flexDirection={{ base: "column", md: "row" }}
-                                    alignItems={"center"}
+                                    justifyContent={"center"}
                                 >
                                     <SimpleGrid
-                                        w={"full"}
-                                        columns={{ base: 1, md: 3 }}
-                                        spacing={6}
+                                        w={{ base: "100%", md: "90%" }}
+                                        columns={1}
+                                        spacing={7}
                                     >
                                         <Feature
-                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            icon={<Icon as={TiChartLineOutline} w={10} h={10} />}
                                             title={t("services.1.title")}
                                             text={t("services.1.description")}
+                                            includes={t("services.1.includes")}
                                         />
                                         <Feature
-                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            icon={<Icon as={HiOutlineKey} w={10} h={10} />}
                                             title={t("services.2.title")}
                                             text={t("services.2.description")}
+                                            includes={t("services.2.includes")}
                                         />
                                         <Feature
-                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            icon={<Icon as={GiTrafficLightsGreen} w={10} h={10} />}
                                             title={t("services.3.title")}
                                             text={t("services.3.description")}
+                                            includes={t("services.3.includes")}
                                         />
                                         <Feature
-                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            icon={<Icon as={GrTransaction} w={10} h={10} />}
                                             title={t("services.4.title")}
                                             text={t("services.4.description")}
+                                            includes={t("services.4.includes")}
                                         />
                                         <Feature
-                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
+                                            icon={<Icon as={MdDesignServices} w={10} h={10} />}
                                             title={t("services.5.title")}
                                             text={t("services.5.description")}
+                                            includes={t("services.5.includes")}
                                         />
-                                        <Feature
-                                            icon={<Icon as={CheckIcon} w={10} h={10} />}
-                                            title={t("services.5.title")}
-                                            text={t("services.5.description")}
-                                        />
-
                                     </SimpleGrid>
                                 </Flex>
                             </Box>
@@ -167,28 +174,40 @@ const Home = () => {
                                 fontSize={"2xl"}
                                 fontWeight={"regular"}
                             >
-                                <Heading id="about-us"
-                                    fontFamily={"'Etna', sans-serif"}
-                                    py={3}
-                                    textAlign={"left"}
-                                    fontSize={"4xl"}
-                                    color={useColorModeValue("white_yellow", "dark_yellow")}
-                                >
-                                    {t("about_us.title")}
-                                </Heading>
-                                <Text color={"gray.500"} fontSize={"2xl"}>
+                                <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
+                                    <Icon
+                                        as={IoLink}
+                                        w={10} h={10} mx={2}
+                                        alignSelf={"center"}
+                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        display={{ base: "none", sm: "block" }}
+                                    />
+                                    <Heading id="about-us"
+                                        fontFamily={"'Etna', sans-serif"}
+                                        textAlign={"left"}
+                                        fontSize={{ base: "2xl", md: "3xl" }}
+                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        w={"100%"}
+                                    >
+                                        {t("about_us.title")}
+                                    </Heading>
+                                </Flex>
+                                <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }}>
                                     {t("about_us.description")}
                                 </Text>
                                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mt={5}>
                                     <Info
+                                        icon={<Icon as={FaPeopleGroup} w={10} h={10} />}
                                         title={t("about_us.1.title")}
                                         text={t("about_us.1.text")}
                                     />
                                     <Info
+                                        icon={<Icon as={FaRankingStar} w={10} h={10} />}
                                         title={t("about_us.2.title")}
                                         text={t("about_us.2.text")}
                                     />
                                     <Info
+                                        icon={<Icon as={GiRingedPlanet} w={10} h={10} />}
                                         title={t("about_us.3.title")}
                                         text={t("about_us.3.text")}
                                     />
@@ -200,34 +219,10 @@ const Home = () => {
                         <Section delay={0.6}>
                             <Box
                                 fontFamily={"'Etna', sans-serif"}
-                                py={12}
+                                py={1}
                                 rounded={"3xl"}
                                 w={"100%"}
                             >
-                                <Text
-                                    as="a"
-                                    href="/"
-                                    color={useColorModeValue("gray.900", "gray.200")}
-                                    fontWeight={"medium"}
-                                    fontSize={"md"}
-                                    border={"1px solid"}
-                                    borderColor={useColorModeValue("gray.300", "gray.700")}
-                                    p={2}
-                                    alignSelf={"flex-start"}
-                                    rounded={"2xl"}
-                                    w={"fit-content"}
-                                >
-                                    {t("company.ecosystem")}
-                                </Text>
-                                <Heading
-                                    py={5}
-                                    textAlign={"left"}
-                                    fontSize={"xl"}
-                                    fontWeight={"medium"}
-                                    color={useColorModeValue("white_yellow", "dark_yellow")}
-                                >
-                                    {t("company.description")}
-                                </Heading>
                                 <Flex
                                     w={"100%"}
                                     justifyContent={"space-between"}
@@ -263,6 +258,121 @@ const Home = () => {
                             </Box >
                         </Section>
                     </Container>
+                </Box >
+                <Box>
+                    <Container maxW="10xl" pt={10}>
+                        <Section delay={0.8} fontFamily={"'Etna', sans-serif"}>
+                            <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
+                                <Icon
+                                    as={IoLink}
+                                    w={10} h={10} mx={2}
+                                    alignSelf={"center"}
+                                    color={useColorModeValue("white_yellow", "dark_yellow")}
+                                    display={{ base: "none", sm: "block" }}
+                                />
+                                <Heading id="contacts"
+                                    textAlign={"left"}
+                                    fontSize={{ base: "2xl", md: "3xl" }}
+                                    color={useColorModeValue("white_yellow", "dark_yellow")}
+                                    w={"100%"}
+                                >
+                                    {t("faq.title")}
+                                </Heading>
+                            </Flex>
+                            <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={4}>
+                                {t("faq.description")}
+                            </Text>
+                            <Flex
+                                align={"center"}
+                                justify={"center"}
+                                rounded={"3xl"}
+                                mb={9}
+                            >
+                                <Container
+                                    justifyContent={"space-between"}
+                                    maxW="container.2xl"
+                                    p={7}
+                                    shadow={"lg"}
+                                    border={"1px solid"}
+                                    borderColor={useColorModeValue("gray.300", "gray.700")}
+                                    css={{ backdropFilter: "blur(10px)" }}
+                                    rounded={"3xl"}
+                                    _hover={{
+                                        cursor: "pointer"
+                                    }}
+                                >
+                                    <Flex w={"100%"} alignItems={"start"} flexWrap={"wrap"}>
+                                        <Accordion allowMultiple w="100%">
+                                            <AccordionItem border={"none"} py={1}>
+                                                <AccordionButton
+                                                    display="flex"
+                                                    alignItems="start"
+                                                    justifyContent="space-between"
+                                                >
+                                                    <Text
+                                                        fontSize={{ base: "xl", md: "2xl" }}
+                                                        wordBreak={"break-word"}
+                                                    >
+                                                        {t("faq.1.title")}
+                                                    </Text>
+                                                    <ChevronDownIcon fontSize="24px" />
+                                                </AccordionButton>
+                                                <AccordionPanel>
+                                                    <Text
+                                                        color="gray.600"
+                                                        fontSize={{ base: "lg", md: "xl" }}
+                                                        wordBreak={"break-word"}
+                                                    >
+                                                        {t("faq.1.text")}
+                                                    </Text>
+                                                </AccordionPanel>
+                                            </AccordionItem>
+                                            <AccordionItem border={"none"} py={1}>
+                                                <AccordionButton
+                                                    display="flex"
+                                                    alignItems="start"
+                                                    justifyContent="space-between"
+                                                >
+                                                    <Text
+                                                        fontSize={{ base: "xl", md: "2xl" }}
+                                                        wordBreak={"break-word"}
+                                                    >
+                                                        {t("faq.2.title")}
+                                                    </Text>
+                                                    <ChevronDownIcon fontSize="24px" />
+                                                </AccordionButton>
+                                                <AccordionPanel>
+                                                    <Text color="gray.600" fontSize={{ base: "lg", md: "xl" }}>
+                                                        {t("faq.2.text")}
+                                                    </Text>
+                                                </AccordionPanel>
+                                            </AccordionItem>
+                                            <AccordionItem border={"none"} py={1}>
+                                                <AccordionButton
+                                                    display="flex"
+                                                    alignItems="start"
+                                                    justifyContent="space-between"
+                                                >
+                                                    <Text
+                                                        fontSize={{ base: "xl", md: "2xl" }}
+                                                        wordBreak={"break-word"}
+                                                    >
+                                                        {t("faq.3.title")}
+                                                    </Text>
+                                                    <ChevronDownIcon fontSize="24px" />
+                                                </AccordionButton>
+                                                <AccordionPanel>
+                                                    <Text color="gray.600" fontSize={{ base: "lg", md: "xl" }}>
+                                                        {t("faq.3.text")}
+                                                    </Text>
+                                                </AccordionPanel>
+                                            </AccordionItem>
+                                        </Accordion>
+                                    </Flex>
+                                </Container>
+                            </Flex>
+                        </Section>
+                    </Container >
                 </Box>
                 <Box>
                     <Container maxW="10xl">
@@ -273,16 +383,26 @@ const Home = () => {
                                 maxW={"10xl"}
                                 py={10}
                             >
-                                <Heading id="contacts"
-                                    fontFamily={"'Etna', sans-serif"}
-                                    py={3}
-                                    textAlign={"left"}
-                                    fontSize={"4xl"}
-                                    color={useColorModeValue("white_yellow", "dark_yellow")}
-                                >
-                                    {t("contacts.title")}
-                                </Heading>
-                                <Text color={"gray.500"} fontSize={"2xl"}>
+                                <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
+                                    <Icon
+                                        as={IoLink}
+                                        w={10} h={10} mx={2}
+                                        alignSelf={"center"}
+                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        display={{ base: "none", sm: "block" }}
+                                    />
+                                    <Heading id="contacts"
+                                        fontFamily={"'Etna', sans-serif"}
+                                        py={3}
+                                        textAlign={"left"}
+                                        fontSize={{ base: "2xl", md: "3xl" }}
+                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        w={"100%"}
+                                    >
+                                        {t("contacts.title")}
+                                    </Heading>
+                                </Flex>
+                                <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={4}>
                                     {t("contacts.description")}
                                 </Text>
                                 <Flex
@@ -303,7 +423,7 @@ const Home = () => {
                                             aria-label="Telegram"
                                         >
                                             <InfoFullyGrid
-                                                icon={<FaStar size={"3rem"} />}
+                                                icon={<FaStar size={"2.5rem"} />}
                                                 text={t("contacts.owner.title")}
                                                 title={t("contacts.owner.telegram")}
                                             />
@@ -315,7 +435,7 @@ const Home = () => {
                                             aria-label="Telegram"
                                         >
                                             <InfoFullyGrid
-                                                icon={<MdBusinessCenter size={"3rem"} />}
+                                                icon={<MdBusinessCenter size={"2.5rem"} />}
                                                 text={t("contacts.leading.title")}
                                                 title={t("contacts.leading.telegram")}
                                             />
@@ -327,7 +447,7 @@ const Home = () => {
                                             aria-label="Telegram"
                                         >
                                             <InfoFullyGrid
-                                                icon={<IoIosPeople size={"3rem"} />}
+                                                icon={<IoIosPeople size={"2.5rem"} />}
                                                 text={t("contacts.traffic.title")}
                                                 title={t("contacts.traffic.telegram")}
                                             />
@@ -338,7 +458,7 @@ const Home = () => {
                         </Section>
                     </Container>
                 </Box>
-            </Flex>
+            </Flex >
         </Layout >
     );
 };
