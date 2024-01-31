@@ -7,7 +7,7 @@ const Logo = () => {
         <Link href={"#home"} passHref scroll={false} aria-label="Home" label="Home">
             <Box p={2}>
                 <Image
-                    src="/images/logo_3d.png"
+                    src="/images/logo_2d.png"
                     alt="Alt Corporation Logo"
                     width={65}
                     height={65}
