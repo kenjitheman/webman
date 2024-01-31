@@ -1,10 +1,9 @@
 import React from "react";
-import { Box, Flex, Stack, Stat, StatLabel, StatNumber, Text, useColorModeValue, List, ListItem } from "@chakra-ui/react";
-import { CheckIcon } from "@chakra-ui/icons";
+import { Box, Flex, Stack, Stat, StatLabel, StatNumber, Text, useColorModeValue, List, ListItem, Icon } from "@chakra-ui/react";
 import { AnimateOnHover } from "../components/custom_animations";
 import { FiArrowUpRight } from "react-icons/fi";
+import { CheckIcon } from "@chakra-ui/icons";
 
-// welcome_stats.js
 const WelcomeStat = (props) => {
     const { title, text } = props;
     return (
@@ -27,7 +26,7 @@ const WelcomeStat = (props) => {
                 <Flex justifyContent={"space-evenly"}>
                     <Box>
                         <StatNumber
-                            fontSize={{ base: "2xl", xl: "4xl" }}
+                            fontSize={{ base: "3xl", xl: "4xl" }}
                             fontWeight={"bold"}
                             color={useColorModeValue("white_yellow", "dark_yellow")}
                             textAlign={"center"}
@@ -49,7 +48,7 @@ const WelcomeStat = (props) => {
     );
 };
 
-// stats_fully_grid.js
+// not in use rn
 const StatFullyGrid = (props) => {
     const { title, text, icon } = props;
     return (
@@ -104,8 +103,7 @@ const StatsCard = (props) => {
         <AnimateOnHover>
             <Flex flexDirection="column" alignItems="center" justifyContent="center">
                 <Stat
-                    px={{ base: 4, md: 15 }}
-                    py={10}
+                    p={7}
                     shadow={"lg"}
                     border={"1px solid"}
                     minHeight={"100%"}
@@ -117,13 +115,18 @@ const StatsCard = (props) => {
                     }}
                 >
                     <StatNumber
-                        fontSize={"3xl"}
+                        fontSize={{ base: "xl", md: "2xl" }}
                         fontWeight={"regular"}
                         color={useColorModeValue("white_yellow", "dark_yellow")}
+                        pb={2}
                     >
                         {title}
                     </StatNumber>
-                    <StatLabel fontSize={"2xl"} fontWeight={"medium"} color={"gray.500"}>
+                    <StatLabel
+                        fontSize={{ base: "lg", xl: "xl" }}
+                        fontWeight={"regular"}
+                        color={"gray.500"}
+                    >
                         {text}
                     </StatLabel>
                 </Stat>
@@ -153,22 +156,23 @@ const InfoFullyGrid = (props) => {
                 }}
             >
                 <Flex align={"center"} justify={"space-evenly"}>
-                    <Box m={2} color={useColorModeValue("white_yellow", "dark_yellow")} alignContent={"start"}>
+                    <Box color={useColorModeValue("white_yellow", "dark_yellow")} alignContent={"start"}>
                         {icon}
                     </Box>
                 </Flex>
-                <Text fontSize={"2xl"} fontWeight={"medium"} p={3}>
-                    {text}{": "}{title}
+                <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight={"medium"} px={{ base: 2, md: 4 }}>
+                    {text}: {title}
                 </Text>
-                <FiArrowUpRight size={35} />
+                <Flex align={"center"} justify={"space-evenly"}>
+                    <FiArrowUpRight size={34} />
+                </Flex>
             </Flex>
         </AnimateOnHover>
     );
 };
 
 const Feature = (props) => {
-    const { title, text, icon, ...included } = props;
-
+    const { title, text, icon, includes } = props;
     return (
         <AnimateOnHover>
             <Flex
@@ -197,23 +201,50 @@ const Feature = (props) => {
                         border={"1px solid"}
                         borderColor={useColorModeValue("gray.300", "gray.700")}
                         rounded={"3xl"}
+                        p={2}
                     >
                         {icon}
                     </Flex>
-                    <Text fontSize={"2xl"} fontWeight={"medium"} p={3}>
+                    <Text
+                        fontSize={"2xl"}
+                        fontWeight={"medium"}
+                        p={3}
+                        wordBreak={"break-word"}
+                    >
                         {title}
                     </Text>
                 </Flex>
-                <Text fontSize={"xl"} fontWeight={"regular"} p={3} color={"gray.500"}>
+                <Text
+                    fontSize={"xl"}
+                    fontWeight={"regular"}
+                    color={"gray.500"}
+                    p={2}
+                    justify={"center"}
+                    wordBreak={"break-word"}
+                >
                     {text}
                 </Text>
+                {includes && typeof includes === "object" && Object.keys(includes).length > 0 && (
+                    <List spacing={3}>
+                        {Object.keys(includes).map((key, index) => (
+                            <ListItem key={index} fontSize={"xl"} fontWeight={"regular"}>
+                                <Icon
+                                    as={CheckIcon}
+                                    color={useColorModeValue("white_yellow", "dark_yellow")}
+                                    pr={2} w={7} h={7}
+                                />
+                                {includes[key]}
+                            </ListItem>
+                        ))}
+                    </List>
+                )}
             </Flex>
-        </AnimateOnHover>
+        </AnimateOnHover >
     );
 };
 
 const Info = (props) => {
-    const { title, text } = props;
+    const { title, text, icon } = props;
     return (
         <AnimateOnHover>
             <Box
@@ -231,16 +262,33 @@ const Info = (props) => {
                 p={5}
             >
                 <Stack>
-                    <Text
-                        fontWeight={"medium"}
+                    <Flex
+                        flexDirection="row"
+                        alignItems="center"
+                        justifyContent="start"
                         color={useColorModeValue("white_yellow", "dark_yellow")}
                     >
-                        {title}
+                        {icon}
+                        <Text
+                            fontWeight={"medium"}
+                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                            pl={{ base: 3, md: 4 }}
+                            fontSize={{ base: "lg", md: "2xl" }}
+                            wordBreak={"break-word"}
+                            w={"100%"}
+                        >
+                            {title}
+                        </Text>
+                    </Flex>
+                    <Text color={"gray.500"}
+                        fontSize={{ base: "lg", md: "xl" }}
+                        fontWeight={"regular"}
+                    >
+                        {text}
                     </Text>
-                    <Text color={"gray.500"}>{text}</Text>
                 </Stack >
             </Box >
-        </AnimateOnHover>
+        </AnimateOnHover >
     );
 };
 
