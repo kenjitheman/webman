@@ -91,17 +91,15 @@
         }
     },
     "company": {
-        "ecosystem": "EXPLORE OUR ECOSYSTEM",
-        "description": "We redefine crypto trading, setting new standards.",
-        "we_serve": {
+        "1": {
             "title": "Serving the Finest Traders",
             "text": "Our goal is to empower and serve the best traders in the industry, offering them the tools and insights needed for unparalleled success."
         },
-        "our_mission": {
+        "2": {
             "title": "Mission: Transforming the Crypto World",
             "text": "Alt Corporation aims to change the world by providing accessible and advanced crypto trading solutions, fostering financial empowerment globally."
         },
-        "our_vision": {
+        "3": {
             "title": "Vision: Shaping the Future of Finance",
             "text": "We envision a future where Alt Corporation plays a pivotal role in shaping the landscape of decentralized finance, making financial freedom a reality for all."
         }
