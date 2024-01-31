@@ -82,7 +82,7 @@ const Home = () => {
                                             text={t("stats.3.text")}
                                         />
                                         <WelcomeStat
-                                            title={capital + "k$+"}
+                                            title={capital + "K+"}
                                             text={t("stats.4.text")}
                                         />
                                     </SimpleGrid>
