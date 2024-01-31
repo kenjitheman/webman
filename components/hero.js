@@ -40,6 +40,8 @@ const Hero = (props) => {
                 maxW={"full"}
                 fontFamily={"'Etna', sans-serif"}
                 display={"flex"}
+                w={"100%"}
+                wordBreak={"break-word"}
                 justifyContent={"space-between"}
                 alignItems={"flex-start"}
                 wrap={"wrap"}
@@ -54,7 +56,7 @@ const Hero = (props) => {
                     borderColor={useColorModeValue("gray.300", "gray.700")}
                 >
                     <Heading
-                        fontWeight={600}
+                        fontWeight={"bold"}
                         fontSize={{ base: "3xl", sm: "5xl", md: "6xl" }}
                         color={useColorModeValue("gray.900", "white")}
                         p={2}
@@ -63,9 +65,9 @@ const Hero = (props) => {
                     </Heading>
                     <Text
                         fontSize={{ base: "md", lg: "xl" }}
-                        color={useColorModeValue("gray.500", "gray.300")}
-                        fontWeight={400}
-                        p={2}
+                        color={useColorModeValue("gray.800", "white")}
+                        fontWeight={"medium"}
+                        p={1}
                     >
                         {text}
                     </Text>
