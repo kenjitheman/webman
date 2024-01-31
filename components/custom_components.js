@@ -96,45 +96,6 @@ const StatFullyGrid = (props) => {
     );
 };
 
-// community.js
-const StatsCard = (props) => {
-    const { title, text } = props;
-    return (
-        <AnimateOnHover>
-            <Flex flexDirection="column" alignItems="center" justifyContent="center">
-                <Stat
-                    p={7}
-                    shadow={"lg"}
-                    border={"1px solid"}
-                    minHeight={"100%"}
-                    borderColor={useColorModeValue("gray.300", "gray.700")}
-                    rounded={"3xl"}
-                    _hover={{
-                        cursor: "pointer",
-                        borderColor: useColorModeValue("white_yellow", "dark_yellow")
-                    }}
-                >
-                    <StatNumber
-                        fontSize={{ base: "xl", md: "2xl" }}
-                        fontWeight={"regular"}
-                        color={useColorModeValue("white_yellow", "dark_yellow")}
-                        pb={2}
-                    >
-                        {title}
-                    </StatNumber>
-                    <StatLabel
-                        fontSize={{ base: "lg", xl: "xl" }}
-                        fontWeight={"regular"}
-                        color={"gray.500"}
-                    >
-                        {text}
-                    </StatLabel>
-                </Stat>
-            </Flex>
-        </AnimateOnHover>
-    );
-};
-
 const InfoFullyGrid = (props) => {
     const { title, text, icon } = props;
     return (
@@ -292,4 +253,4 @@ const Info = (props) => {
     );
 };
 
-export { WelcomeStat, StatFullyGrid, StatsCard, InfoFullyGrid, Info, Feature };
+export { WelcomeStat, StatFullyGrid, InfoFullyGrid, Info, Feature };
