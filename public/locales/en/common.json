@@ -1,16 +1,20 @@
 {
-    "website_description": "Alt Corporation is a leading crypto trading platform, empowering users with innovative solutions tailored for the dynamic landscape of digital assets.",
+    "website_description": "Alt Corporation: multifunctional range of services. Explore our services, including signal channel maintenance, turnkey channel creation, traffic arbitrage, transaction guarantor, and design. Our expert team ensures exceptional reliability and low commissions, shaping the future of decentralized finance. Contact us to achieve your financial goals.",
     "navbar": {
         "home": "Home",
         "about_us": "About Us",
         "contacts": "Contacts",
         "services": "Services",
         "blog": "Blog",
-        "reviews": "Reviews"
+        "reviews": "Reviews",
+        "community": "Community",
+        "invest": "Invest fund",
+        "faq": "FAQ",
+        "education": "Education"
     },
     "welcome": {
         "title": "Alt Corporation",
-        "description": "Our mission is to empower users with comprehensive solutions tailored for the dynamic landscape of digital assets"
+        "description": "Welcome: Unleashing a Multifunctional Range of Services for Your Success."
     },
     "stats": {
         "1": {
@@ -28,25 +32,27 @@
     },
     "services": {
         "title": "Multifunctional range of services",
-        "description": "Alt Corporation is more than just a digital product design agency; we are your strategic partner in navigating the complexities of crypto trading. Our seasoned professionals focus on delivering unparalleled user experiences, transforming virtual transactions into real-world success stories.",
+        "description": "A team of experts is ready to be inspired by your ideas and work with enthusiasm to exceed your expectations. Absolutely any flight of imagination of the customer will be fulfilled instantly.",
         "1": {
             "title": "Maintaining a signal channel",
             "description": "Services for maintaining a signal channel",
             "includes": {
                 "1": "Issuing signals (crypto/forex)",
-                "2": "Market Analytics",
+                "2": "Market analytics",
                 "3": "Writing posts",
                 "4": "Voice messages",
                 "5": "Live broadcasts",
                 "6": "Mugs with an actor",
                 "7": "Marathons",
                 "8": "Training",
-                "9": "Absolutely any flight of fancy of the customer will be fulfilled instantly"
+                "9": "Publish statistics",
+                "10": "Entering trades on margin",
+                "11": "There is a trial period"
             }
         },
         "2": {
             "title": "Turnkey channel",
-            "description": "Development of your channel from scratch",
+            "description": "Experienced specialists are ready to take responsibility in creating and promoting your channel from the very beginning to achieving profit.",
             "includes": {
                 "1": "Avatar development",
                 "2": "Description development",
@@ -55,26 +61,29 @@
                 "5": "Channel management",
                 "6": "Buying/selling advertising",
                 "7": "Attracting external traffic",
-                "8": "Channel monetization",
-                "9": "Absolutely any flight of fancy of the customer will be fulfilled instantly"
+                "8": "Channel monetization"
             }
         },
         "3": {
             "title": "Traffic arbitrage",
-            "description": "A wide range of services for the development of your channel",
+            "description": "A team of professionals is ready to accept your request and develop a strategy that will help attract the target audience from external social networks to your channel at a better price than the market price.",
             "includes": {
-                "1": "Targeted traffic (inst, YouTube, TT, spam)",
-                "2": "Driving traffic from external social networks, exclusively targeted and high-quality audience",
-                "3": "Trial period 20pdp"
+                "1": "Target sources: instagram/spams",
+                "2": "Diversion of traffic from external social networks, exclusively targeted and high-quality audience",
+                "3": "Traffic arbitration in the telegram channel",
+                "4": "Pour the target audience from external resources into the channel",
+                "5": "There is a trial period"
             }
         },
         "4": {
             "title": "Transaction guarantor",
-            "description": "We guarantee the safety of your funds",
+            "description": "Our professional team is here to offer a transaction guarantee service, ensuring the security and reliability of your transactions. Benefit from our expertise at a competitive rate, providing peace of mind beyond market standards.",
             "includes": {
-                "1": "Any type of transaction is welcome",
-                "2": "Lots of completed transactions",
-                "3": "2-5% of the transaction amount"
+                "1": "Low commission",
+                "2": "Multiple completed transactions",
+                "3": "Exceptional reliability",
+                "4": "High speed of transaction execution",
+                "5": "A transaction of any nature is welcome"
             }
         },
         "5": {
