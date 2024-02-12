@@ -2,10 +2,9 @@ import React from "react";
 import { Box, Container, Stack, Text } from "@chakra-ui/react";
 import LanguageSwitcher from "./language_switcher.js";
 import { FaDiscord } from "react-icons/fa";
-import { ImTelegram } from "react-icons/im";
 import { useTranslation } from "next-i18next";
+import { FaTelegram } from "react-icons/fa";
 import { PiInstagramLogoBold } from "react-icons/pi";
-import { RiTelegramLine } from "react-icons/ri";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link.js";
 
@@ -46,17 +45,9 @@ const Footer = () => {
                                 href="https://t.me/alt_portfolio"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Telegram-main"
-                            >
-                                <ImTelegram size={35} />
-                            </Link>
-                            <Link
-                                href="https://t.me/alt_corp"
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 aria-label="Telegram-reviews"
                             >
-                                <RiTelegramLine size={43} />
+                                <FaTelegram size={35} />
                             </Link>
                             <Link
                                 href="https://www.instagram.com/tema.burovin"
@@ -72,14 +63,14 @@ const Footer = () => {
                     <Text pt={{ base: 5, md: 0 }} fontSize={"md"} textAlign={{ base: "center", md: "left" }}>
                         &copy; {new Date().getFullYear()} Alt Corporation. {t("footer.copyright")} {" Contact: "}
                         <Link
-                            href="mailto:"
+                            href="mailto:info@altcorp.org"
                             isExternal
                             alt="Email link"
                             aria-label="Email"
                             color="gray.500"
                             fontWeight="semibold"
                         >
-                            mail@alt-corp.org
+                            info@altcorp.org
                         </Link>
                     </Text>
                 </Stack>
