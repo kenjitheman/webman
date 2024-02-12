@@ -10,6 +10,7 @@ const WelcomeStat = (props) => {
         <AnimateOnHover>
             <Stat
                 p={10}
+                minH={"100%"}
                 shadow={"lg"}
                 border={"1px solid"}
                 borderColor={useColorModeValue("gray.300", "gray.700")}
@@ -209,9 +210,9 @@ const Info = (props) => {
     return (
         <AnimateOnHover>
             <Box
-                w="100%"
-                h="100%"
-                minHeight={"100%"}
+                w={"100%"}
+                minH={"100%"}
+                p={5}
                 border={"1px solid"}
                 borderColor={useColorModeValue("gray.300", "gray.700")}
                 shadow={"lg"}
@@ -220,7 +221,7 @@ const Info = (props) => {
                     borderColor: useColorModeValue("white_yellow", "dark_yellow")
                 }}
                 rounded={"3xl"}
-                p={5}
+                css={{ backdropFilter: "blur(10px)" }}
             >
                 <Stack>
                     <Flex
