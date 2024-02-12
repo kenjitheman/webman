@@ -4,8 +4,7 @@ import Logo from "../components/logo.js";
 import { useRouter } from "next/router";
 import ThemeToggleButton from "../components/theme-toggle-button.js";
 import { PiInstagramLogoBold } from "react-icons/pi";
-import { ImTelegram } from "react-icons/im";
-import { RiTelegramLine } from "react-icons/ri";
+import { FaTelegram } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 import LanguageSwitcher from "./language_switcher.js";
 import Scroll from "react-scroll";
@@ -20,11 +19,13 @@ const Links = {
     about_us: "#about-us",
     services: "#services",
     contacts: "#contacts",
-    reviews: "https://t.me/alt_corp"
+    education: "education",
+    community: "community",
+    invest: "invest-fund"
 };
 
 const NavLink = ({ children, href, currentPath }) => {
-    const isActive = href === currentPath;
+    const isCurrent = href === currentPath;
     const isScrollLink = href.startsWith("#");
     const isExternalLink = href.startsWith("http");
 
@@ -32,7 +33,7 @@ const NavLink = ({ children, href, currentPath }) => {
         return (
             <Box
                 as="a"
-                px={5}
+                px={3}
                 py={2}
                 textDecoration="none"
                 color={useColorModeValue("gray.900", "white")}
@@ -68,7 +69,7 @@ const NavLink = ({ children, href, currentPath }) => {
                 }}
             >
                 <Box
-                    px={5}
+                    px={3}
                     py={2}
                     rounded="2xl"
                     color={useColorModeValue("gray.900", "white")}
@@ -93,9 +94,8 @@ const NavLink = ({ children, href, currentPath }) => {
             textDecoration="none"
             _hover={{
                 textDecoration: "none",
-                bg: useColorModeValue("white_yellow", "dark_yellow")
+                color: useColorModeValue("white_yellow", "dark_yellow")
             }}
-            bg={isActive ? useColorModeValue("white_yellow", "dark_yellow") : useColorModeValue("gray.200", "gray.900")}
             href={href}
             target="_self"
             rel="noopener noreferrer"
@@ -165,15 +165,7 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             aria-label="Telegram-main"
                         >
-                            <ImTelegram size={30} />
-                        </Link>
-                        <Link
-                            href="https://t.me/alt_corp"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Telegram-reviews"
-                        >
-                            <RiTelegramLine size={37} />
+                            <FaTelegram size={30} />
                         </Link>
                         <Link
                             href="https://www.instagram.com/tema.burovin"
@@ -194,10 +186,16 @@ const Navbar = () => {
                 </Flex>
 
                 {isOpen ? (
-                    <Box p={6} display={{ lg: "none" }}>
+                    <Box
+                        p={3}
+                        display={{ lg: "none" }}
+                        maxH={"100vh"}
+                        w={"100%"}
+                        zIndex={2}
+                    >
                         <Stack
                             as={"nav"}
-                            spacing={7}
+                            spacing={6}
                             fontFamily={"'Etna', sans-serif"}
                             fontSize={"lg"}
                             fontWeight={"medium"}
@@ -224,15 +222,7 @@ const Navbar = () => {
                                         rel="noopener noreferrer"
                                         aria-label="Telegram-main"
                                     >
-                                        <ImTelegram size={30} />
-                                    </Link>
-                                    <Link
-                                        href="https://t.me/alt_corp"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label="Telegram-reviews"
-                                    >
-                                        <RiTelegramLine size={36} />
+                                        <FaTelegram size={30} />
                                     </Link>
                                     <Link
                                         href="https://www.instagram.com/tema.burovin"
