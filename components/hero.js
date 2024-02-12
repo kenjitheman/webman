@@ -55,6 +55,7 @@ const Hero = (props) => {
                     border={"1px solid"}
                     borderColor={useColorModeValue("gray.300", "gray.700")}
                 >
+
                     <Heading
                         fontWeight={"bold"}
                         fontSize={{ base: "3xl", sm: "5xl", md: "6xl" }}
