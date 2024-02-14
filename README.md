@@ -1,7 +1,7 @@
 ## Installation
 
 ```sh
-git clone https://github.com/btwkenji/altcorp.org
+git clone https://github.com/plastiey/altcorp.org
 ```
 
 - Install all dependencies

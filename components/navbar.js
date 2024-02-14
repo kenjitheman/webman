@@ -17,8 +17,8 @@ const ScrollLink = Scroll.Link;
 const Links = {
     home: "#home",
     about_us: "#about-us",
-    services: "#services",
     contacts: "#contacts",
+    services: "services",
     education: "education",
     community: "community",
     invest: "invest-fund"
