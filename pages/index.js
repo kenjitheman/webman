@@ -7,7 +7,7 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { Hero } from "../components/hero.js";
-import { WelcomeStat, InfoFullyGrid, Feature, Info } from "../components/custom_components.js";
+import { WelcomeStat, InfoFullyGrid, Info } from "../components/custom_components.js";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FaStar } from "react-icons/fa";
@@ -15,11 +15,6 @@ import { MdBusinessCenter } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
 import Link from "next/link.js";
 import { incrementExperience, incrementHappyClients, incrementReviews, incrementCapital } from "../utils/incrementor.js";
-import { TiChartLineOutline } from "react-icons/ti";
-import { HiOutlineKey } from "react-icons/hi";
-import { GiTrafficLightsGreen } from "react-icons/gi";
-import { GrTransaction } from "react-icons/gr";
-import { MdDesignServices } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GiRingedPlanet } from "react-icons/gi";
 import { FaRankingStar } from "react-icons/fa6";
@@ -52,7 +47,10 @@ const Home = () => {
     const capital = incrementCapital(capitalNow, lastMonth);
 
     return (
-        <Layout title="Alt Corporation" description={t("website_description")}>
+        <Layout
+            title="Alt Corporation"
+            description={t("website_description")}
+        >
             <Flex flexDirection={"column"}>
                 <Section delay={0.1}>
                     <Box>
@@ -65,7 +63,7 @@ const Home = () => {
                     </Box>
                 </Section>
                 <Box>
-                    <Container maxW="10xl">
+                    <Container maxW="full">
                         <Section delay={0.2}>
                             <Box pt={5} px={{ base: 2, sm: 12, md: 17 }}>
                                 <Flex flexDirection={{ base: "column", md: "row" }} justifyContent={"space-between"}>
@@ -101,98 +99,7 @@ const Home = () => {
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="10xl" id="services">
-                        <Section delay={0.3}>
-                            <Box
-                                fontFamily={"'Etna', sans-serif"}
-                                rounded={"3xl"}
-                                maxW={"10xl"}
-                                py={10}
-                            >
-                                <ScrollAnimation>
-                                    <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
-                                        <Icon
-                                            as={IoLink}
-                                            w={{ base: 7, md: 10 }} h={{ base: 7, md: 10 }} mx={2}
-                                            alignSelf={"center"}
-                                            color={useColorModeValue("white_yellow", "dark_yellow")}
-                                            display={{ base: "none", sm: "block" }}
-                                        />
-                                        <Heading
-                                            fontFamily={"'Etna', sans-serif"}
-                                            py={3}
-                                            textAlign={"left"}
-                                            fontSize={{ base: "2xl", md: "3xl" }}
-                                            color={useColorModeValue("white_yellow", "dark_yellow")}
-                                            w={"100%"}
-                                        >
-                                            {t("services.title")}
-                                        </Heading>
-                                    </Flex>
-                                </ScrollAnimation>
-                                <ScrollAnimation>
-                                    <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={10}>
-                                        {t("services.description")}
-                                    </Text>
-                                </ScrollAnimation>
-                                <Flex
-                                    maxW={"10xl"}
-                                    flexDirection={{ base: "column", md: "row" }}
-                                    justifyContent={"center"}
-                                >
-                                    <SimpleGrid
-                                        w={{ base: "100%", md: "90%" }}
-                                        columns={1}
-                                        spacing={7}
-                                    >
-                                        <ScrollAnimation>
-                                            <Feature
-                                                icon={<Icon as={TiChartLineOutline} w={10} h={10} />}
-                                                title={t("services.1.title")}
-                                                text={t("services.1.description")}
-                                                includes={t("services.1.includes")}
-                                            />
-                                        </ScrollAnimation>
-                                        <ScrollAnimation>
-                                            <Feature
-                                                icon={<Icon as={HiOutlineKey} w={10} h={10} />}
-                                                title={t("services.2.title")}
-                                                text={t("services.2.description")}
-                                                includes={t("services.2.includes")}
-                                            />
-                                        </ScrollAnimation>
-                                        <ScrollAnimation>
-                                            <Feature
-                                                icon={<Icon as={GiTrafficLightsGreen} w={10} h={10} />}
-                                                title={t("services.3.title")}
-                                                text={t("services.3.description")}
-                                                includes={t("services.3.includes")}
-                                            />
-                                        </ScrollAnimation>
-                                        <ScrollAnimation>
-                                            <Feature
-                                                icon={<Icon as={GrTransaction} w={10} h={10} />}
-                                                title={t("services.4.title")}
-                                                text={t("services.4.description")}
-                                                includes={t("services.4.includes")}
-                                            />
-                                        </ScrollAnimation>
-                                        <ScrollAnimation>
-                                            <Feature
-                                                icon={<Icon as={MdDesignServices} w={10} h={10} />}
-                                                title={t("services.5.title")}
-                                                text={t("services.5.description")}
-                                                includes={t("services.5.includes")}
-                                            />
-                                        </ScrollAnimation>
-                                    </SimpleGrid>
-                                </Flex>
-                            </Box>
-                        </Section>
-                    </Container>
-                </Box>
-                <Box>
-                    <Container maxW="10xl" id="about-us">
+                    <Container maxW="full" id="about-us">
                         <Section delay={0.5}>
                             <Box
                                 p={4}
@@ -219,34 +126,26 @@ const Home = () => {
                                             {t("about_us.title")}
                                         </Heading>
                                     </Flex>
-                                </ScrollAnimation>
-                                <ScrollAnimation>
                                     <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }}>
                                         {t("about_us.description")}
                                     </Text>
                                 </ScrollAnimation>
                                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mt={5} w={"100%"}>
-                                    <ScrollAnimation>
-                                        <Info
-                                            icon={<Icon as={FaPeopleGroup} w={10} h={10} />}
-                                            title={t("about_us.1.title")}
-                                            text={t("about_us.1.text")}
-                                        />
-                                    </ScrollAnimation>
-                                    <ScrollAnimation>
-                                        <Info
-                                            icon={<Icon as={FaRankingStar} w={10} h={10} />}
-                                            title={t("about_us.2.title")}
-                                            text={t("about_us.2.text")}
-                                        />
-                                    </ScrollAnimation>
-                                    <ScrollAnimation>
-                                        <Info
-                                            icon={<Icon as={GiRingedPlanet} w={10} h={10} />}
-                                            title={t("about_us.3.title")}
-                                            text={t("about_us.3.text")}
-                                        />
-                                    </ScrollAnimation>
+                                    <Info
+                                        icon={<Icon as={FaPeopleGroup} w={10} h={10} />}
+                                        title={t("about_us.1.title")}
+                                        text={t("about_us.1.text")}
+                                    />
+                                    <Info
+                                        icon={<Icon as={FaRankingStar} w={10} h={10} />}
+                                        title={t("about_us.2.title")}
+                                        text={t("about_us.2.text")}
+                                    />
+                                    <Info
+                                        icon={<Icon as={GiRingedPlanet} w={10} h={10} />}
+                                        title={t("about_us.3.title")}
+                                        text={t("about_us.3.text")}
+                                    />
                                 </SimpleGrid>
                             </Box>
                         </Section>
@@ -266,44 +165,36 @@ const Home = () => {
                                     alignItems={"center"}
                                 >
                                     <Box w={{ base: "100%", md: "50%" }} pb={{ base: 12, md: 0 }}>
-                                        <ScrollAnimation>
-                                            <Image
-                                                src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
-                                                loading={"lazy"}
-                                                rounded={"3xl"}
-                                                alt={"Stats Image"}
-                                                border={"1px solid"}
-                                                borderColor={useColorModeValue("gray.300", "gray.700")}
-                                                objectFit={"cover"}
-                                                fill={true}
-                                                quality={100}
-                                                w={"100%"}
-                                                h={{ base: 80, md: "lg" }}
-                                            />
-                                        </ScrollAnimation>
+                                        <Image
+                                            src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
+                                            loading={"lazy"}
+                                            rounded={"3xl"}
+                                            alt={"About us image"}
+                                            border={"1px solid"}
+                                            borderColor={useColorModeValue("gray.300", "gray.700")}
+                                            objectFit={"cover"}
+                                            fill={true}
+                                            quality={100}
+                                            w={"100%"}
+                                            h={{ base: 80, md: "lg" }}
+                                        />
                                     </Box>
                                     <SimpleGrid w={{ base: "100%", md: "45%" }} columns={{ base: 1, md: 1 }} spacing={6}>
-                                        <ScrollAnimation>
-                                            <Info
-                                                icon={<Icon as={FaStarHalfAlt} w={10} h={10} />}
-                                                title={t("company.1.title")}
-                                                text={t("company.1.text")}
-                                            />
-                                        </ScrollAnimation>
-                                        <ScrollAnimation>
-                                            <Info
-                                                icon={<Icon as={LuGoal} w={10} h={10} />}
-                                                title={t("company.2.title")}
-                                                text={t("company.2.text")}
-                                            />
-                                        </ScrollAnimation>
-                                        <ScrollAnimation>
-                                            <Info
-                                                icon={<Icon as={PiHandEye} w={10} h={10} />}
-                                                title={t("company.3.title")}
-                                                text={t("company.3.text")}
-                                            />
-                                        </ScrollAnimation>
+                                        <Info
+                                            icon={<Icon as={FaStarHalfAlt} w={10} h={10} />}
+                                            title={t("about_us.4.title")}
+                                            text={t("about_us.4.text")}
+                                        />
+                                        <Info
+                                            icon={<Icon as={LuGoal} w={10} h={10} />}
+                                            title={t("about_us.5.title")}
+                                            text={t("about_us.5.text")}
+                                        />
+                                        <Info
+                                            icon={<Icon as={PiHandEye} w={10} h={10} />}
+                                            title={t("about_us.6.title")}
+                                            text={t("about_us.6.text")}
+                                        />
                                     </SimpleGrid>
                                 </Flex>
                             </Box >
@@ -311,7 +202,7 @@ const Home = () => {
                     </Container>
                 </Box >
                 <Box>
-                    <Container maxW="10xl" pt={10} id="faq">
+                    <Container maxW="10xl" pt={10}>
                         <Section delay={0.8} fontFamily={"'Etna', sans-serif"}>
                             <ScrollAnimation>
                                 <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
@@ -362,8 +253,14 @@ const Home = () => {
                                                 <AccordionItem border={"none"} py={1}>
                                                     <AccordionButton
                                                         display="flex"
+                                                        rounded="2xl"
                                                         alignItems="start"
                                                         justifyContent="space-between"
+                                                        _hover={{
+                                                            bg: "none",
+                                                            border: "1px solid",
+                                                            borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                                                        }}
                                                     >
                                                         <Text
                                                             fontSize={{ base: "xl", md: "2xl" }}
@@ -386,8 +283,14 @@ const Home = () => {
                                                 <AccordionItem border={"none"} py={1}>
                                                     <AccordionButton
                                                         display="flex"
+                                                        rounded="2xl"
                                                         alignItems="start"
                                                         justifyContent="space-between"
+                                                        _hover={{
+                                                            bg: "none",
+                                                            border: "1px solid",
+                                                            borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                                                        }}
                                                     >
                                                         <Text
                                                             fontSize={{ base: "xl", md: "2xl" }}
@@ -406,8 +309,14 @@ const Home = () => {
                                                 <AccordionItem border={"none"} py={1}>
                                                     <AccordionButton
                                                         display="flex"
+                                                        rounded="2xl"
                                                         alignItems="start"
                                                         justifyContent="space-between"
+                                                        _hover={{
+                                                            bg: "none",
+                                                            border: "1px solid",
+                                                            borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                                                        }}
                                                     >
                                                         <Text
                                                             fontSize={{ base: "xl", md: "2xl" }}
@@ -462,7 +371,7 @@ const Home = () => {
                                     </Flex>
                                 </ScrollAnimation>
                                 <ScrollAnimation>
-                                    <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={4}>
+                                    <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={7}>
                                         {t("contacts.description")}
                                     </Text>
                                 </ScrollAnimation>
