@@ -10,7 +10,8 @@ const ScrollAnimation = ({ children }) => {
 
     const fadeIn = useSpring({
         opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(60px)"
+        transform: inView ? "translateY(0)" : "translateY(122px)",
+        config: { duration: 450 }
     });
 
     return (
