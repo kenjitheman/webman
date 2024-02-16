@@ -49,18 +49,15 @@ const WelcomeStat = (props) => {
     );
 };
 
-// not in use rn
-const StatFullyGrid = (props) => {
+const CommunityInfo = (props) => {
     const { title, text, icon } = props;
     return (
         <AnimateOnHover>
             <Flex
                 flexDirection="row"
                 alignItems="center"
-                px={{ base: 4, md: 15 }}
-                position={"relative"}
-                my={5}
-                py={8}
+                justifyContent="space-between"
+                p={8}
                 shadow={"lg"}
                 border={"1px solid"}
                 borderColor={useColorModeValue("gray.300", "gray.700")}
@@ -70,28 +67,26 @@ const StatFullyGrid = (props) => {
                     borderColor: useColorModeValue("white_yellow", "dark_yellow")
                 }}
             >
-                <Flex align={"center"} justify={"space-evenly"}>
-                    <Box
-                        m={4}
-                        color={useColorModeValue("white_yellow", "dark_yellow")}
-                        alignContent={"start"}
-                        w={16}
-                        h={16}
-                    >
-                        {icon}
-                    </Box>
-                    <Text
-                        fontSize={"3xl"}
-                        fontWeight={"medium"}
-                        color={useColorModeValue("white_yellow", "dark_yellow")}
-                    >
-                        {title}
-                    </Text>
-                    <Text fontSize={{ base: "xl", xl: "2xl" }} fontWeight={"medium"}>
-                        {text}
-                    </Text>
-                    <FiArrowUpRight size={40} position={"absolute"} right={0} />
+                <Flex align={"center"} flexDirection="row">
+                    <Stack direction={"column"} spacing={2}>
+                        <Flex>
+                            <Box color={useColorModeValue("white_yellow", "dark_yellow")} alignContent={"start"}>
+                                {icon}
+                            </Box>
+                            <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight={"medium"} px={{ base: 2, md: 4 }}>
+                                {title}
+                            </Text>
+                        </Flex>
+                        <Text
+                            fontSize={{ base: "lg", md: "xl" }}
+                            fontWeight={"regular"}
+                            color={useColorModeValue("gray.500", "gray.400")}
+                        >
+                            {text}
+                        </Text>
+                    </Stack>
                 </Flex>
+                <FiArrowUpRight size={34} />
             </Flex>
         </AnimateOnHover>
     );
@@ -104,9 +99,8 @@ const InfoFullyGrid = (props) => {
             <Flex
                 flexDirection="row"
                 alignItems="center"
-                justifyContent="center"
-                px={{ base: 4, md: 15 }}
-                my={5}
+                justifyContent="space-between"
+                minH={"100%"}
                 p={8}
                 shadow={"lg"}
                 border={"1px solid"}
@@ -117,23 +111,21 @@ const InfoFullyGrid = (props) => {
                     borderColor: useColorModeValue("white_yellow", "dark_yellow")
                 }}
             >
-                <Flex align={"center"} justify={"space-evenly"}>
+                <Flex align={"center"}>
                     <Box color={useColorModeValue("white_yellow", "dark_yellow")} alignContent={"start"}>
                         {icon}
                     </Box>
+                    <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight={"medium"} px={{ base: 3, md: 5 }}>
+                        {text}: {title}
+                    </Text>
                 </Flex>
-                <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight={"medium"} px={{ base: 2, md: 4 }}>
-                    {text}: {title}
-                </Text>
-                <Flex align={"center"} justify={"space-evenly"}>
-                    <FiArrowUpRight size={34} />
-                </Flex>
+                <FiArrowUpRight size={34} />
             </Flex>
         </AnimateOnHover>
     );
 };
 
-const Feature = (props) => {
+const Service = (props) => {
     const { title, text, icon, includes } = props;
     return (
         <AnimateOnHover>
@@ -141,8 +133,8 @@ const Feature = (props) => {
                 flexDirection="column"
                 alignItems="flex-start"
                 justifyContent="center"
-                w={"100%"}
-                position={"relative"}
+                alignContent="center"
+                minH={"100%"}
                 shadow={"lg"}
                 border={"1px solid"}
                 borderColor={useColorModeValue("gray.300", "gray.700")}
@@ -151,7 +143,7 @@ const Feature = (props) => {
                     cursor: "pointer",
                     borderColor: useColorModeValue("white_yellow", "dark_yellow")
                 }}
-                p={5}
+                p={7}
             >
                 <Flex flexDirection="row" alignItems="flex-start">
                     <Flex
@@ -210,9 +202,8 @@ const Info = (props) => {
     return (
         <AnimateOnHover>
             <Box
-                w={"100%"}
-                minH={"100%"}
                 p={5}
+                minH={"full"}
                 border={"1px solid"}
                 borderColor={useColorModeValue("gray.300", "gray.700")}
                 shadow={"lg"}
@@ -245,13 +236,14 @@ const Info = (props) => {
                     <Text color={"gray.500"}
                         fontSize={{ base: "lg", md: "xl" }}
                         fontWeight={"regular"}
+                        wordBreak={"break-word"}
                     >
                         {text}
                     </Text>
-                </Stack >
-            </Box >
+                </Stack>
+            </Box>
         </AnimateOnHover >
     );
 };
 
-export { WelcomeStat, StatFullyGrid, InfoFullyGrid, Info, Feature };
+export { WelcomeStat, InfoFullyGrid, Info, Service, CommunityInfo };
