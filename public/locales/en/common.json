@@ -32,6 +32,8 @@
     },
     "services": {
         "title": "Multifunctional range of services",
+        "page_title": "Services",
+        "page_description": "Explore our services, including signal channel maintenance, turnkey channel creation, traffic arbitrage, transaction guarantor, and design. Our expert team ensures exceptional reliability and low commissions, shaping the future of decentralized finance.",
         "description": "A team of experts is ready to be inspired by your ideas and work with enthusiasm to exceed your expectations. Absolutely any flight of imagination of the customer will be fulfilled instantly.",
         "1": {
             "title": "Maintaining a signal channel",
@@ -65,28 +67,6 @@
             }
         },
         "3": {
-            "title": "Traffic arbitrage",
-            "description": "A team of professionals is ready to accept your request and develop a strategy that will help attract the target audience from external social networks to your channel at a better price than the market price.",
-            "includes": {
-                "1": "Target sources: instagram/spams",
-                "2": "Diversion of traffic from external social networks, exclusively targeted and high-quality audience",
-                "3": "Traffic arbitration in the telegram channel",
-                "4": "Pour the target audience from external resources into the channel",
-                "5": "There is a trial period"
-            }
-        },
-        "4": {
-            "title": "Transaction guarantor",
-            "description": "Our professional team is here to offer a transaction guarantee service, ensuring the security and reliability of your transactions. Benefit from our expertise at a competitive rate, providing peace of mind beyond market standards.",
-            "includes": {
-                "1": "Low commission",
-                "2": "Multiple completed transactions",
-                "3": "Exceptional reliability",
-                "4": "High speed of transaction execution",
-                "5": "A transaction of any nature is welcome"
-            }
-        },
-        "5": {
             "title": "Design",
             "description": "We create unique designs for your business",
             "includes": {
@@ -97,20 +77,64 @@
                 "5": "Stickers",
                 "6": "Absolutely any flight of fancy of the customer will be fulfilled instantly"
             }
+        },
+        "4": {
+            "title": "Transaction guarantor",
+            "description": "Ensuring the security and reliability of your transactions. Benefit from our expertise at a competitive rate, providing peace.",
+            "includes": {
+                "1": "Low commission",
+                "2": "Multiple completed transactions",
+                "3": "Exceptional reliability",
+                "4": "High speed of transaction execution",
+                "5": "A transaction of any nature is welcome"
+            }
+        },
+        "5": {
+            "title": "Traffic arbitrage",
+            "description": "A team of professionals is ready to accept your request and develop a strategy that will help attract the target audience from external social networks to your channel at a better price than the market price.",
+            "includes": {
+                "1": "Target sources: instagram/spams",
+                "2": "Diversion of traffic from external social networks, exclusively targeted and high-quality audience",
+                "3": "Traffic arbitration in the telegram channel",
+                "4": "Pour the target audience from external resources into the channel",
+                "5": "There is a trial period"
+            }
         }
     },
-    "company": {
-        "1": {
-            "title": "Serving the Finest Traders",
-            "text": "Our goal is to empower and serve the best traders in the industry, offering them the tools and insights needed for unparalleled success."
+    "community": {
+        "title": "Community",
+        "page_title": "Community",
+        "description": "Join our community to stay updated with the latest news, insights, and trends in the world of decentralized finance. Our community is a place for traders, investors, and enthusiasts to connect, share, and learn from each other.",
+        "page_description": "Join our community to stay updated with the latest news, insights, and trends in the world of decentralized finance. Our community is a place for traders, investors, and enthusiasts to connect, share, and learn from each other.",
+        "telegram": {
+            "1": {
+                "title": "Signals",
+                "text": "Stay updated with the latest news."
+            },
+            "2": {
+                "title": "Traffic",
+                "text": "Stay updated with the latest news."
+            },
+            "3": {
+                "title": "Content",
+                "text": "Stay updated with the latest news."
+            },
+            "4": {
+                "title": "Support",
+                "text": "Stay updated with the latest news."
+            }
         },
-        "2": {
-            "title": "Mission: Transforming the Crypto World",
-            "text": "Alt Corporation aims to change the world by providing accessible and advanced crypto trading solutions, fostering financial empowerment globally."
+        "discord": {
+            "1": {
+                "title": "Discord",
+                "text": "Stay updated with the latest news."
+            }
         },
-        "3": {
-            "title": "Vision: Shaping the Future of Finance",
-            "text": "We envision a future where Alt Corporation plays a pivotal role in shaping the landscape of decentralized finance, making financial freedom a reality for all."
+        "instagram": {
+            "1": {
+                "title": "Instagram",
+                "text": "Stay updated with the latest news."
+            }
         }
     },
     "about_us": {
@@ -127,10 +151,22 @@
         "3": {
             "title": "Commitment",
             "text": "We strive to continuously improve our products and services to meet our customers' needs and exceed their expectations."
+        },
+        "4": {
+            "title": "Serving the Finest Traders",
+            "text": "Our goal is to empower and serve the best traders in the industry, offering them the tools and insights needed for unparalleled success."
+        },
+        "5": {
+            "title": "Mission: Transforming the Crypto World",
+            "text": "Alt Corporation aims to change the world by providing accessible and advanced crypto trading solutions, fostering financial empowerment globally."
+        },
+        "6": {
+            "title": "Vision: Shaping the Future of Finance",
+            "text": "We envision a future where Alt Corporation plays a pivotal role in shaping the landscape of decentralized finance, making financial freedom a reality for all."
         }
     },
     "contacts": {
-        "title": "Alt Corporation contact list",
+        "title": "Contacts",
         "description": "We are always happy to answer your questions and provide you with additional information about our products and services. Contact us to learn more about how Alt Corporation can help you achieve your goals",
         "owner": {
             "title": "Owner",
