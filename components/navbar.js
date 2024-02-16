@@ -15,13 +15,13 @@ import Link from "next/link.js";
 const ScrollLink = Scroll.Link;
 
 const Links = {
-    home: "#home",
-    about_us: "#about-us",
-    contacts: "#contacts",
+    home: "/#home",
+    about_us: "/#about-us",
+    contacts: "/#contacts",
     services: "services",
-    education: "education",
-    community: "community",
-    invest: "invest-fund"
+    community: "community"
+    // education: "education",
+    // invest: "invest-fund"
 };
 
 const NavLink = ({ children, href, currentPath }) => {
