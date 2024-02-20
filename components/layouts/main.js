@@ -1,7 +1,8 @@
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
-import Navbar from "../navbar";
 import { Box, Container } from "@chakra-ui/react";
+import Navbar from "../navbar";
+import ProgressBar from "../progress_bar";
 import Footer from "../footer";
 
 const Main = ({ children, router }) => {
@@ -30,6 +31,7 @@ const Main = ({ children, router }) => {
                 </AnimatePresence>
                 <Footer />
             </Container>
+            <ProgressBar />
         </Box>
     );
 };
