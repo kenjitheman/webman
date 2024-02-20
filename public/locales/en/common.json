@@ -181,6 +181,10 @@
             "telegram": "@altcorp_traffic"
         }
     },
+    "reviews": {
+        "title": "Reviews",
+        "description": "We are always happy to receive feedback from our customers. Your opinion is important to us and helps us improve our products and services."
+    },
     "404": {
         "title": "Page not found",
         "description": "Page not found",
