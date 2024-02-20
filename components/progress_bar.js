@@ -2,9 +2,6 @@ import React from "react";
 import ScrollProgressBar from "react-scroll-progress-bar";
 import { useColorModeValue } from "@chakra-ui/react";
 
-// white_yellow: "#f09301",
-// dark_yellow: "#c2781b"
-
 const ProgressBar = () => {
     return (
         <ScrollProgressBar
