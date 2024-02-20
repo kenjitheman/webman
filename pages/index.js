@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link.js";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import {
     Box, Container, Icon, useColorModeValue, Flex, Heading, SimpleGrid, Text, Image,
     AccordionButton, AccordionPanel, AccordionItem, Accordion
 } from "@chakra-ui/react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { Hero } from "../components/hero.js";
 import { WelcomeStat, InfoFullyGrid, Info } from "../components/custom_components.js";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import {
+    incrementExperience, incrementHappyClients, incrementReviews, incrementCapital
+} from "../utils/incrementor.js";
+import { ScrollAnimation } from "../components/scroll_animation.js";
+
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import { FaStar } from "react-icons/fa";
 import { MdBusinessCenter } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
-import Link from "next/link.js";
-import { incrementExperience, incrementHappyClients, incrementReviews, incrementCapital } from "../utils/incrementor.js";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GiRingedPlanet } from "react-icons/gi";
 import { FaRankingStar } from "react-icons/fa6";
@@ -22,7 +29,7 @@ import { IoLink } from "react-icons/io5";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { LuGoal } from "react-icons/lu";
 import { PiHandEye } from "react-icons/pi";
-import { ScrollAnimation } from "../components/scroll_animation.js";
+import Carousel from "../components/carousel.js";
 
 const Home = () => {
     const { t } = useTranslation("common");
@@ -341,13 +348,118 @@ const Home = () => {
                     </Container >
                 </Box>
                 <Box>
+                    <Container maxW="10xl" id="reviews">
+                        <Section delay={0.3}>
+                            <Box
+                                fontFamily={"'Etna', sans-serif"}
+                                rounded={"3xl"}
+                                maxW={"10xl"}
+                                py={5}
+                            >
+                                <ScrollAnimation>
+                                    <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
+                                        <Icon
+                                            as={IoLink}
+                                            w={10} h={10} mx={2}
+                                            alignSelf={"center"}
+                                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                                            display={{ base: "none", sm: "block" }}
+                                        />
+                                        <Heading
+                                            fontFamily={"'Etna', sans-serif"}
+                                            py={3}
+                                            textAlign={"left"}
+                                            fontSize={{ base: "2xl", md: "3xl" }}
+                                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                                            w={"100%"}
+                                        >
+                                            {t("reviews.title")}
+                                        </Heading>
+                                    </Flex>
+                                </ScrollAnimation>
+                                <ScrollAnimation>
+                                    <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={7}>
+                                        {t("reviews.description")}
+                                    </Text>
+                                </ScrollAnimation>
+                                <Flex
+                                    maxW={"100%"}
+                                    alignItems={"center"}
+                                    p={5}
+                                >
+                                    <Carousel
+                                        items={[
+                                            <Box
+                                                rounded={{ base: "xl", md: "3xl" }}
+                                                p={5}
+                                                align={"center"}
+                                                w={"100%"}
+                                            >
+                                                <Image
+                                                    src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
+                                                    loading={"lazy"}
+                                                    rounded={{ base: "xl", md: "3xl" }}
+                                                    alt={"About us image"}
+                                                    border={"1px solid"}
+                                                    objectFit={"cover"}
+                                                    fill={true}
+                                                    borderColor={useColorModeValue("gray.300", "gray.700")}
+                                                    quality={100}
+                                                    h={"sm"}
+                                                />
+                                            </Box>,
+                                            <Box
+                                                rounded={{ base: "xl", md: "3xl" }}
+                                                p={5}
+                                                align={"center"}
+                                                w={"100%"}
+                                            >
+                                                <Image
+                                                    src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
+                                                    loading={"lazy"}
+                                                    rounded={{ base: "xl", md: "3xl" }}
+                                                    alt={"About us image"}
+                                                    border={"1px solid"}
+                                                    objectFit={"cover"}
+                                                    fill={true}
+                                                    borderColor={useColorModeValue("gray.300", "gray.700")}
+                                                    quality={100}
+                                                    h={"sm"}
+                                                />
+                                            </Box>,
+                                            <Box
+                                                rounded={{ base: "xl", md: "3xl" }}
+                                                p={5}
+                                                align={"center"}
+                                                w={"100%"}
+                                            >
+                                                <Image
+                                                    src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
+                                                    loading={"lazy"}
+                                                    rounded={{ base: "xl", md: "3xl" }}
+                                                    alt={"About us image"}
+                                                    border={"1px solid"}
+                                                    objectFit={"cover"}
+                                                    fill={true}
+                                                    borderColor={useColorModeValue("gray.300", "gray.700")}
+                                                    quality={100}
+                                                    h={"sm"}
+                                                />
+                                            </Box>
+                                        ]} />
+                                </Flex>
+                            </Box>
+                        </Section>
+                    </Container>
+                </Box>
+                <Box>
                     <Container maxW="10xl" id="contacts">
                         <Section delay={0.3}>
                             <Box
                                 fontFamily={"'Etna', sans-serif"}
                                 rounded={"3xl"}
                                 maxW={"10xl"}
-                                py={10}
+                                pb={5}
                             >
                                 <ScrollAnimation>
                                     <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
@@ -444,5 +556,6 @@ export const getStaticProps = async ({ locale }) => ({
         ...await serverSideTranslations(locale, ["common"])
     }
 });
+
 
 export default Home;
