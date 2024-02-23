@@ -24,7 +24,7 @@ const LanguageSwitcher = ({ id }) => {
             }}
             borderColor={useColorModeValue("gray.300", "gray.700")}
             value={router.locale}
-            width={{ base: "auto", md: "90px" }}
+            width={{ base: "auto", md: "75px" }}
             onChange={(e) => handleChangeLanguage(e.target.value)}
         >
             {Object.entries(languages).map(([locale, language]) => (
