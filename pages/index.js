@@ -509,7 +509,7 @@ const Home = () => {
                                 >
                                     <SimpleGrid
                                         w={"full"}
-                                        columns={{ base: 1, md: 3 }}
+                                        columns={{ md: 1, lg: 3 }}
                                         spacing={6}
                                     >
                                         <ScrollAnimation>
