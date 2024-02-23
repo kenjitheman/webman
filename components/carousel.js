@@ -8,7 +8,7 @@ function Carousel({ items }) {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         speed: 6000,
         autoplay: true,
         autoplaySpeed: 6000,
@@ -20,7 +20,7 @@ function Carousel({ items }) {
     };
 
     return (
-        <Box className="slider-container" w={"100%"} m={"auto"}>
+        <Box className="slider-container" w={"100%"} h={"100%"} align={"center"} justify={"space-evenly"}>
             <Slider {...settings}>
                 {items.map((item, index) => (
                     <div key={index}>{item}</div>

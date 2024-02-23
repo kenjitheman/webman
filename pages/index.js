@@ -396,7 +396,11 @@ const Home = () => {
                                                 w={"100%"}
                                             >
                                                 <Image
-                                                    src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
+                                                    src={
+                                                        useColorModeValue(
+                                                            "images/bg_white.webp", "images/bg_dark.webp"
+                                                        )
+                                                    }
                                                     loading={"lazy"}
                                                     rounded={{ base: "xl", md: "3xl" }}
                                                     alt={"About us image"}
@@ -415,7 +419,12 @@ const Home = () => {
                                                 w={"100%"}
                                             >
                                                 <Image
-                                                    src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
+                                                    src={
+                                                        useColorModeValue(
+                                                            "images/bg_white.webp",
+                                                            "images/bg_dark.webp"
+                                                        )
+                                                    }
                                                     loading={"lazy"}
                                                     rounded={{ base: "xl", md: "3xl" }}
                                                     alt={"About us image"}
@@ -434,7 +443,12 @@ const Home = () => {
                                                 w={"100%"}
                                             >
                                                 <Image
-                                                    src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
+                                                    src={
+                                                        useColorModeValue(
+                                                            "images/bg_white.webp",
+                                                            "images/bg_dark.webp"
+                                                        )
+                                                    }
                                                     loading={"lazy"}
                                                     rounded={{ base: "xl", md: "3xl" }}
                                                     alt={"About us image"}
