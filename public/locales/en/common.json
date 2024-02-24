@@ -2,14 +2,13 @@
     "website_description": "Alt Corporation: multifunctional range of services. Explore our services, including signal channel maintenance, turnkey channel creation, traffic arbitrage, transaction guarantor, and design. Our expert team ensures exceptional reliability and low commissions, shaping the future of decentralized finance. Contact us to achieve your financial goals.",
     "navbar": {
         "home": "Home",
-        "about_us": "About us",
+        "about_us": "About Us",
         "contacts": "Contacts",
         "services": "Services",
         "blog": "Blog",
         "reviews": "Reviews",
         "community": "Community",
         "invest": "Invest fund",
-        "faq": "FAQ",
         "education": "Education"
     },
     "welcome": {
@@ -36,68 +35,64 @@
         "page_description": "Explore our services, including signal channel maintenance, turnkey channel creation, traffic arbitrage, transaction guarantor, and design. Our expert team ensures exceptional reliability and low commissions, shaping the future of decentralized finance.",
         "description": "A team of experts is ready to be inspired by your ideas and work with enthusiasm to exceed your expectations. Absolutely any flight of imagination of the customer will be fulfilled instantly.",
         "1": {
-            "title": "Maintaining a signal channel",
-            "description": "Services for maintaining a signal channel",
+            "title": "Signal Channel Management",
+            "description": "Our team of experts is ready to be inspired by your ideas and work with enthusiasm to exceed your expectations.",
             "includes": {
-                "1": "Issuing signals (crypto/forex)",
-                "2": "Market analytics",
-                "3": "Writing posts",
+                "1": "Signal issuance (crypto/forex)",
+                "2": "Statistics publication",
+                "3": "Post writing",
                 "4": "Voice messages",
                 "5": "Live broadcasts",
-                "6": "Mugs with an actor",
-                "7": "Marathons",
-                "8": "Training",
-                "9": "Publish statistics",
-                "10": "Entering trades on margin",
-                "11": "There is a trial period"
+                "6": "Actor-hosted sessions",
+                "7": "Training",
+                "8": "Market analysis",
+                "9": "Margin trading entry"
             }
         },
         "2": {
-            "title": "Turnkey channel",
-            "description": "Experienced specialists are ready to take responsibility in creating and promoting your channel from the very beginning to achieving profit.",
+            "title": "Turnkey Channel",
+            "description": "Experienced specialists are ready to take responsibility for creating and promoting your channel from the very beginning to profitability.",
             "includes": {
                 "1": "Avatar development",
                 "2": "Description development",
-                "3": "Development of advertising creatives",
+                "3": "Ad creative development",
                 "4": "Content plan development",
                 "5": "Channel management",
-                "6": "Buying/selling advertising",
-                "7": "Attracting external traffic",
+                "6": "Buying/selling ads",
+                "7": "External traffic attraction",
                 "8": "Channel monetization"
             }
         },
         "3": {
-            "title": "Design",
-            "description": "We create unique designs for your business",
+            "title": "Deal Guarantor",
+            "description": "Reliability for your transactions. Benefit from our experience at a competitive price, ensuring peace of mind.",
             "includes": {
-                "1": "Avatars",
-                "2": "Logos",
-                "3": "Preview",
-                "4": "Banners",
-                "5": "Stickers",
-                "6": "Absolutely any flight of fancy of the customer will be fulfilled instantly"
+                "1": "Low commission",
+                "2": "Numerous completed transactions",
+                "3": "Exceptional reliability",
+                "4": "High-speed transaction processing",
+                "5": "Any type of deal welcome"
             }
         },
         "4": {
-            "title": "Transaction guarantor",
-            "description": "Ensuring the security and reliability of your transactions. Benefit from our expertise at a competitive rate, providing peace.",
+            "title": "Telegram Channel Traffic Arbitrage",
+            "description": "A team of professionals is ready to take your request and develop a strategy to attract a target audience from external social networks to your channel at a more favorable cost than the market.",
             "includes": {
-                "1": "Low commission",
-                "2": "Multiple completed transactions",
-                "3": "Exceptional reliability",
-                "4": "High speed of transaction execution",
-                "5": "A transaction of any nature is welcome"
+                "1": "Target sources: instagram/spams",
+                "2": "Traffic transfer from external social networks, exclusively targeted and high-quality audience",
+                "3": "Telegram channel traffic arbitrage",
+                "4": "Trial work period available"
             }
         },
         "5": {
-            "title": "Traffic arbitrage",
-            "description": "A team of professionals is ready to accept your request and develop a strategy that will help attract the target audience from external social networks to your channel at a better price than the market price.",
+            "title": "Content Manager for Any Theme Channel",
+            "description": "A team of specialists is ready to take your idea and create attractive content that perfectly fits your theme.",
             "includes": {
-                "1": "Target sources: instagram/spams",
-                "2": "Diversion of traffic from external social networks, exclusively targeted and high-quality audience",
-                "3": "Traffic arbitration in the telegram channel",
-                "4": "Pour the target audience from external resources into the channel",
-                "5": "There is a trial period"
+                "1": "Content plan creation",
+                "2": "Writing unique and engaging posts",
+                "3": "Audience engagement",
+                "4": "Tips for retaining reach",
+                "5": "Trial work period available"
             }
         }
     },
