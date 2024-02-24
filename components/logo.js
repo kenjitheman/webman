@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Logo = () => {
     return (
-        <Link href={"/#home"} passHref scroll={false} aria-label="Home" label="Home">
+        <Link href="/" passHref scroll={false} aria-label="Home" label="Home">
             <Box p={2}>
                 <Image
                     src="/images/logo_2d.png"

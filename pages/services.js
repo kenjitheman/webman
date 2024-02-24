@@ -77,16 +77,16 @@ const Services = () => {
                                         includes={t("services.2.includes")}
                                     />
                                     <Service
-                                        icon={<Icon as={GiTrafficLightsGreen} w={10} h={10} />}
+                                        icon={<Icon as={GrTransaction} w={10} h={10} />}
                                         title={t("services.3.title")}
                                         text={t("services.3.description")}
                                         includes={t("services.3.includes")}
                                     />
                                     <Service
-                                        icon={<Icon as={GrTransaction} w={10} h={10} />}
-                                        title={t("services.4.title")}
-                                        text={t("services.4.description")}
-                                        includes={t("services.4.includes")}
+                                        icon={<Icon as={MdDesignServices} w={10} h={10} />}
+                                        title={t("services.5.title")}
+                                        text={t("services.5.description")}
+                                        includes={t("services.5.includes")}
                                     />
                                 </SimpleGrid>
                             </Flex>
@@ -96,10 +96,10 @@ const Services = () => {
                             >
                                 <SimpleGrid columns={1}>
                                     <Service
-                                        icon={<Icon as={MdDesignServices} w={10} h={10} />}
-                                        title={t("services.5.title")}
-                                        text={t("services.5.description")}
-                                        includes={t("services.5.includes")}
+                                        icon={<Icon as={GiTrafficLightsGreen} w={10} h={10} />}
+                                        title={t("services.4.title")}
+                                        text={t("services.4.description")}
+                                        includes={t("services.4.includes")}
                                     />
                                 </SimpleGrid>
                             </Flex>

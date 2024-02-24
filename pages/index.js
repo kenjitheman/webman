@@ -73,8 +73,11 @@ const Home = () => {
                     <Container maxW="full">
                         <Section delay={0.2}>
                             <Box pt={5} px={{ base: 2, sm: 12, md: 17 }}>
-                                <Flex flexDirection={{ base: "column", md: "row" }} justifyContent={"space-between"}>
-                                    <SimpleGrid w={"full"} columns={{ base: 1, md: 4 }} spacing={6}>
+                                <Flex
+                                    flexDirection={{ base: "column", md: "row" }}
+                                    justifyContent={"space-between"}
+                                >
+                                    <SimpleGrid w={"full"} columns={{ base: 1, md: 2, lg: 4 }} spacing={6}>
                                         <ScrollAnimation>
                                             <WelcomeStat
                                                 title={experience + "+"}
@@ -115,13 +118,17 @@ const Home = () => {
                                 fontWeight={"regular"}
                             >
                                 <ScrollAnimation>
-                                    <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
+                                    <Flex
+                                        alignContent={"start"}
+                                        flexDirection={"row"}
+                                        alignItems={"center"}
+                                    >
                                         <Icon
                                             as={IoLink}
                                             w={10} h={10} mx={2}
                                             alignSelf={"center"}
                                             color={useColorModeValue("white_yellow", "dark_yellow")}
-                                            display={{ base: "none", sm: "block" }}
+                                            display="block"
                                         />
                                         <Heading
                                             fontFamily={"'Etna', sans-serif"}
@@ -137,7 +144,7 @@ const Home = () => {
                                         {t("about_us.description")}
                                     </Text>
                                 </ScrollAnimation>
-                                <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mt={5} w={"100%"}>
+                                <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={10} mt={5} w={"100%"}>
                                     <Info
                                         icon={<Icon as={FaPeopleGroup} w={10} h={10} />}
                                         title={t("about_us.1.title")}
@@ -168,10 +175,10 @@ const Home = () => {
                                 <Flex
                                     w={"100%"}
                                     justifyContent={"space-between"}
-                                    flexDirection={{ base: "column", md: "row" }}
+                                    flexDirection={{ base: "column", lg: "row" }}
                                     alignItems={"center"}
                                 >
-                                    <Box w={{ base: "100%", md: "50%" }} pb={{ base: 12, md: 0 }}>
+                                    <Box w={{ base: "100%", lg: "49%" }} pb={{ base: 12, lg: 0 }}>
                                         <Image
                                             src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
                                             loading={"lazy"}
@@ -186,7 +193,11 @@ const Home = () => {
                                             h={{ base: 80, md: "lg" }}
                                         />
                                     </Box>
-                                    <SimpleGrid w={{ base: "100%", md: "45%" }} columns={{ base: 1, md: 1 }} spacing={6}>
+                                    <SimpleGrid
+                                        w={{ base: "100%", lg: "49%" }}
+                                        columns={{ base: 1, md: 1 }}
+                                        spacing={6}
+                                    >
                                         <Info
                                             icon={<Icon as={FaStarHalfAlt} w={10} h={10} />}
                                             title={t("about_us.4.title")}
@@ -212,13 +223,18 @@ const Home = () => {
                     <Container maxW="10xl" pt={10}>
                         <Section delay={0.8} fontFamily={"'Etna', sans-serif"}>
                             <ScrollAnimation>
-                                <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
+                                <Flex
+                                    alignContent={"start"}
+                                    flexDirection={"row"}
+                                    alignItems={"center"}
+                                >
+
                                     <Icon
                                         as={IoLink}
                                         w={10} h={10} mx={2}
                                         alignSelf={"center"}
                                         color={useColorModeValue("white_yellow", "dark_yellow")}
-                                        display={{ base: "none", sm: "block" }}
+                                        display="block"
                                     />
                                     <Heading
                                         textAlign={"left"}
@@ -363,7 +379,7 @@ const Home = () => {
                                             w={10} h={10} mx={2}
                                             alignSelf={"center"}
                                             color={useColorModeValue("white_yellow", "dark_yellow")}
-                                            display={{ base: "none", sm: "block" }}
+                                            display="block"
                                         />
                                         <Heading
                                             fontFamily={"'Etna', sans-serif"}
@@ -476,13 +492,17 @@ const Home = () => {
                                 pb={5}
                             >
                                 <ScrollAnimation>
-                                    <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
+                                    <Flex
+                                        alignContent={"start"}
+                                        flexDirection={"row"}
+                                        alignItems={"center"}
+                                    >
                                         <Icon
                                             as={IoLink}
                                             w={10} h={10} mx={2}
                                             alignSelf={"center"}
                                             color={useColorModeValue("white_yellow", "dark_yellow")}
-                                            display={{ base: "none", sm: "block" }}
+                                            display="block"
                                         />
                                         <Heading
                                             fontFamily={"'Etna', sans-serif"}

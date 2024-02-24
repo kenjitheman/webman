@@ -15,13 +15,13 @@ import Link from "next/link.js";
 const ScrollLink = Scroll.Link;
 
 const Links = {
-    home: "/#home",
-    about_us: "/#about-us",
-    contacts: "/#contacts",
+    home: "#home",
+    about_us: "#about-us",
+    contacts: "#contacts",
     services: "services",
-    community: "community"
-    // education: "education",
-    // invest: "invest-fund"
+    community: "community",
+    education: "education",
+    invest: "invest-fund"
 };
 
 const NavLink = ({ children, href, currentPath }) => {
@@ -35,6 +35,7 @@ const NavLink = ({ children, href, currentPath }) => {
                 as="a"
                 px={3}
                 py={2}
+                fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
                 textDecoration="none"
                 color={useColorModeValue("gray.900", "white")}
                 _hover={{
@@ -72,6 +73,7 @@ const NavLink = ({ children, href, currentPath }) => {
                     px={3}
                     py={2}
                     rounded="2xl"
+                    fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
                     color={useColorModeValue("gray.900", "white")}
                     _hover={{
                         textDecoration: "none",
@@ -88,8 +90,9 @@ const NavLink = ({ children, href, currentPath }) => {
     return (
         <Box
             as="a"
-            px={5}
+            px={{ lg: 3, xl: 4, "2xl": 5 }}
             py={2}
+            fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
             rounded="2xl"
             textDecoration="none"
             _hover={{

@@ -20,7 +20,10 @@ function Carousel({ items }) {
     };
 
     return (
-        <Box className="slider-container" w={"100%"} h={"100%"} align={"center"} justify={"space-evenly"}>
+        <Box
+            className="slider-container" w={"100%"}
+            h={"100%"} align={"center"} justify={"space-evenly"}
+        >
             <Slider {...settings}>
                 {items.map((item, index) => (
                     <div key={index}>{item}</div>
