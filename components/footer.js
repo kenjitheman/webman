@@ -3,8 +3,9 @@ import { Box, Container, Stack, Text } from "@chakra-ui/react";
 import LanguageSwitcher from "./language_switcher.js";
 import { FaDiscord } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
-import { FaTelegram } from "react-icons/fa";
 import { PiInstagramLogoBold } from "react-icons/pi";
+import { FaTelegram } from "react-icons/fa";
+import { RiTelegramLine } from "react-icons/ri";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link.js";
 
@@ -48,6 +49,14 @@ const Footer = () => {
                                 aria-label="Telegram-reviews"
                             >
                                 <FaTelegram size={35} />
+                            </Link>
+                            <Link
+                                href="https://t.me/alt_portfolio"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Telegram-reviews"
+                            >
+                                <RiTelegramLine size={42} />
                             </Link>
                             <Link
                                 href="https://www.instagram.com/tema.burovin"

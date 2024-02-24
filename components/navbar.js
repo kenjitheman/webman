@@ -6,6 +6,7 @@ import ThemeToggleButton from "../components/theme-toggle-button.js";
 import { PiInstagramLogoBold } from "react-icons/pi";
 import { FaTelegram } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
+import { RiTelegramLine } from "react-icons/ri";
 import LanguageSwitcher from "./language_switcher.js";
 import Scroll from "react-scroll";
 import { useTranslation } from "next-i18next";
@@ -25,7 +26,6 @@ const Links = {
 };
 
 const NavLink = ({ children, href, currentPath }) => {
-    const isCurrent = href === currentPath;
     const isScrollLink = href.startsWith("#");
     const isExternalLink = href.startsWith("http");
 
@@ -33,7 +33,7 @@ const NavLink = ({ children, href, currentPath }) => {
         return (
             <Box
                 as="a"
-                px={3}
+                px={2}
                 py={2}
                 fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
                 textDecoration="none"
@@ -70,7 +70,7 @@ const NavLink = ({ children, href, currentPath }) => {
                 }}
             >
                 <Box
-                    px={3}
+                    px={2}
                     py={2}
                     rounded="2xl"
                     fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
@@ -90,7 +90,7 @@ const NavLink = ({ children, href, currentPath }) => {
     return (
         <Box
             as="a"
-            px={{ lg: 3, xl: 4, "2xl": 5 }}
+            px={{ lg: 2, xl: 3, "2xl": 5 }}
             py={2}
             fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
             rounded="2xl"
@@ -138,7 +138,7 @@ const Navbar = () => {
                             fontFamily={"'Etna', sans-serif"}
                             fontSize={{ lg: "lg", xl: "xl" }}
                             fontWeight={"medium"}
-                            display={{ base: "none", lg: "flex" }}
+                            display={{ base: "none", xl: "flex" }}
                         >
                             {linksArray.map(([label, link]) => (
                                 <NavLink key={label} href={link} currentPath={currentPath}>
@@ -148,7 +148,7 @@ const Navbar = () => {
                         </HStack>
                     </HStack>
                     <HStack
-                        display={{ base: "none", lg: "flex" }}
+                        display={{ base: "none", xl: "flex" }}
                         alignItems={"center"}
                         justifyContent={"flex-end"}
                     >
@@ -171,6 +171,14 @@ const Navbar = () => {
                             <FaTelegram size={30} />
                         </Link>
                         <Link
+                            href="https://t.me/alt_portfolio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Telegram-main"
+                        >
+                            <RiTelegramLine size={36} /> 
+                        </Link>
+                        <Link
                             href="https://www.instagram.com/tema.burovin"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -183,7 +191,7 @@ const Navbar = () => {
                         size={"lg"}
                         icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
                         aria-label={"Open Menu"}
-                        display={{ lg: "none" }}
+                        display={{ xl: "none" }}
                         onClick={isOpen ? onClose : onOpen}
                     />
                 </Flex>
@@ -191,7 +199,7 @@ const Navbar = () => {
                 {isOpen ? (
                     <Box
                         p={3}
-                        display={{ lg: "none" }}
+                        display={{ xl: "none" }}
                         maxH={"100vh"}
                         w={"100%"}
                         zIndex={2}
@@ -227,6 +235,14 @@ const Navbar = () => {
                                     >
                                         <FaTelegram size={30} />
                                     </Link>
+                        <Link
+                            href="https://t.me/alt_portfolio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Telegram-main"
+                        >
+                            <RiTelegramLine size={36} /> 
+                        </Link>
                                     <Link
                                         href="https://www.instagram.com/tema.burovin"
                                         target="_blank"
