@@ -25,7 +25,7 @@ const Links = {
     invest: "invest-fund"
 };
 
-const NavLink = ({ children, href, currentPath }) => {
+const NavLink = ({ children, href }) => {
     const isScrollLink = href.startsWith("#");
     const isExternalLink = href.startsWith("http");
 
@@ -176,7 +176,7 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             aria-label="Telegram-main"
                         >
-                            <RiTelegramLine size={36} /> 
+                            <RiTelegramLine size={36} />
                         </Link>
                         <Link
                             href="https://www.instagram.com/tema.burovin"
@@ -235,14 +235,14 @@ const Navbar = () => {
                                     >
                                         <FaTelegram size={30} />
                                     </Link>
-                        <Link
-                            href="https://t.me/alt_portfolio"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Telegram-main"
-                        >
-                            <RiTelegramLine size={36} /> 
-                        </Link>
+                                    <Link
+                                        href="https://t.me/alt_portfolio"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Telegram-main"
+                                    >
+                                        <RiTelegramLine size={36} />
+                                    </Link>
                                     <Link
                                         href="https://www.instagram.com/tema.burovin"
                                         target="_blank"
