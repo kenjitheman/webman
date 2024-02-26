@@ -171,7 +171,7 @@ const Navbar = () => {
                             <FaTelegram size={30} />
                         </Link>
                         <Link
-                            href="https://t.me/alt_portfolio"
+                            href="https://t.me/https://t.me/+Y1wM__EfbHtjZGU0"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Telegram-main"
@@ -236,7 +236,7 @@ const Navbar = () => {
                                         <FaTelegram size={30} />
                                     </Link>
                                     <Link
-                                        href="https://t.me/alt_portfolio"
+                                        href="https://t.me/+Y1wM__EfbHtjZGU0"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Telegram-main"
