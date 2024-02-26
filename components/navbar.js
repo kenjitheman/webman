@@ -12,20 +12,11 @@ import Scroll from "react-scroll";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link.js";
+import { useEffect } from "react";
 
 const ScrollLink = Scroll.Link;
 
-const Links = {
-    home: "#home",
-    about_us: "#about-us",
-    contacts: "#contacts",
-    services: "services",
-    community: "community",
-    education: "education",
-    invest: "invest-fund"
-};
-
-const NavLink = ({ children, href }) => {
+const NavLink = ({ href, children }) => {
     const isScrollLink = href.startsWith("#");
     const isExternalLink = href.startsWith("http");
 
@@ -113,8 +104,23 @@ const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const router = useRouter();
     const currentPath = router.asPath;
-    const linksArray = Object.entries(Links);
     const { t } = useTranslation("common");
+
+    const get_current_locale_from_local_storage = () => {
+        return typeof window !== "undefined" ?
+            localStorage.getItem("preferredLanguage") || router.locale :
+            router.locale;
+    };
+
+    const Links = {
+        home: `/${get_current_locale_from_local_storage()}/`,
+        services: `/${get_current_locale_from_local_storage()}/services`,
+        community: `/${get_current_locale_from_local_storage()}/community`,
+        education: `/${get_current_locale_from_local_storage()}/education`,
+        invest: `/${get_current_locale_from_local_storage()}/invest-fund`
+    };
+
+    const linksArray = Object.entries(Links);
 
     return (
         <>
