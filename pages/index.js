@@ -13,6 +13,8 @@ import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { Hero } from "../components/hero.js";
 import { WelcomeStat, InfoFullyGrid, Info } from "../components/custom_components.js";
+import Carousel from "../components/carousel.js";
+
 import {
     incrementExperience, incrementHappyClients, incrementReviews, incrementCapital
 } from "../utils/incrementor.js";
@@ -29,7 +31,7 @@ import { IoLink } from "react-icons/io5";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { LuGoal } from "react-icons/lu";
 import { PiHandEye } from "react-icons/pi";
-import Carousel from "../components/carousel.js";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Home = () => {
     const { t } = useTranslation("common");
@@ -373,24 +375,42 @@ const Home = () => {
                                 py={5}
                             >
                                 <ScrollAnimation>
-                                    <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
+                                    <Flex
+                                        alignItems={"start"}
+                                        alignContent={"center"}
+                                        flexDirection={"row"}
+                                    >
                                         <Icon
                                             as={IoLink}
-                                            w={10} h={10} mx={2}
+                                            w={10} h={10}
                                             alignSelf={"center"}
                                             color={useColorModeValue("white_yellow", "dark_yellow")}
                                             display="block"
                                         />
-                                        <Heading
-                                            fontFamily={"'Etna', sans-serif"}
-                                            py={3}
-                                            textAlign={"left"}
-                                            fontSize={{ base: "2xl", md: "3xl" }}
-                                            color={useColorModeValue("white_yellow", "dark_yellow")}
-                                            w={"100%"}
-                                        >
-                                            {t("reviews.title")}
-                                        </Heading>
+                                        <Flex flexDirection={"row"} alignItems={"center"}>
+                                            <Heading
+                                                fontFamily={"'Etna', sans-serif"}
+                                                py={3}
+                                                px={2}
+                                                textAlign={"left"}
+                                                fontSize={{ base: "2xl", md: "3xl" }}
+                                                color={useColorModeValue("white_yellow", "dark_yellow")}
+                                                w={"100%"}
+                                            >
+                                                {t("reviews.title")}
+                                            </Heading>
+                                            <Link href="https://t.me/+Y1wM__EfbHtjZGU0"
+                                                isExternal
+                                                aria-label="Reviews in telegram"
+                                                target="_blank"
+                                            >
+                                                <FiArrowUpRight
+                                                    size={"2rem"}
+                                                    alignSelf={"center"}
+                                                    color={useColorModeValue("white_yellow", "dark_yellow")}
+                                                />
+                                            </Link>
+                                        </Flex>
                                     </Flex>
                                 </ScrollAnimation>
                                 <ScrollAnimation>
