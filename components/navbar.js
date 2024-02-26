@@ -12,7 +12,6 @@ import Scroll from "react-scroll";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link.js";
-import { useEffect } from "react";
 
 const ScrollLink = Scroll.Link;
 
