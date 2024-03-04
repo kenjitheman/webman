@@ -21,7 +21,9 @@ function Carousel({ items }) {
 
     return (
         <Box
-            className="slider-container" w={"100%"}
+            className="slider-container"
+            w={{ base: "1000px", md: "1500px", lg: "110%", xl: "100%" }}
+            ml={{ base: "-10", md: "0" }}
             h={"100%"} align={"center"} justify={"space-evenly"}
         >
             <Slider {...settings}>
