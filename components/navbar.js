@@ -184,7 +184,7 @@ const Navbar = () => {
                             <RiTelegramLine size={36} />
                         </Link>
                         <Link
-                            href="https://www.instagram.com/tema.burovin"
+                            href="https://www.instagram.com/artem.san_"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Instagram"
@@ -236,7 +236,7 @@ const Navbar = () => {
                                         href="https://t.me/alt_portfolio"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Telegram-main"
+                                        aria-label="Telegram"
                                     >
                                         <FaTelegram size={30} />
                                     </Link>
@@ -244,12 +244,12 @@ const Navbar = () => {
                                         href="https://t.me/+Y1wM__EfbHtjZGU0"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Telegram-main"
+                                        aria-label="Telegram"
                                     >
                                         <RiTelegramLine size={36} />
                                     </Link>
                                     <Link
-                                        href="https://www.instagram.com/tema.burovin"
+                                        href="https://www.instagram.com/artem.san_"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Instagram"

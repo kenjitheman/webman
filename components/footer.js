@@ -46,7 +46,7 @@ const Footer = () => {
                                 href="https://t.me/alt_portfolio"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Telegram-reviews"
+                                aria-label="Telegram"
                             >
                                 <FaTelegram size={35} />
                             </Link>
@@ -54,12 +54,12 @@ const Footer = () => {
                                 href="https://t.me/+Y1wM__EfbHtjZGU0"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Telegram-reviews"
+                                aria-label="Telegram"
                             >
                                 <RiTelegramLine size={42} />
                             </Link>
                             <Link
-                                href="https://www.instagram.com/tema.burovin"
+                                href="https://www.instagram.com/artem.san_"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Instagram"
