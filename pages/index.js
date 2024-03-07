@@ -46,9 +46,9 @@ const Home = () => {
     }, []);
 
     const yearOfBeginning = 2018;
-    const happyClientsNow = 400;
-    const reviewsNow = 200;
-    const capitalNow = 200;
+    const happyClientsNow = 440;
+    const reviewsNow = 230;
+    const capitalNow = 250;
 
     const experience = incrementExperience(yearOfBeginning);
     const happyClients = incrementHappyClients(happyClientsNow, lastMonth);
@@ -58,7 +58,7 @@ const Home = () => {
     return (
         <Layout
             title="Alt Corporation"
-            description={t("website_description")}
+            description={t("welcome.description")}
         >
             <Flex flexDirection={"column"}>
                 <Section delay={0.1}>
