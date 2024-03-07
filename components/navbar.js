@@ -163,7 +163,7 @@ const Navbar = () => {
                             href="https://discord.gg/XY2rMVUFhR"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Discord"
+                            aria-label="Discord | Alt Corporation"
                         >
                             <FaDiscord size={35} />
                         </Link>
@@ -171,7 +171,7 @@ const Navbar = () => {
                             href="https://t.me/alt_portfolio"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Telegram-main"
+                            aria-label="Telegram | Alt Corporation"
                         >
                             <FaTelegram size={30} />
                         </Link>
@@ -179,7 +179,7 @@ const Navbar = () => {
                             href="https://t.me/+Y1wM__EfbHtjZGU0"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Telegram-main"
+                            aria-label="Telegram | Artem San"
                         >
                             <RiTelegramLine size={36} />
                         </Link>
@@ -187,7 +187,7 @@ const Navbar = () => {
                             href="https://www.instagram.com/artem.san_"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Instagram"
+                            aria-label="Instagram | Artem San"
                         >
                             <PiInstagramLogoBold size={35} />
                         </Link>
@@ -228,7 +228,7 @@ const Navbar = () => {
                                         href="https://discord.gg/XY2rMVUFhR"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Discord"
+                                        aria-label="Discord | Alt Corporation"
                                     >
                                         <FaDiscord size={34} />
                                     </Link>
@@ -236,7 +236,7 @@ const Navbar = () => {
                                         href="https://t.me/alt_portfolio"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Telegram"
+                                        aria-label="Telegram | Alt Corporation"
                                     >
                                         <FaTelegram size={30} />
                                     </Link>
@@ -244,7 +244,7 @@ const Navbar = () => {
                                         href="https://t.me/+Y1wM__EfbHtjZGU0"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Telegram"
+                                        aria-label="Telegram | Artem San"
                                     >
                                         <RiTelegramLine size={36} />
                                     </Link>
@@ -252,7 +252,7 @@ const Navbar = () => {
                                         href="https://www.instagram.com/artem.san_"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Instagram"
+                                        aria-label="Instagram | Artem San"
                                     >
                                         <PiInstagramLogoBold size={33} />
                                     </Link>

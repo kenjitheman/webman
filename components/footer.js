@@ -38,7 +38,7 @@ const Footer = () => {
                                 href="https://discord.gg/XY2rMVUFhR"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Discord"
+                                aria-label="Discord | Alt Corporation"
                             >
                                 <FaDiscord size={40} />
                             </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
                                 href="https://t.me/alt_portfolio"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Telegram"
+                                aria-label="Telegram | Alt Corporation"
                             >
                                 <FaTelegram size={35} />
                             </Link>
@@ -54,7 +54,7 @@ const Footer = () => {
                                 href="https://t.me/+Y1wM__EfbHtjZGU0"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Telegram"
+                                aria-label="Telegram | Artem San"
                             >
                                 <RiTelegramLine size={42} />
                             </Link>
@@ -62,7 +62,7 @@ const Footer = () => {
                                 href="https://www.instagram.com/artem.san_"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Instagram"
+                                aria-label="Instagram | Artem San"
                             >
                                 <PiInstagramLogoBold size={40} />
                             </Link>
@@ -74,8 +74,7 @@ const Footer = () => {
                         <Link
                             href="mailto:info@altcorp.org"
                             isExternal
-                            alt="Email link"
-                            aria-label="Email"
+                            aria-label="Email | Alt Corporation"
                             color="gray.500"
                             fontWeight="semibold"
                         >
