@@ -41,6 +41,7 @@ const Community = () => {
                                         fontFamily={"'Etna', sans-serif"}
                                         py={3}
                                         textAlign={"left"}
+                                        fontWeight={"bold"}
                                         fontSize={{ base: "2xl", md: "3xl" }}
                                         color={useColorModeValue("white_yellow", "dark_yellow")}
                                         w={"100%"}
@@ -50,13 +51,16 @@ const Community = () => {
                                 </Flex>
                             </ScrollAnimation>
                             <ScrollAnimation>
-                                <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }}>
+                                <Text
+                                    color={useColorModeValue("white_gray", "dark_gray")}
+                                    fontSize={{ base: "xl", md: "2xl" }}
+                                >
                                     {t("community.description")}
                                 </Text>
                             </ScrollAnimation>
                             <ScrollAnimation>
                                 <Divider
-                                    borderColor={useColorModeValue("gray.300", "gray.700")}
+                                    borderColor={useColorModeValue("white_border_color", "dark_border_color")}
                                     m={0}
                                     borderWidth={1}
                                     my={10}
@@ -65,11 +69,17 @@ const Community = () => {
                             <ScrollAnimation>
                                 <Heading
                                     fontSize={{ base: "xl", md: "2xl" }}
+                                    fontWeight={"bold"}
                                     color={useColorModeValue("white_yellow", "dark_yellow")}
                                 >
                                     {t("community.title")}
                                 </Heading>
-                                <Text color={"gray.500"} fontSize={{ base: "md", md: "lg" }} pb={10}>
+                                <Text
+                                    color={useColorModeValue("white_gray", "dark_gray")}
+                                    fontSize={{ base: "md", md: "lg" }}
+                                    fontWeight={"regular"}
+                                    pb={10}
+                                >
                                     {t("community.description")}
                                 </Text>
                             </ScrollAnimation>
