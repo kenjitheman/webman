@@ -8,13 +8,13 @@ function Carousel({ items, initialSlideToShow = 3 }) {
         infinite: true,
         slidesToShow: initialSlideToShow,
         speed: 5000,
+        autoplaySpeed: 0,
         autoplay: true,
+        initialSlide: 0,
         cssEase: "linear",
         centerMode: true,
         pauseOnHover: false,
         arrows: false,
-        autoplaySpeed: 0,
-        initialSlide: 0,
         responsive: [
             {
                 breakpoint: 1024,
