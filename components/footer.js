@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Stack, Text } from "@chakra-ui/react";
+import { Box, Container, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import LanguageSwitcher from "./language_switcher.js";
 import { FaDiscord } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
@@ -12,7 +12,14 @@ import Link from "next/link.js";
 const Footer = () => {
     const { t } = useTranslation("common");
     return (
-        <Box as="footer" fontFamily={"'Etna', sans-serif"} fontWeight={"medium"} fontSize="lg" zIndex={2} mx="auto">
+        <Box
+            as="footer"
+            fontFamily={"'Etna', sans-serif"}
+            fontWeight={"medium"}
+            fontSize="lg"
+            zIndex={2}
+            mx="auto"
+        >
             <Container maxW={"10xl"} py={5}>
                 <Stack
                     direction={{ base: "column", md: "row-reverse" }}
@@ -40,7 +47,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Discord | Alt Corporation"
                             >
-                                <FaDiscord size={40} />
+                                <FaDiscord size={40} color={useColorModeValue("black", "white")} />
                             </Link>
                             <Link
                                 href="https://t.me/alt_portfolio"
@@ -48,7 +55,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Telegram | Alt Corporation"
                             >
-                                <FaTelegram size={35} />
+                                <FaTelegram size={35} color={useColorModeValue("black", "white")} />
                             </Link>
                             <Link
                                 href="https://t.me/+Y1wM__EfbHtjZGU0"
@@ -56,7 +63,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Telegram | Artem San"
                             >
-                                <RiTelegramLine size={42} />
+                                <RiTelegramLine size={42} color={useColorModeValue("black", "white")} />
                             </Link>
                             <Link
                                 href="https://www.instagram.com/artem.san_"
@@ -64,19 +71,23 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Instagram | Artem San"
                             >
-                                <PiInstagramLogoBold size={40} />
+                                <PiInstagramLogoBold size={40} color={useColorModeValue("black", "white")} />
                             </Link>
                         </Stack>
                     </Stack>
 
-                    <Text pt={{ base: 5, md: 0 }} fontSize={"md"} textAlign={{ base: "center", md: "left" }}>
+                    <Text
+                        pt={{ base: 5, md: 0 }}
+                        fontSize={"md"}
+                        textAlign={{ base: "center", md: "left" }}
+                        color={useColorModeValue("black", "white")}
+                        fontWeight={"regular"}
+                    >
                         &copy; {new Date().getFullYear()} Alt Corporation. {t("footer.copyright")} {" Contact: "}
                         <Link
                             href="mailto:info@altcorp.org"
                             isExternal
                             aria-label="Email | Alt Corporation"
-                            color="gray.500"
-                            fontWeight="semibold"
                         >
                             info@altcorp.org
                         </Link>
