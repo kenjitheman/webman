@@ -1,5 +1,8 @@
 import React from "react";
-import { Box, Flex, Stack, Stat, StatLabel, StatNumber, Text, useColorModeValue, List, ListItem, Icon } from "@chakra-ui/react";
+import {
+    Box, Flex, Stack, Stat, StatLabel, StatNumber, Text,
+    useColorModeValue, List, ListItem, Icon
+} from "@chakra-ui/react";
 import { AnimateOnHover } from "../components/custom_animations";
 import { FiArrowUpRight } from "react-icons/fi";
 import { CheckIcon } from "@chakra-ui/icons";
@@ -13,7 +16,7 @@ const WelcomeStat = (props) => {
                 minH={"100%"}
                 shadow={"lg"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("gray.300", "gray.700")}
+                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
                 css={{ backdropFilter: "blur(10px)" }}
                 rounded={"3xl"}
                 _hover={{
@@ -37,7 +40,7 @@ const WelcomeStat = (props) => {
                         <StatLabel
                             fontSize={{ base: "xl", xl: "2xl" }}
                             fontWeight={"regular"}
-                            color={"gray.500"}
+                            color={useColorModeValue("white_gray", "dark_gray")}
                             textAlign={"center"}
                         >
                             {text}
@@ -60,7 +63,7 @@ const CommunityInfo = (props) => {
                 p={8}
                 shadow={"lg"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("gray.300", "gray.700")}
+                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
                 rounded={"3xl"}
                 _hover={{
                     cursor: "pointer",
@@ -80,7 +83,7 @@ const CommunityInfo = (props) => {
                         <Text
                             fontSize={{ base: "lg", md: "xl" }}
                             fontWeight={"regular"}
-                            color={useColorModeValue("gray.500", "gray.400")}
+                            color={useColorModeValue("white_gray", "dark_gray")}
                         >
                             {text}
                         </Text>
@@ -104,7 +107,7 @@ const InfoFullyGrid = (props) => {
                 p={8}
                 shadow={"lg"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("gray.300", "gray.700")}
+                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
                 rounded={"3xl"}
                 _hover={{
                     cursor: "pointer",
@@ -137,7 +140,7 @@ const Service = (props) => {
                 minH={"100%"}
                 shadow={"lg"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("gray.300", "gray.700")}
+                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
                 rounded={"3xl"}
                 _hover={{
                     cursor: "pointer",
@@ -153,7 +156,7 @@ const Service = (props) => {
                         justify={"center"}
                         color={useColorModeValue("white_yellow", "dark_yellow")}
                         border={"1px solid"}
-                        borderColor={useColorModeValue("gray.300", "gray.700")}
+                        borderColor={useColorModeValue("white_border_color", "dark_border_color")}
                         rounded={"3xl"}
                         p={2}
                     >
@@ -171,7 +174,7 @@ const Service = (props) => {
                 <Text
                     fontSize={"xl"}
                     fontWeight={"regular"}
-                    color={"gray.500"}
+                    color={useColorModeValue("white_gray", "dark_gray")}
                     p={2}
                     justify={"center"}
                     wordBreak={"break-word"}
@@ -205,7 +208,7 @@ const Info = (props) => {
                 p={5}
                 minH={"full"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("gray.300", "gray.700")}
+                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
                 shadow={"lg"}
                 _hover={{
                     cursor: "pointer",
@@ -233,7 +236,8 @@ const Info = (props) => {
                             {title}
                         </Text>
                     </Flex>
-                    <Text color={"gray.500"}
+                    <Text
+                        color={useColorModeValue("white_gray", "dark_gray")}
                         fontSize={{ base: "lg", md: "xl" }}
                         fontWeight={"regular"}
                         wordBreak={"break-word"}

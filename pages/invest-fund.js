@@ -8,17 +8,18 @@ const InvestFund = () => {
     const { t } = useTranslation("common");
     return (
         <Layout
-            title="Invest Fund | Alt Corporation"
-            description={t("404.description")}
+            title={t("invest_fund.title") + " | " + "Alt Corporation"}
+            description={t("invest_fund.description")}
         >
-            <Container my={"30vh"}>
+            <Container my={"32vh"}>
                 <Heading
                     as="h1"
                     fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
                     fontFamily={"'Etna', sans-serif"}
+                    fontWeight={"bold"}
                     align="center"
                 >
-                    Invest Fund | Alt Corporation
+                    {t("404.soon")}
                 </Heading>
                 <Divider my={5} />
                 <Box my={5} align="center">

@@ -13,6 +13,7 @@
     },
     "welcome": {
         "title": "Alt Corporation",
+        "page_title": "Home",
         "description": "Welcome: Unleashing a Multifunctional Range of Services for Your Success."
     },
     "stats": {
@@ -183,7 +184,9 @@
     "404": {
         "title": "Page not found",
         "description": "Page not found",
-        "back": "Home"
+        "back": "Home",
+        "soon": "Soon... 🚧",
+        "under_construction": "Under construction 🚧"
     },
     "footer": {
         "copyright": "All rights reserved."
@@ -203,5 +206,13 @@
             "title": "What payment methods do you accept?",
             "text": "We accept payment in BTC, USDT, RUB, UAH, VISA, MasterCard."
         }
+    },
+    "education": {
+        "title": "Education",
+        "description": "We are always happy to share our knowledge and experience with you. Here you will find useful information and tips on how to achieve success in the world of decentralized finance."
+    },
+    "invest_fund": {
+        "title": "Invest fund",
+        "description": "We are always happy to share our knowledge and experience with you. Here you will find useful information and tips on how to achieve success in the world of decentralized finance."
     }
 }

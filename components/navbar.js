@@ -27,7 +27,7 @@ const NavLink = ({ href, children }) => {
                 py={2}
                 fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
                 textDecoration="none"
-                color={useColorModeValue("gray.900", "white")}
+                color={useColorModeValue("black", "white")}
                 _hover={{
                     textDecoration: "none",
                     color: useColorModeValue("white_yellow", "dark_yellow")
@@ -50,7 +50,7 @@ const NavLink = ({ href, children }) => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                color={useColorModeValue("gray.900", "white")}
+                color={useColorModeValue("black", "white")}
                 style={{
                     textDecoration: "none",
                     _hover: {
@@ -64,7 +64,7 @@ const NavLink = ({ href, children }) => {
                     py={2}
                     rounded="2xl"
                     fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
-                    color={useColorModeValue("gray.900", "white")}
+                    color={useColorModeValue("black", "white")}
                     _hover={{
                         textDecoration: "none",
                         cursor: "pointer",
@@ -165,7 +165,7 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             aria-label="Discord | Alt Corporation"
                         >
-                            <FaDiscord size={35} />
+                            <FaDiscord size={35} color={useColorModeValue("black", "white")} />
                         </Link>
                         <Link
                             href="https://t.me/alt_portfolio"
@@ -173,7 +173,7 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             aria-label="Telegram | Alt Corporation"
                         >
-                            <FaTelegram size={30} />
+                            <FaTelegram size={30} color={useColorModeValue("black", "white")} />
                         </Link>
                         <Link
                             href="https://t.me/+Y1wM__EfbHtjZGU0"
@@ -181,7 +181,7 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             aria-label="Telegram | Artem San"
                         >
-                            <RiTelegramLine size={36} />
+                            <RiTelegramLine size={36} color={useColorModeValue("black", "white")} />
                         </Link>
                         <Link
                             href="https://www.instagram.com/artem.san_"
@@ -189,7 +189,7 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             aria-label="Instagram | Artem San"
                         >
-                            <PiInstagramLogoBold size={35} />
+                            <PiInstagramLogoBold size={35} color={useColorModeValue("black", "white")} />
                         </Link>
                     </HStack>
                     <IconButton
@@ -222,7 +222,12 @@ const Navbar = () => {
                                     {t(`navbar.${label}`)}
                                 </NavLink>
                             ))}
-                            <Box justifyContent={"space-between"} display={"flex"} w={"100%"} alignItems={"center"}>
+                            <Box
+                                justifyContent={"space-between"}
+                                display={"flex"}
+                                w={"100%"}
+                                alignItems={"center"}
+                            >
                                 <Stack direction={"row"} spacing={2} alignItems={"center"} justifyContent={"flex-end"}>
                                     <Link
                                         href="https://discord.gg/XY2rMVUFhR"
@@ -230,7 +235,7 @@ const Navbar = () => {
                                         rel="noopener noreferrer"
                                         aria-label="Discord | Alt Corporation"
                                     >
-                                        <FaDiscord size={34} />
+                                        <FaDiscord size={34} color={useColorModeValue("black", "white")} />
                                     </Link>
                                     <Link
                                         href="https://t.me/alt_portfolio"
@@ -238,7 +243,7 @@ const Navbar = () => {
                                         rel="noopener noreferrer"
                                         aria-label="Telegram | Alt Corporation"
                                     >
-                                        <FaTelegram size={30} />
+                                        <FaTelegram size={30} color={useColorModeValue("black", "white")} />
                                     </Link>
                                     <Link
                                         href="https://t.me/+Y1wM__EfbHtjZGU0"
@@ -254,7 +259,7 @@ const Navbar = () => {
                                         rel="noopener noreferrer"
                                         aria-label="Instagram | Artem San"
                                     >
-                                        <PiInstagramLogoBold size={33} />
+                                        <PiInstagramLogoBold size={33} color={useColorModeValue("black", "white")} />
                                     </Link>
                                 </Stack>
                                 <ThemeToggleButton />
