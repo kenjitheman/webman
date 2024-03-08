@@ -392,7 +392,7 @@ const Home = () => {
                     </Container >
                 </Box>
                 <Box>
-                    <Container maxW="10xl" id="reviews">
+                    <Container maxW="100%" id="reviews">
                         <Section delay={0.3}>
                             <Box
                                 fontFamily={"'Etna', sans-serif"}
@@ -453,7 +453,6 @@ const Home = () => {
                                 <Flex
                                     maxW={"100%"}
                                     alignItems={"center"}
-                                    p={5}
                                 >
                                     <Carousel
                                         items={[
