@@ -8,17 +8,17 @@ const Education = () => {
     const { t } = useTranslation("common");
     return (
         <Layout
-            title="Education | Alt Corporation"
-            description={t("404.description")}
+            title={t("education.title") + " | " + "Alt Corporation"}
+            description={t("education.description")}
         >
-            <Container my={"30vh"}>
+            <Container my={"32vh"}>
                 <Heading
                     as="h1"
                     fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
                     fontFamily={"'Etna', sans-serif"}
                     align="center"
                 >
-                    Education | Alt Corporation
+                    {t("404.soon")}
                 </Heading>
                 <Divider my={5} />
                 <Box my={5} align="center">
