@@ -46,9 +46,9 @@ const Home = () => {
     }, []);
 
     const yearOfBeginning = 2018;
-    const happyClientsNow = 440;
-    const reviewsNow = 230;
-    const capitalNow = 250;
+    const happyClientsNow = 410;
+    const reviewsNow = 200;
+    const capitalNow = 215;
 
     const experience = incrementExperience(yearOfBeginning);
     const happyClients = incrementHappyClients(happyClientsNow, lastMonth);
