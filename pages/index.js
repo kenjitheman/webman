@@ -57,7 +57,7 @@ const Home = () => {
 
     return (
         <Layout
-            title="Alt Corporation"
+            title={t("welcome.page_title") + " | " + "Alt Corporation"}
             description={t("welcome.description")}
         >
             <Flex flexDirection={"column"}>
@@ -136,13 +136,18 @@ const Home = () => {
                                             fontFamily={"'Etna', sans-serif"}
                                             textAlign={"left"}
                                             fontSize={{ base: "2xl", md: "3xl" }}
+                                            fontWeight={"bold"}
                                             color={useColorModeValue("white_yellow", "dark_yellow")}
                                             w={"100%"}
                                         >
                                             {t("about_us.title")}
                                         </Heading>
                                     </Flex>
-                                    <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }}>
+                                    <Text
+                                        color={useColorModeValue("white_gray", "dark_gray")}
+                                        fontSize={{ base: "xl", md: "2xl" }}
+                                        fontWeight={"regular"}
+                                    >
                                         {t("about_us.description")}
                                     </Text>
                                 </ScrollAnimation>
@@ -187,7 +192,7 @@ const Home = () => {
                                             rounded={"3xl"}
                                             alt={"About us image"}
                                             border={"1px solid"}
-                                            borderColor={useColorModeValue("gray.300", "gray.700")}
+                                            borderColor={useColorModeValue("white_border_color", "dark_border_color")}
                                             objectFit={"cover"}
                                             fill={true}
                                             quality={100}
@@ -230,7 +235,6 @@ const Home = () => {
                                     flexDirection={"row"}
                                     alignItems={"center"}
                                 >
-
                                     <Icon
                                         as={IoLink}
                                         w={10} h={10} mx={2}
@@ -241,6 +245,7 @@ const Home = () => {
                                     <Heading
                                         textAlign={"left"}
                                         fontSize={{ base: "2xl", md: "3xl" }}
+                                        fontWeight={"bold"}
                                         color={useColorModeValue("white_yellow", "dark_yellow")}
                                         w={"100%"}
                                     >
@@ -249,7 +254,11 @@ const Home = () => {
                                 </Flex>
                             </ScrollAnimation>
                             <ScrollAnimation>
-                                <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={4}>
+                                <Text
+                                    color={useColorModeValue("white_gray", "dark_gray")}
+                                    fontSize={{ base: "xl", md: "2xl" }} pb={4}
+                                    fontWeight={"regular"}
+                                >
                                     {t("faq.description")}
                                 </Text>
                             </ScrollAnimation>
@@ -266,7 +275,7 @@ const Home = () => {
                                         p={7}
                                         shadow={"lg"}
                                         border={"1px solid"}
-                                        borderColor={useColorModeValue("gray.300", "gray.700")}
+                                        borderColor={useColorModeValue("gray.300", "gray.600")}
                                         css={{ backdropFilter: "blur(10px)" }}
                                         rounded={"3xl"}
                                         _hover={{
@@ -290,6 +299,8 @@ const Home = () => {
                                                         <Text
                                                             fontSize={{ base: "xl", md: "2xl" }}
                                                             wordBreak={"break-word"}
+                                                            fontWeight={"regular"}
+                                                            color={useColorModeValue("black", "white")}
                                                         >
                                                             {t("faq.1.title")}
                                                         </Text>
@@ -297,8 +308,9 @@ const Home = () => {
                                                     </AccordionButton>
                                                     <AccordionPanel>
                                                         <Text
-                                                            color="gray.600"
+                                                            color={useColorModeValue("white_gray", "dark_gray")}
                                                             fontSize={{ base: "lg", md: "xl" }}
+                                                            fontWeight={"regular"}
                                                             wordBreak={"break-word"}
                                                         >
                                                             {t("faq.1.text")}
@@ -320,13 +332,20 @@ const Home = () => {
                                                         <Text
                                                             fontSize={{ base: "xl", md: "2xl" }}
                                                             wordBreak={"break-word"}
+                                                            fontWeight={"regular"}
+                                                            color={useColorModeValue("black", "white")}
                                                         >
                                                             {t("faq.2.title")}
                                                         </Text>
                                                         <ChevronDownIcon fontSize="24px" />
                                                     </AccordionButton>
                                                     <AccordionPanel>
-                                                        <Text color="gray.600" fontSize={{ base: "lg", md: "xl" }}>
+                                                        <Text
+                                                            color={useColorModeValue("white_gray", "dark_gray")}
+                                                            fontSize={{ base: "lg", md: "xl" }}
+                                                            fontWeight={"regular"}
+                                                            wordBreak={"break-word"}
+                                                        >
                                                             {t("faq.2.text")}
                                                         </Text>
                                                     </AccordionPanel>
@@ -346,13 +365,20 @@ const Home = () => {
                                                         <Text
                                                             fontSize={{ base: "xl", md: "2xl" }}
                                                             wordBreak={"break-word"}
+                                                            fontWeight={"regular"}
+                                                            color={useColorModeValue("black", "white")}
                                                         >
                                                             {t("faq.3.title")}
                                                         </Text>
                                                         <ChevronDownIcon fontSize="24px" />
                                                     </AccordionButton>
                                                     <AccordionPanel>
-                                                        <Text color="gray.600" fontSize={{ base: "lg", md: "xl" }}>
+                                                        <Text
+                                                            color={useColorModeValue("white_gray", "dark_gray")}
+                                                            fontSize={{ base: "lg", md: "xl" }}
+                                                            fontWeight={"regular"}
+                                                            wordBreak={"break-word"}
+                                                        >
                                                             {t("faq.3.text")}
                                                         </Text>
                                                     </AccordionPanel>
@@ -394,6 +420,7 @@ const Home = () => {
                                                 px={2}
                                                 textAlign={"left"}
                                                 fontSize={{ base: "2xl", md: "3xl" }}
+                                                fontWeight={"bold"}
                                                 color={useColorModeValue("white_yellow", "dark_yellow")}
                                                 w={"100%"}
                                             >
@@ -414,7 +441,12 @@ const Home = () => {
                                     </Flex>
                                 </ScrollAnimation>
                                 <ScrollAnimation>
-                                    <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={7}>
+                                    <Text
+                                        color={useColorModeValue("white_gray", "dark_gray")}
+                                        fontWeight={"regular"}
+                                        fontSize={{ base: "xl", md: "2xl" }}
+                                        pb={7}
+                                    >
                                         {t("reviews.description")}
                                     </Text>
                                 </ScrollAnimation>
@@ -443,7 +475,11 @@ const Home = () => {
                                                     border={"1px solid"}
                                                     objectFit={"cover"}
                                                     fill={true}
-                                                    borderColor={useColorModeValue("gray.300", "gray.700")}
+                                                    borderColor={
+                                                        useColorModeValue(
+                                                            "white_border_color", "dark_border_color"
+                                                        )
+                                                    }
                                                     quality={100}
                                                     h={"sm"}
                                                 />
@@ -467,7 +503,7 @@ const Home = () => {
                                                     border={"1px solid"}
                                                     objectFit={"cover"}
                                                     fill={true}
-                                                    borderColor={useColorModeValue("gray.300", "gray.700")}
+                                                    borderColor={useColorModeValue("gray.300", "gray.600")}
                                                     quality={100}
                                                     h={"sm"}
                                                 />
@@ -491,7 +527,7 @@ const Home = () => {
                                                     border={"1px solid"}
                                                     objectFit={"cover"}
                                                     fill={true}
-                                                    borderColor={useColorModeValue("gray.300", "gray.700")}
+                                                    borderColor={useColorModeValue("gray.300", "gray.600")}
                                                     quality={100}
                                                     h={"sm"}
                                                 />
@@ -529,6 +565,7 @@ const Home = () => {
                                             py={3}
                                             textAlign={"left"}
                                             fontSize={{ base: "2xl", md: "3xl" }}
+                                            fontWeight={"bold"}
                                             color={useColorModeValue("white_yellow", "dark_yellow")}
                                             w={"100%"}
                                         >
@@ -537,7 +574,11 @@ const Home = () => {
                                     </Flex>
                                 </ScrollAnimation>
                                 <ScrollAnimation>
-                                    <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={7}>
+                                    <Text
+                                        color={useColorModeValue("white_gray", "dark_gray")}
+                                        fontSize={{ base: "xl", md: "2xl" }} pb={7}
+                                        fontWeight={"regular"}
+                                    >
                                         {t("contacts.description")}
                                     </Text>
                                 </ScrollAnimation>
