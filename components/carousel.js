@@ -1,14 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
 import { Box } from "@chakra-ui/react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-function Carousel({ items }) {
+function Carousel({ items, initialSlideToShow = 3 }) {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: initialSlideToShow,
         speed: 6000,
         autoplay: true,
         autoplaySpeed: 6000,
@@ -16,22 +14,39 @@ function Carousel({ items }) {
         centerMode: true,
         pauseOnHover: false,
         arrows: false,
-        initialSlide: 0
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     };
 
     return (
         <Box
             className="slider-container"
-            w={{ base: "1000px", md: "1500px", lg: "110%", xl: "100%" }}
-            ml={{ base: "-10", md: "0" }}
-            h={"100%"} align={"center"} justify={"space-evenly"}
+            w="100%"
+            h="100%"
+            overflow="hidden"
+            margin="auto"
+            padding="0px"
+            position="relative"
         >
             <Slider {...settings}>
                 {items.map((item, index) => (
                     <div key={index}>{item}</div>
                 ))}
             </Slider>
-        </Box >
+        </Box>
     );
 }
 
