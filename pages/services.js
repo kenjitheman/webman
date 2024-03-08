@@ -21,7 +21,7 @@ const Services = () => {
             description={t("services.page_description")}
         >
             <Box>
-                <Container maxW="95%">
+                <Container maxW={{ base: "100%", md: "95%" }}>
                     <Section delay={0.3}>
                         <Box
                             fontFamily={"'Etna', sans-serif"}
@@ -32,10 +32,10 @@ const Services = () => {
                                 <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
                                     <Icon
                                         as={IoLink}
-                                        w={{ base: 7, md: 10 }} h={{ base: 7, md: 10 }} mx={2}
+                                        w={10} h={10} mx={2}
                                         alignSelf={"center"}
                                         color={useColorModeValue("white_yellow", "dark_yellow")}
-                                        display={{ base: "none", sm: "block" }}
+                                        display={{ base: "none", md: "block" }}
                                     />
                                     <Heading
                                         fontFamily={"'Etna', sans-serif"}
@@ -44,13 +44,18 @@ const Services = () => {
                                         fontSize={{ base: "2xl", md: "3xl" }}
                                         color={useColorModeValue("white_yellow", "dark_yellow")}
                                         w={"100%"}
+                                        wordBreak={"break-word"}
                                     >
                                         {t("services.title")}
                                     </Heading>
                                 </Flex>
                             </ScrollAnimation>
                             <ScrollAnimation>
-                                <Text color={"gray.500"} fontSize={{ base: "xl", md: "2xl" }} pb={10}>
+                                <Text
+                                    color={useColorModeValue("white_gray", "dark_gray")}
+                                    fontSize={{ base: "xl", md: "2xl" }}
+                                    pb={10}
+                                >
                                     {t("services.description")}
                                 </Text>
                             </ScrollAnimation>
