@@ -53,7 +53,7 @@ const Hero = (props) => {
                     rounded={"3xl"}
                     backdropFilter={"blur(10px)"}
                     border={"1px solid"}
-                    borderColor={useColorModeValue("gray.300", "gray.700")}
+                    borderColor={useColorModeValue("white_border_color", "dark_border_color")}
                 >
 
                     <Heading
