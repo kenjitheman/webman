@@ -66,7 +66,7 @@ const Footer = () => {
                                 <RiTelegramLine size={42} color={useColorModeValue("black", "white")} />
                             </Link>
                             <Link
-                                href="https://www.instagram.com/artem.san_"
+                                href="https://www.instagram.com/temaaa_san/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Instagram | Artem San"
