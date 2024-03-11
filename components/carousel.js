@@ -8,7 +8,6 @@ function Carousel({ items, initialSlideToShow = 3 }) {
         infinite: true,
         slidesToShow: initialSlideToShow,
         speed: 5000,
-        autoplaySpeed: 0,
         autoplay: true,
         initialSlide: 0,
         cssEase: "linear",
