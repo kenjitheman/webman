@@ -9,6 +9,7 @@ function Carousel({ items, initialSlideToShow = 3 }) {
         slidesToShow: initialSlideToShow,
         speed: 5000,
         autoplay: true,
+        autoplaySpeed: 0,
         initialSlide: 0,
         cssEase: "linear",
         centerMode: true,
@@ -18,13 +19,25 @@ function Carousel({ items, initialSlideToShow = 3 }) {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 1.6
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 580,
+                settings: {
+                    slidesToShow: 0.9
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 0.7
                 }
             }
         ]
