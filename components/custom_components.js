@@ -6,6 +6,8 @@ import {
 import { AnimateOnHover } from "../components/custom_animations";
 import { FiArrowUpRight } from "react-icons/fi";
 import { CheckIcon } from "@chakra-ui/icons";
+import { TbInfoSquareRounded } from "react-icons/tb";
+import Link from "next/link.js";
 
 const WelcomeStat = (props) => {
     const { title, text } = props;
@@ -129,7 +131,8 @@ const InfoFullyGrid = (props) => {
 };
 
 const Service = (props) => {
-    const { title, text, icon, includes } = props;
+    const { title, text, icon, includes, link } = props;
+
     return (
         <AnimateOnHover>
             <Flex
@@ -148,41 +151,67 @@ const Service = (props) => {
                 }}
                 p={7}
             >
-                <Flex flexDirection="row" alignItems="flex-start">
-                    <Flex
-                        w={16}
-                        h={16}
-                        align={"center"}
-                        justify={"center"}
-                        color={useColorModeValue("white_yellow", "dark_yellow")}
-                        border={"1px solid"}
-                        borderColor={useColorModeValue("white_border_color", "dark_border_color")}
-                        rounded={"3xl"}
-                        p={2}
-                    >
-                        {icon}
+                <Flex
+                    flexDirection="row"
+                    justifyContent="space-between"
+                    w={"100%"}
+                >
+                    <Flex align={"center"} alignItems={"flex-start"}>
+                        <Flex
+                            w={16}
+                            h={16}
+                            align={"center"}
+                            justify={"center"}
+                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                            border={"1px solid"}
+                            borderColor={useColorModeValue("white_border_color", "dark_border_color")}
+                            rounded={"3xl"}
+                            p={2}
+                        >
+                            {icon}
+                        </Flex>
+                        <Text
+                            fontSize={"2xl"}
+                            fontWeight={"medium"}
+                            p={3}
+                            wordBreak={"break-word"}
+                        >
+                            {title}
+                        </Text>
                     </Flex>
+                    <Link
+                        href={link}
+                        display="inline-block"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        isExternal
+                    >
+                        <FiArrowUpRight size={34} />
+                    </Link>
+                </Flex>
+                <Flex
+                    alignContent={"start"}
+                    flexDirection={"row"}
+                    alignItems={"center"}
+                >
+                    <Icon
+                        as={TbInfoSquareRounded}
+                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                        w={9} h={9}
+                    />
                     <Text
-                        fontSize={"2xl"}
-                        fontWeight={"medium"}
+                        fontSize={"xl"}
+                        fontWeight={"regular"}
+                        color={useColorModeValue("white_gray", "dark_gray")}
                         p={3}
+                        justify={"center"}
                         wordBreak={"break-word"}
                     >
-                        {title}
+                        {text}
                     </Text>
                 </Flex>
-                <Text
-                    fontSize={"xl"}
-                    fontWeight={"regular"}
-                    color={useColorModeValue("white_gray", "dark_gray")}
-                    p={2}
-                    justify={"center"}
-                    wordBreak={"break-word"}
-                >
-                    {text}
-                </Text>
                 {includes && typeof includes === "object" && Object.keys(includes).length > 0 && (
-                    <List spacing={3}>
+                    <List spacing={4} w={"100%"}>
                         {Object.keys(includes).map((key, index) => (
                             <ListItem key={index} fontSize={"xl"} fontWeight={"regular"}>
                                 <Icon
