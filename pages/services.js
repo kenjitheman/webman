@@ -1,7 +1,9 @@
 import { Box, Container, Heading } from "@chakra-ui/react";
 import { ScrollAnimation } from "../components/scroll_animation";
 import { Service } from "../components/custom_components";
-import { Flex, Icon, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+    Flex, Icon, SimpleGrid, Text, useColorModeValue, Button
+} from "@chakra-ui/react";
 import Section from "../components/section";
 import Layout from "../components/layouts/article";
 import { useTranslation } from "next-i18next";
@@ -12,6 +14,9 @@ import { GiTrafficLightsGreen } from "react-icons/gi";
 import { GrTransaction } from "react-icons/gr";
 import { MdDesignServices } from "react-icons/md";
 import { IoLink } from "react-icons/io5";
+import { FaHandsHelping } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const Services = () => {
     const { t } = useTranslation("common");
@@ -74,24 +79,28 @@ const Services = () => {
                                         title={t("services.1.title")}
                                         text={t("services.1.description")}
                                         includes={t("services.1.includes")}
+                                        link="https://t.me/alt_corporation"
                                     />
                                     <Service
                                         icon={<Icon as={HiOutlineKey} w={10} h={10} />}
                                         title={t("services.2.title")}
                                         text={t("services.2.description")}
                                         includes={t("services.2.includes")}
+                                        link="https://t.me/alt_corporation"
                                     />
                                     <Service
                                         icon={<Icon as={GrTransaction} w={10} h={10} />}
                                         title={t("services.3.title")}
                                         text={t("services.3.description")}
                                         includes={t("services.3.includes")}
+                                        link="https://t.me/bybitsignals_0"
                                     />
                                     <Service
                                         icon={<Icon as={MdDesignServices} w={10} h={10} />}
                                         title={t("services.5.title")}
                                         text={t("services.5.description")}
                                         includes={t("services.5.includes")}
+                                        link="https://t.me/bybitsignals_0"
                                     />
                                 </SimpleGrid>
                             </Flex>
@@ -105,10 +114,55 @@ const Services = () => {
                                         title={t("services.4.title")}
                                         text={t("services.4.description")}
                                         includes={t("services.4.includes")}
+                                        link="https://t.me/altcorp_traffic"
                                     />
                                 </SimpleGrid>
                             </Flex>
                         </Box>
+                        <Flex justifyContent={"center"} mt={5} mb={10}>
+                            <Link href="https://t.me/bybitsignals_0" isExternal>
+                                <Button
+                                    colorScheme='gray'
+                                    variant='solid'
+                                    size='xl'
+                                    py={7}
+                                    px={8}
+                                    rounded={"3xl"}
+                                    cursor={"pointer"}
+                                    _hover={{
+                                        transform: "scale(1.05)",
+                                        transition: "0.3s",
+                                        border: "1px solid",
+                                        borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                                    }}
+                                >
+                                    <Icon
+                                        as={FaHandsHelping}
+                                        w={10}
+                                        h={10}
+                                        mx={2}
+                                        alignSelf={"center"}
+                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        display="block"
+                                    />
+                                    <Text
+                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        fontSize={{ base: "xl", md: "2xl" }}
+                                    >
+                                        {t("services.ask_question")}
+                                    </Text>
+                                    <Icon
+                                        as={FaArrowRightLong}
+                                        w={7}
+                                        h={7}
+                                        ml={3}
+                                        mr={2}
+                                        alignSelf={"center"}
+                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                    />
+                                </Button>
+                            </Link>
+                        </Flex>
                     </Section>
                 </Container>
             </Box>
