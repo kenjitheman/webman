@@ -12,6 +12,7 @@ import Section from "../components/section";
 import { Hero } from "../components/hero.js";
 import { WelcomeStat, InfoFullyGrid, Info } from "../components/custom_components.js";
 import AutoplayCarousel from "../components/carousel.js";
+import links from "../components/vars.js";
 
 import {
     incrementExperience, incrementHappyClients, incrementReviews, incrementCapital
@@ -113,7 +114,6 @@ const Home = () => {
                         <Section delay={0.5}>
                             <Box
                                 p={4}
-                                fontFamily={"'Etna', sans-serif"}
                                 fontSize={"2xl"}
                                 fontWeight={"regular"}
                             >
@@ -131,7 +131,6 @@ const Home = () => {
                                             display="block"
                                         />
                                         <Heading
-                                            fontFamily={"'Etna', sans-serif"}
                                             textAlign={"left"}
                                             fontSize={{ base: "2xl", md: "3xl" }}
                                             fontWeight={"bold"}
@@ -172,7 +171,6 @@ const Home = () => {
                     <Container maxW="10xl">
                         <Section delay={0.6}>
                             <Box
-                                fontFamily={"'Etna', sans-serif"}
                                 py={1}
                                 rounded={"3xl"}
                                 w={"100%"}
@@ -226,7 +224,7 @@ const Home = () => {
                 </Box >
                 <Box>
                     <Container maxW="10xl" pt={10}>
-                        <Section delay={0.8} fontFamily={"'Etna', sans-serif"}>
+                        <Section delay={0.8}>
                             <ScrollAnimation>
                                 <Flex
                                     alignContent={"start"}
@@ -393,7 +391,6 @@ const Home = () => {
                     <Container maxW="100%" id="reviews">
                         <Section delay={0.3}>
                             <Box
-                                fontFamily={"'Etna', sans-serif"}
                                 rounded={"3xl"}
                                 maxW={"10xl"}
                                 py={5}
@@ -413,7 +410,6 @@ const Home = () => {
                                         />
                                         <Flex flexDirection={"row"} alignItems={"center"}>
                                             <Heading
-                                                fontFamily={"'Etna', sans-serif"}
                                                 py={3}
                                                 px={2}
                                                 textAlign={"left"}
@@ -424,9 +420,10 @@ const Home = () => {
                                             >
                                                 {t("reviews.title")}
                                             </Heading>
-                                            <Link href="https://t.me/+Y1wM__EfbHtjZGU0"
+                                            <Link
+                                                href={links.reviews}
                                                 isExternal
-                                                aria-label="Reviews in telegram"
+                                                aria-label="reviews"
                                                 target="_blank"
                                             >
                                                 <FiArrowUpRight
@@ -461,7 +458,6 @@ const Home = () => {
                     <Container maxW="10xl" id="contacts">
                         <Section delay={0.3}>
                             <Box
-                                fontFamily={"'Etna', sans-serif"}
                                 rounded={"3xl"}
                                 maxW={"10xl"}
                                 pb={5}
@@ -480,7 +476,6 @@ const Home = () => {
                                             display="block"
                                         />
                                         <Heading
-                                            fontFamily={"'Etna', sans-serif"}
                                             py={3}
                                             textAlign={"left"}
                                             fontSize={{ base: "2xl", md: "3xl" }}
@@ -514,7 +509,7 @@ const Home = () => {
                                     >
                                         <ScrollAnimation>
                                             <Link
-                                                href="https://t.me/bybitsignals_0"
+                                                href={links.contacts.owner}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Telegram"
@@ -528,7 +523,7 @@ const Home = () => {
                                         </ScrollAnimation>
                                         <ScrollAnimation>
                                             <Link
-                                                href="https://t.me/alt_corporation"
+                                                href={links.contacts.content}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Telegram"
@@ -542,7 +537,7 @@ const Home = () => {
                                         </ScrollAnimation>
                                         <ScrollAnimation>
                                             <Link
-                                                href="https://t.me/altcorp_traffic"
+                                                href={links.contacts.traffic}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Telegram"
