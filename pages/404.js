@@ -15,7 +15,6 @@ const NotFound = () => {
                 <Heading
                     as="h1"
                     fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
-                    fontFamily={"'Etna', sans-serif"}
                     align="center"
                 >
                     404 | {t("404.description")}
@@ -29,7 +28,6 @@ const NotFound = () => {
                         rounded={{ base: "2xl", md: "3xl" }}
                         fontSize={{ base: "md", md: "lg", lg: "xl" }}
                         p={{ base: 5, md: 7 }}
-                        fontFamily={"'Etna', sans-serif"}
                     >
                         {t("404.back")}
                     </Button>

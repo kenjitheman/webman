@@ -8,6 +8,7 @@ import { FaTelegram } from "react-icons/fa";
 import { RiTelegramLine } from "react-icons/ri";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link.js";
+import links from "./vars.js";
 
 const Footer = () => {
     const { t } = useTranslation("common");
@@ -41,34 +42,34 @@ const Footer = () => {
                             pb={{ base: 4, md: 0 }}
                         >
                             <Link
-                                href="https://discord.gg/XY2rMVUFhR"
+                                href={links.socials.discord}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Discord | Alt Corporation"
+                                aria-label="Discord"
                             >
                                 <FaDiscord size={40} color={useColorModeValue("black", "white")} />
                             </Link>
                             <Link
-                                href="https://t.me/alt_portfolio"
+                                href={links.socials.telegram.alt_corporation}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Telegram | Alt Corporation"
+                                aria-label="Telegram"
                             >
                                 <FaTelegram size={35} color={useColorModeValue("black", "white")} />
                             </Link>
                             <Link
-                                href="https://t.me/+Y1wM__EfbHtjZGU0"
+                                href={links.socials.telegram.owner}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Telegram | Artem San"
+                                aria-label="Telegram"
                             >
                                 <RiTelegramLine size={42} color={useColorModeValue("black", "white")} />
                             </Link>
                             <Link
-                                href="https://www.instagram.com/temaaa_san/"
+                                href={links.socials.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Instagram | Artem San"
+                                aria-label="Instagram"
                             >
                                 <PiInstagramLogoBold size={40} color={useColorModeValue("black", "white")} />
                             </Link>
@@ -86,7 +87,7 @@ const Footer = () => {
                         <Link
                             href="mailto:info@altcorp.org"
                             isExternal
-                            aria-label="Email | Alt Corporation"
+                            aria-label="Email"
                         >
                             info@altcorp.org
                         </Link>

@@ -1,13 +1,18 @@
-import { Box, Container, Heading, Divider } from "@chakra-ui/react";
-import Layout from "../components/layouts/article";
+import Link from "next/link";
+import {
+    Box, Container, Heading, Divider, Flex,
+    Icon, SimpleGrid, Text, useColorModeValue
+} from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { ScrollAnimation } from "../components/scroll_animation.js";
-import { Flex, Icon, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
-import { IoLink } from "react-icons/io5";
 import { CommunityInfo } from "../components/custom_components";
-import Link from "next/link";
+import links from "../components/vars.js";
+
+import { IoLink } from "react-icons/io5";
 import { FaTelegram } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -152,7 +157,7 @@ const Community = () => {
                                     </ScrollAnimation>
                                     <ScrollAnimation>
                                         <Link
-                                            href="https://discord.com/invite/XY2rMVUFhR"
+                                            href={links.socials.discord}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-label="Discord"

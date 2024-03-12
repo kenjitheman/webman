@@ -1,22 +1,24 @@
-import { Box, Flex, HStack, IconButton, useDisclosure, useColorModeValue, Stack } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import Logo from "../components/logo.js";
+import Link from "next/link.js";
 import { useRouter } from "next/router";
+import {
+    Box, Flex, HStack, IconButton,
+    useDisclosure, useColorModeValue, Stack
+} from "@chakra-ui/react";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+import Logo from "../components/logo.js";
 import ThemeToggleButton from "../components/theme-toggle-button.js";
+import LanguageSwitcher from "./language_switcher.js";
+import links from "./vars.js";
+
 import { PiInstagramLogoBold } from "react-icons/pi";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaTelegram } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 import { RiTelegramLine } from "react-icons/ri";
-import LanguageSwitcher from "./language_switcher.js";
-import Scroll from "react-scroll";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Link from "next/link.js";
-
-const ScrollLink = Scroll.Link;
 
 const NavLink = ({ href, children }) => {
-    const isScrollLink = href.startsWith("#");
     const isExternalLink = href.startsWith("http");
 
     if (isExternalLink) {
@@ -38,42 +40,6 @@ const NavLink = ({ href, children }) => {
             >
                 {children}
             </Box>
-        );
-    }
-
-    if (isScrollLink) {
-        return (
-            <ScrollLink
-                activeClass="active"
-                to={href.slice(1)}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                color={useColorModeValue("black", "white")}
-                style={{
-                    textDecoration: "none",
-                    _hover: {
-                        cursor: "pointer",
-                        color: useColorModeValue("white_yellow", "dark_yellow")
-                    }
-                }}
-            >
-                <Box
-                    px={2}
-                    py={2}
-                    rounded="2xl"
-                    fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
-                    color={useColorModeValue("black", "white")}
-                    _hover={{
-                        textDecoration: "none",
-                        cursor: "pointer",
-                        color: useColorModeValue("white_yellow", "dark_yellow")
-                    }}
-                >
-                    {children}
-                </Box>
-            </ScrollLink>
         );
     }
 
@@ -159,34 +125,34 @@ const Navbar = () => {
                         <LanguageSwitcher id={"language-switcher-nav"} />
                         <ThemeToggleButton />
                         <Link
-                            href="https://discord.gg/XY2rMVUFhR"
+                            href={links.socials.discord}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Discord | Alt Corporation"
+                            aria-label="discord"
                         >
                             <FaDiscord size={35} color={useColorModeValue("black", "white")} />
                         </Link>
                         <Link
-                            href="https://t.me/alt_portfolio"
+                            href={links.socials.telegram.alt_corporation}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Telegram | Alt Corporation"
+                            aria-label="telegram"
                         >
                             <FaTelegram size={30} color={useColorModeValue("black", "white")} />
                         </Link>
                         <Link
-                            href="https://t.me/+Y1wM__EfbHtjZGU0"
+                            href={links.socials.telegram.owner}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Telegram | Artem San"
+                            aria-label="telegram"
                         >
                             <RiTelegramLine size={36} color={useColorModeValue("black", "white")} />
                         </Link>
                         <Link
-                            href="https://www.instagram.com/temaaa_san/"
+                            href={links.socials.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Instagram | Artem San"
+                            aria-label="instagram"
                         >
                             <PiInstagramLogoBold size={35} color={useColorModeValue("black", "white")} />
                         </Link>
@@ -228,34 +194,34 @@ const Navbar = () => {
                             >
                                 <Stack direction={"row"} spacing={2} alignItems={"center"} justifyContent={"flex-end"}>
                                     <Link
-                                        href="https://discord.gg/XY2rMVUFhR"
+                                        href={links.socials.discord}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Discord | Alt Corporation"
+                                        aria-label="discord"
                                     >
                                         <FaDiscord size={34} color={useColorModeValue("black", "white")} />
                                     </Link>
                                     <Link
-                                        href="https://t.me/alt_portfolio"
+                                        href={links.socials.telegram.alt_corporation}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Telegram | Alt Corporation"
+                                        aria-label="telegram"
                                     >
                                         <FaTelegram size={30} color={useColorModeValue("black", "white")} />
                                     </Link>
                                     <Link
-                                        href="https://t.me/+Y1wM__EfbHtjZGU0"
+                                        href={links.socials.telegram.owner}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Telegram | Artem San"
+                                        aria-label="telegram"
                                     >
                                         <RiTelegramLine size={36} />
                                     </Link>
                                     <Link
-                                        href="https://www.instagram.com/temaaa_san/"
+                                        href={links.socials.instagram}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Instagram | Artem San"
+                                        aria-label="instagram"
                                     >
                                         <PiInstagramLogoBold size={33} color={useColorModeValue("black", "white")} />
                                     </Link>
