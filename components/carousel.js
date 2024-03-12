@@ -1,13 +1,12 @@
 import React from "react";
 import { Image, useColorModeValue } from "@chakra-ui/react";
-import "swiper/swiper-bundle.css";
-import SwiperCore, { Autoplay } from "swiper";
+import SwiperCore from "swiper";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-SwiperCore.use([Autoplay]);
 import "swiper/css";
-import "swiper/css/autoplay";
 
 const AutoplayCarousel = () => {
+    SwiperCore.use([Autoplay]);
 
     const slides = [
         {
@@ -20,7 +19,7 @@ const AutoplayCarousel = () => {
                     )
                 }
                 loading={"lazy"}
-                rounded={{ base: "xl", md: "3xl" }}
+                rounded={{ base: "2xl", md: "3xl" }}
                 alt={"About us image"}
                 border={"1px solid"}
                 objectFit={"cover"}
@@ -40,7 +39,7 @@ const AutoplayCarousel = () => {
                     )
                 }
                 loading={"lazy"}
-                rounded={{ base: "xl", md: "3xl" }}
+                rounded={{ base: "2xl", md: "3xl" }}
                 alt={"About us image"}
                 border={"1px solid"}
                 objectFit={"cover"}
@@ -60,7 +59,7 @@ const AutoplayCarousel = () => {
                     )
                 }
                 loading={"lazy"}
-                rounded={{ base: "xl", md: "3xl" }}
+                rounded={{ base: "2xl", md: "3xl" }}
                 alt={"About us image"}
                 border={"1px solid"}
                 objectFit={"cover"}
@@ -80,7 +79,7 @@ const AutoplayCarousel = () => {
                     )
                 }
                 loading={"lazy"}
-                rounded={{ base: "xl", md: "3xl" }}
+                rounded={{ base: "2xl", md: "3xl" }}
                 alt={"About us image"}
                 border={"1px solid"}
                 objectFit={"cover"}
@@ -100,7 +99,7 @@ const AutoplayCarousel = () => {
                     )
                 }
                 loading={"lazy"}
-                rounded={{ base: "xl", md: "3xl" }}
+                rounded={{ base: "2xl", md: "3xl" }}
                 alt={"About us image"}
                 border={"1px solid"}
                 objectFit={"cover"}
@@ -116,11 +115,12 @@ const AutoplayCarousel = () => {
         <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            loop={true}
             autoplay={{
                 delay: 0,
-                disableOnInteraction: true
+                disableOnInteraction: false
             }}
+            loop={true}
+            modules={[Autoplay]}
             breakpoints={{
                 640: {
                     slidesPerView: 1
@@ -132,6 +132,7 @@ const AutoplayCarousel = () => {
                     slidesPerView: 3
                 }
             }}
+            speed={3500}
         >
             {slides.map((slide) => (
                 <SwiperSlide key={slide.id}>
