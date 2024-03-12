@@ -98,7 +98,7 @@ const Home = () => {
                                         </ScrollAnimation>
                                         <ScrollAnimation>
                                             <WelcomeStat
-                                                title={capital + "K+"}
+                                                title={"$" + capital + "K+"}
                                                 text={t("stats.4.text")}
                                             />
                                         </ScrollAnimation>
