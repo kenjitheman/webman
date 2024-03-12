@@ -6,14 +6,12 @@ import {
     Box, Container, Icon, useColorModeValue, Flex, Heading, SimpleGrid, Text, Image,
     AccordionButton, AccordionPanel, AccordionItem, Accordion
 } from "@chakra-ui/react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { Hero } from "../components/hero.js";
 import { WelcomeStat, InfoFullyGrid, Info } from "../components/custom_components.js";
-import Carousel from "../components/carousel.js";
+import AutoplayCarousel from "../components/carousel.js";
 
 import {
     incrementExperience, incrementHappyClients, incrementReviews, incrementCapital
@@ -452,86 +450,8 @@ const Home = () => {
                                 </ScrollAnimation>
                                 <Flex
                                     maxW={"100%"}
-                                    alignItems={"center"}
                                 >
-                                    <Carousel
-                                        items={[
-                                            <Box
-                                                rounded={{ base: "xl", md: "3xl" }}
-                                                p={5}
-                                                align={"center"}
-                                                w={"100%"}
-                                            >
-                                                <Image
-                                                    src={
-                                                        useColorModeValue(
-                                                            "images/bg_white.webp", "images/bg_dark.webp"
-                                                        )
-                                                    }
-                                                    loading={"lazy"}
-                                                    rounded={{ base: "xl", md: "3xl" }}
-                                                    alt={"About us image"}
-                                                    border={"1px solid"}
-                                                    objectFit={"cover"}
-                                                    fill={true}
-                                                    borderColor={
-                                                        useColorModeValue(
-                                                            "white_border_color", "dark_border_color"
-                                                        )
-                                                    }
-                                                    quality={100}
-                                                    h={"sm"}
-                                                />
-                                            </Box>,
-                                            <Box
-                                                rounded={{ base: "xl", md: "3xl" }}
-                                                p={5}
-                                                align={"center"}
-                                                w={"100%"}
-                                            >
-                                                <Image
-                                                    src={
-                                                        useColorModeValue(
-                                                            "images/bg_white.webp",
-                                                            "images/bg_dark.webp"
-                                                        )
-                                                    }
-                                                    loading={"lazy"}
-                                                    rounded={{ base: "xl", md: "3xl" }}
-                                                    alt={"About us image"}
-                                                    border={"1px solid"}
-                                                    objectFit={"cover"}
-                                                    fill={true}
-                                                    borderColor={useColorModeValue("gray.300", "gray.600")}
-                                                    quality={100}
-                                                    h={"sm"}
-                                                />
-                                            </Box>,
-                                            <Box
-                                                rounded={{ base: "xl", md: "3xl" }}
-                                                p={5}
-                                                align={"center"}
-                                                w={"100%"}
-                                            >
-                                                <Image
-                                                    src={
-                                                        useColorModeValue(
-                                                            "images/bg_white.webp",
-                                                            "images/bg_dark.webp"
-                                                        )
-                                                    }
-                                                    loading={"lazy"}
-                                                    rounded={{ base: "xl", md: "3xl" }}
-                                                    alt={"About us image"}
-                                                    border={"1px solid"}
-                                                    objectFit={"cover"}
-                                                    fill={true}
-                                                    borderColor={useColorModeValue("gray.300", "gray.600")}
-                                                    quality={100}
-                                                    h={"sm"}
-                                                />
-                                            </Box>
-                                        ]} />
+                                    <AutoplayCarousel />
                                 </Flex>
                             </Box>
                         </Section>
