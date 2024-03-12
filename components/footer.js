@@ -14,7 +14,6 @@ const Footer = () => {
     return (
         <Box
             as="footer"
-            fontFamily={"'Etna', sans-serif"}
             fontWeight={"medium"}
             fontSize="lg"
             zIndex={2}
@@ -83,7 +82,7 @@ const Footer = () => {
                         color={useColorModeValue("black", "white")}
                         fontWeight={"regular"}
                     >
-                        &copy; {new Date().getFullYear()} Alt Corporation. {t("footer.copyright")} {" Contact: "}
+                        &copy; {new Date().getFullYear()} Alt Corporation. {t("footer.copyright") + ": "}
                         <Link
                             href="mailto:info@altcorp.org"
                             isExternal
