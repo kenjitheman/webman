@@ -1,65 +1,146 @@
 import React from "react";
-import Slider from "react-slick";
-import { Box } from "@chakra-ui/react";
+import { Image, useColorModeValue } from "@chakra-ui/react";
+import "swiper/swiper-bundle.css";
+import SwiperCore, { Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+SwiperCore.use([Autoplay]);
+import "swiper/css";
+import "swiper/css/autoplay";
 
-function Carousel({ items, initialSlideToShow = 3 }) {
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: initialSlideToShow,
-        speed: 5000,
-        autoplay: true,
-        autoplaySpeed: 0,
-        initialSlide: 0,
-        cssEase: "linear",
-        centerMode: true,
-        pauseOnHover: false,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1.6
+const AutoplayCarousel = () => {
+
+    const slides = [
+        {
+            id: 1,
+            content: <Image
+                src={
+                    useColorModeValue(
+                        "images/bg_white.webp",
+                        "images/bg_dark.webp"
+                    )
                 }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
+                loading={"lazy"}
+                rounded={{ base: "xl", md: "3xl" }}
+                alt={"About us image"}
+                border={"1px solid"}
+                objectFit={"cover"}
+                fill={true}
+                borderColor={useColorModeValue("gray.300", "gray.600")}
+                quality={100}
+                h={"sm"}
+            />
+        },
+        {
+            id: 2,
+            content: <Image
+                src={
+                    useColorModeValue(
+                        "images/bg_white.webp",
+                        "images/bg_dark.webp"
+                    )
                 }
-            },
-            {
-                breakpoint: 580,
-                settings: {
-                    slidesToShow: 0.9
+                loading={"lazy"}
+                rounded={{ base: "xl", md: "3xl" }}
+                alt={"About us image"}
+                border={"1px solid"}
+                objectFit={"cover"}
+                fill={true}
+                borderColor={useColorModeValue("gray.300", "gray.600")}
+                quality={100}
+                h={"sm"}
+            />
+        },
+        {
+            id: 3,
+            content: <Image
+                src={
+                    useColorModeValue(
+                        "images/bg_white.webp",
+                        "images/bg_dark.webp"
+                    )
                 }
-            },
-            {
-                breakpoint: 450,
-                settings: {
-                    slidesToShow: 0.7
+                loading={"lazy"}
+                rounded={{ base: "xl", md: "3xl" }}
+                alt={"About us image"}
+                border={"1px solid"}
+                objectFit={"cover"}
+                fill={true}
+                borderColor={useColorModeValue("gray.300", "gray.600")}
+                quality={100}
+                h={"sm"}
+            />
+        },
+        {
+            id: 4,
+            content: <Image
+                src={
+                    useColorModeValue(
+                        "images/bg_white.webp",
+                        "images/bg_dark.webp"
+                    )
                 }
-            }
-        ]
-    };
+                loading={"lazy"}
+                rounded={{ base: "xl", md: "3xl" }}
+                alt={"About us image"}
+                border={"1px solid"}
+                objectFit={"cover"}
+                fill={true}
+                borderColor={useColorModeValue("gray.300", "gray.600")}
+                quality={100}
+                h={"sm"}
+            />
+        },
+        {
+            id: 5,
+            content: <Image
+                src={
+                    useColorModeValue(
+                        "images/bg_white.webp",
+                        "images/bg_dark.webp"
+                    )
+                }
+                loading={"lazy"}
+                rounded={{ base: "xl", md: "3xl" }}
+                alt={"About us image"}
+                border={"1px solid"}
+                objectFit={"cover"}
+                fill={true}
+                borderColor={useColorModeValue("gray.300", "gray.600")}
+                quality={100}
+                h={"sm"}
+            />
+        }
+    ];
 
     return (
-        <Box
-            className="slider-container"
-            w="100%"
-            h="100%"
-            overflow="hidden"
-            margin="auto"
-            padding="0px"
-            position="relative"
+        <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+                delay: 0,
+                disableOnInteraction: true
+            }}
+            breakpoints={{
+                640: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            }}
         >
-            <Slider {...settings}>
-                {items.map((item, index) => (
-                    <div key={index}>{item}</div>
-                ))}
-            </Slider>
-        </Box>
+            {slides.map((slide) => (
+                <SwiperSlide key={slide.id}>
+                    {slide.content}
+                </SwiperSlide>
+            ))
+            }
+        </Swiper >
     );
-}
+};
 
-export default Carousel;
+export default AutoplayCarousel;
