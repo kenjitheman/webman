@@ -140,7 +140,6 @@ const Navbar = () => {
                         <HStack
                             as={"nav"}
                             spacing={4}
-                            fontFamily={"'Etna', sans-serif"}
                             fontSize={{ lg: "lg", xl: "xl" }}
                             fontWeight={"medium"}
                             display={{ base: "none", xl: "flex" }}
@@ -212,7 +211,6 @@ const Navbar = () => {
                         <Stack
                             as={"nav"}
                             spacing={6}
-                            fontFamily={"'Etna', sans-serif"}
                             fontSize={"lg"}
                             fontWeight={"medium"}
                             alignItems={"center"}
