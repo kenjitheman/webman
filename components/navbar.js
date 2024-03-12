@@ -27,7 +27,7 @@ const NavLink = ({ href, children }) => {
                 as="a"
                 px={2}
                 py={2}
-                fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
+                fontSize={{ lg: "1.1rem", xl: "1.2rem", "2xl": "1.45rem" }}
                 textDecoration="none"
                 color={useColorModeValue("black", "white")}
                 _hover={{
@@ -48,7 +48,7 @@ const NavLink = ({ href, children }) => {
             as="a"
             px={{ lg: 2, xl: 3, "2xl": 5 }}
             py={2}
-            fontSize={{ lg: "1rem", xl: "1.1rem", "2xl": "1.4rem" }}
+            fontSize={{ lg: "1.1rem", xl: "1.2rem", "2xl": "1.45rem" }}
             rounded="2xl"
             textDecoration="none"
             _hover={{
