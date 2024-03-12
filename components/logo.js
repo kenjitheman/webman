@@ -8,9 +8,9 @@ const Logo = () => {
             <Box p={2}>
                 <Image
                     src="/images/logo_2d.png"
-                    alt="Alt Corporation Logo"
-                    width={65}
-                    height={65}
+                    alt="Logo"
+                    width={60}
+                    height={60}
                 />
             </Box>
         </Link >
