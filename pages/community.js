@@ -152,7 +152,7 @@ const Community = () => {
                                     </ScrollAnimation>
                                     <ScrollAnimation>
                                         <Link
-                                            href="#"
+                                            href="https://discord.com/invite/XY2rMVUFhR"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-label="Discord"
