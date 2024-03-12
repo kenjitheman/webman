@@ -27,7 +27,7 @@
             "text": "Reviews"
         },
         "4": {
-            "text": "Capital $"
+            "text": "Capital"
         }
     },
     "services": {
@@ -189,7 +189,7 @@
         "under_construction": "Under construction 🚧"
     },
     "footer": {
-        "copyright": "All rights reserved."
+        "copyright": "All rights reserved. Contact"
     },
     "faq": {
         "title": "Frequently Asked Questions",
