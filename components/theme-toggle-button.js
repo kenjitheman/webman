@@ -19,7 +19,7 @@ const ThemeToggleButton = () => {
                     alignItems="center"
                     px={3}
                 >
-                    <FaSun size="1rem" />
+                    <FaSun size="1.1rem" />
                     <Switch
                         size="sm"
                         isChecked={useColorModeValue(false, true)}
@@ -27,7 +27,7 @@ const ThemeToggleButton = () => {
                         colorScheme={useColorModeValue("blackAlpha", "whiteAlpha")}
                         px={2}
                     />
-                    <BsMoonStarsFill size="1rem" />
+                    <BsMoonStarsFill size="1.1rem" />
                 </Flex >
             </motion.div>
         </AnimatePresence >

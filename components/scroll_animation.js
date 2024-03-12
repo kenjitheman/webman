@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const ScrollAnimation = ({ children }) => {
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 1
+        threshold: 0.4
     });
 
     const fadeIn = useSpring({

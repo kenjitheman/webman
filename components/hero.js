@@ -38,7 +38,6 @@ const Hero = (props) => {
 
             <Container
                 maxW={"full"}
-                fontFamily={"'Etna', sans-serif"}
                 display={"flex"}
                 w={"100%"}
                 wordBreak={"break-word"}
