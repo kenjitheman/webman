@@ -12,7 +12,7 @@ import Section from "../components/section";
 import { Hero } from "../components/hero.js";
 import { WelcomeStat, InfoFullyGrid, Info } from "../components/custom_components.js";
 import AutoplayCarousel from "../components/carousel.js";
-import links from "../components/vars.js";
+import vars from "../components/vars";
 
 import {
     incrementExperience, incrementHappyClients, incrementReviews, incrementCapital
@@ -56,7 +56,7 @@ const Home = () => {
 
     return (
         <Layout
-            title={t("welcome.page_title") + " | " + "Alt Corporation"}
+            title={t("welcome.page_title") + " | " + vars.website_name}
             description={t("welcome.description")}
         >
             <Flex flexDirection={"column"}>
@@ -110,62 +110,61 @@ const Home = () => {
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="full" id="about-us">
+                    <Container maxW="full">
                         <Section delay={0.5}>
-                            <Box
-                                p={4}
-                                fontSize={"2xl"}
-                                fontWeight={"regular"}
+                            <ScrollAnimation>
+                                <Flex
+                                    alignContent={"start"}
+                                    flexDirection={"row"}
+                                    alignItems={"center"}
+                                >
+                                    <Icon
+                                        as={IoLink}
+                                        w={10} h={10} mx={2}
+                                        alignSelf={"center"}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
+                                        display="block"
+                                    />
+                                    <Heading
+                                        textAlign={"left"}
+                                        fontSize={{ base: "2xl", md: "3xl" }}
+                                        fontWeight={"bold"}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
+                                        w={"100%"}
+                                    >
+                                        {t("about_us.title")}
+                                    </Heading>
+                                </Flex>
+                                <Text
+                                    color={useColorModeValue("light_gray", "dark_gray")}
+                                    fontSize={{ base: "xl", md: "2xl" }}
+                                    fontWeight={"regular"}
+                                >
+                                    {t("about_us.description")}
+                                </Text>
+                            </ScrollAnimation>
+                            <SimpleGrid
+                                columns={{ base: 1, xl: 3 }}
+                                spacing={10}
+                                mt={5}
+                                w={"100%"}
                             >
-                                <ScrollAnimation>
-                                    <Flex
-                                        alignContent={"start"}
-                                        flexDirection={"row"}
-                                        alignItems={"center"}
-                                    >
-                                        <Icon
-                                            as={IoLink}
-                                            w={10} h={10} mx={2}
-                                            alignSelf={"center"}
-                                            color={useColorModeValue("light_yellow", "dark_yellow")}
-                                            display="block"
-                                        />
-                                        <Heading
-                                            textAlign={"left"}
-                                            fontSize={{ base: "2xl", md: "3xl" }}
-                                            fontWeight={"bold"}
-                                            color={useColorModeValue("light_yellow", "dark_yellow")}
-                                            w={"100%"}
-                                        >
-                                            {t("about_us.title")}
-                                        </Heading>
-                                    </Flex>
-                                    <Text
-                                        color={useColorModeValue("light_gray", "dark_gray")}
-                                        fontSize={{ base: "xl", md: "2xl" }}
-                                        fontWeight={"regular"}
-                                    >
-                                        {t("about_us.description")}
-                                    </Text>
-                                </ScrollAnimation>
-                                <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={10} mt={5} w={"100%"}>
-                                    <Info
-                                        icon={<Icon as={FaPeopleGroup} w={10} h={10} />}
-                                        title={t("about_us.1.title")}
-                                        text={t("about_us.1.text")}
-                                    />
-                                    <Info
-                                        icon={<Icon as={FaRankingStar} w={10} h={10} />}
-                                        title={t("about_us.2.title")}
-                                        text={t("about_us.2.text")}
-                                    />
-                                    <Info
-                                        icon={<Icon as={GiRingedPlanet} w={10} h={10} />}
-                                        title={t("about_us.3.title")}
-                                        text={t("about_us.3.text")}
-                                    />
-                                </SimpleGrid>
-                            </Box>
+                                <Info
+                                    icon={<Icon as={FaPeopleGroup} w={10} h={10} />}
+                                    title={t("about_us.1.title")}
+                                    text={t("about_us.1.text")}
+                                />
+                                <Info
+                                    icon={<Icon as={FaRankingStar} w={10} h={10} />}
+                                    title={t("about_us.2.title")}
+                                    text={t("about_us.2.text")}
+                                />
+                                <Info
+                                    icon={<Icon as={GiRingedPlanet} w={10} h={10} />}
+                                    title={t("about_us.3.title")}
+                                    text={t("about_us.3.text")}
+                                />
+                            </SimpleGrid>
                         </Section>
                     </Container>
                     <Container maxW="10xl">
@@ -178,10 +177,10 @@ const Home = () => {
                                 <Flex
                                     w={"100%"}
                                     justifyContent={"space-between"}
-                                    flexDirection={{ base: "column", lg: "row" }}
+                                    flexDirection={{ base: "column", xl: "row" }}
                                     alignItems={"center"}
                                 >
-                                    <Box w={{ base: "100%", lg: "49%" }} pb={{ base: 12, lg: 0 }}>
+                                    <Box w={{ base: "100%", xl: "49%" }} pb={{ base: 12, xl: 0 }}>
                                         <Image
                                             src={useColorModeValue("images/bg_white.webp", "images/bg_dark.webp")}
                                             loading={"lazy"}
@@ -193,11 +192,11 @@ const Home = () => {
                                             fill={true}
                                             quality={100}
                                             w={"100%"}
-                                            h={{ base: 80, md: "lg" }}
+                                            h={{ base: 80, md: "xl" }}
                                         />
                                     </Box>
                                     <SimpleGrid
-                                        w={{ base: "100%", lg: "49%" }}
+                                        w={{ base: "100%", xl: "49%" }}
                                         columns={{ base: 1, md: 1 }}
                                         spacing={6}
                                     >
@@ -252,7 +251,8 @@ const Home = () => {
                             <ScrollAnimation>
                                 <Text
                                     color={useColorModeValue("light_gray", "dark_gray")}
-                                    fontSize={{ base: "xl", md: "2xl" }} pb={4}
+                                    fontSize={{ base: "xl", md: "2xl" }}
+                                    pb={4}
                                     fontWeight={"regular"}
                                 >
                                     {t("faq.description")}
@@ -388,7 +388,7 @@ const Home = () => {
                     </Container >
                 </Box>
                 <Box>
-                    <Container maxW="100%" id="reviews">
+                    <Container maxW="100%">
                         <Section delay={0.3}>
                             <Box
                                 rounded={"3xl"}
@@ -421,7 +421,7 @@ const Home = () => {
                                                 {t("reviews.title")}
                                             </Heading>
                                             <Link
-                                                href={links.reviews}
+                                                href={vars.reviews}
                                                 isExternal
                                                 aria-label="reviews"
                                                 target="_blank"
@@ -455,7 +455,7 @@ const Home = () => {
                     </Container>
                 </Box>
                 <Box>
-                    <Container maxW="10xl" id="contacts">
+                    <Container maxW="10xl">
                         <Section delay={0.3}>
                             <Box
                                 rounded={"3xl"}
@@ -490,7 +490,8 @@ const Home = () => {
                                 <ScrollAnimation>
                                     <Text
                                         color={useColorModeValue("light_gray", "dark_gray")}
-                                        fontSize={{ base: "xl", md: "2xl" }} pb={7}
+                                        fontSize={{ base: "xl", md: "2xl" }}
+                                        pb={7}
                                         fontWeight={"regular"}
                                     >
                                         {t("contacts.description")}
@@ -509,7 +510,7 @@ const Home = () => {
                                     >
                                         <ScrollAnimation>
                                             <Link
-                                                href={links.contacts.owner}
+                                                href={vars.contacts.owner}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Telegram"
@@ -523,7 +524,7 @@ const Home = () => {
                                         </ScrollAnimation>
                                         <ScrollAnimation>
                                             <Link
-                                                href={links.contacts.content}
+                                                href={vars.contacts.content}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Telegram"
@@ -537,7 +538,7 @@ const Home = () => {
                                         </ScrollAnimation>
                                         <ScrollAnimation>
                                             <Link
-                                                href={links.contacts.traffic}
+                                                href={vars.contacts.traffic}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Telegram"

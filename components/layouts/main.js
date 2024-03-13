@@ -6,11 +6,12 @@ import Navbar from "../navbar";
 import ProgressBar from "../progress_bar";
 import Footer from "../footer";
 import { AnimatePresence } from "framer-motion";
+import vars from "../vars";
 
 const Main = ({ children }) => {
     const router = useRouter();
 
-    const ogTitle = "Alt Corporation";
+    const ogTitle = vars.website_name;
     const ogDescription = "A dedicated team of professionals crafting unparalleled user experiences, driving success for businesses.";
     const ogImage = "/images/android-chrome-512x512.png";
     const siteUrl = "https://www.altcorp.org";
@@ -43,7 +44,6 @@ const Main = ({ children }) => {
                 <link rel="canonical" href={siteUrl + router.asPath} />
 
                 <meta property="og:site_name" content={ogTitle} />
-                <meta property="og:title" content={ogTitle} />
                 <meta property="og:description" content={ogDescription} />
                 <meta property="og:image" content={ogImage} />
                 <meta property="og:url" content={siteUrl + router.asPath} />

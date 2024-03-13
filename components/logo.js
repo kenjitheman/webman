@@ -19,7 +19,7 @@ const Logo = () => {
         >
             <Box p={2}>
                 <Image
-                    src="/images/logo_2d.png"
+                    src="/images/logo.png"
                     alt="Logo"
                     width={60}
                     height={60}

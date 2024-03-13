@@ -40,7 +40,7 @@ const WelcomeStat = (props) => {
                             {title}
                         </StatNumber>
                         <StatLabel
-                            fontSize={{ base: "xl", xl: "2xl" }}
+                            fontSize={{ base: "xl", xl: "2xl", lg: "1.6rem" }}
                             fontWeight={"regular"}
                             color={useColorModeValue("light_gray", "dark_gray")}
                             textAlign={"center"}
@@ -75,10 +75,17 @@ const CommunityInfo = (props) => {
                 <Flex align={"center"} flexDirection="row">
                     <Stack direction={"column"} spacing={2}>
                         <Flex>
-                            <Box color={useColorModeValue("light_yellow", "dark_yellow")} alignContent={"start"}>
+                            <Box
+                                color={useColorModeValue("light_yellow", "dark_yellow")}
+                                alignContent={"start"}
+                            >
                                 {icon}
                             </Box>
-                            <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight={"medium"} px={{ base: 2, md: 4 }}>
+                            <Text
+                                fontSize={{ base: "xl", md: "2xl" }}
+                                fontWeight={"medium"}
+                                px={{ base: 2, md: 4 }}
+                            >
                                 {title}
                             </Text>
                         </Flex>
@@ -117,10 +124,17 @@ const InfoFullyGrid = (props) => {
                 }}
             >
                 <Flex align={"center"}>
-                    <Box color={useColorModeValue("light_yellow", "dark_yellow")} alignContent={"start"}>
+                    <Box
+                        color={useColorModeValue("light_yellow", "dark_yellow")}
+                        alignContent={"start"}
+                    >
                         {icon}
                     </Box>
-                    <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight={"medium"} px={{ base: 3, md: 5 }}>
+                    <Text
+                        fontSize={{ base: "xl", md: "2xl" }}
+                        fontWeight={"medium"}
+                        px={{ base: 3, md: 5 }}
+                    >
                         {text}: {title}
                     </Text>
                 </Flex>
@@ -200,7 +214,7 @@ const Service = (props) => {
                         w={9} h={9}
                     />
                     <Text
-                        fontSize={"xl"}
+                        fontSize={"1.3rem"}
                         fontWeight={"regular"}
                         color={useColorModeValue("light_gray", "dark_gray")}
                         p={3}
@@ -213,7 +227,7 @@ const Service = (props) => {
                 {includes && typeof includes === "object" && Object.keys(includes).length > 0 && (
                     <List spacing={4} w={"100%"}>
                         {Object.keys(includes).map((key, index) => (
-                            <ListItem key={index} fontSize={"xl"} fontWeight={"regular"}>
+                            <ListItem key={index} fontSize={"1.3rem"} fontWeight={"regular"}>
                                 <Icon
                                     as={CheckIcon}
                                     color={useColorModeValue("light_yellow", "dark_yellow")}
@@ -255,10 +269,10 @@ const Info = (props) => {
                     >
                         {icon}
                         <Text
-                            fontWeight={"medium"}
+                            fontWeight={"semibold"}
                             color={useColorModeValue("light_yellow", "dark_yellow")}
-                            pl={{ base: 3, md: 4 }}
-                            fontSize={{ base: "lg", md: "2xl" }}
+                            pl={{ base: 2, md: 3 }}
+                            fontSize={{ base: "lg", md: "2xl", lg: "1.6rem" }}
                             wordBreak={"break-word"}
                             w={"100%"}
                         >
@@ -267,7 +281,7 @@ const Info = (props) => {
                     </Flex>
                     <Text
                         color={useColorModeValue("light_gray", "dark_gray")}
-                        fontSize={{ base: "lg", md: "xl" }}
+                        fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
                         fontWeight={"regular"}
                         wordBreak={"break-word"}
                     >

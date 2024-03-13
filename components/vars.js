@@ -1,4 +1,5 @@
-const links = {
+const vars = {
+    website_name: "Alt Corporation",
     contacts: {
         owner: "https://t.me/bybitsignals_01",
         content: "https://t.me/alt_corporation",
@@ -16,4 +17,5 @@ const links = {
     reviews: "https://t.me/+DATWMYlQTgA5Njc0"
 };
 
-export default links;
+
+export default vars;
