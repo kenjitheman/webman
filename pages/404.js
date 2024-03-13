@@ -11,7 +11,7 @@ const NotFound = () => {
             title="404 | Alt Corporation"
             description={t("404.description")}
         >
-            <Container my={"26vh"}>
+            <Container my={"32vh"}>
                 <Heading
                     as="h1"
                     fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}

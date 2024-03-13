@@ -23,6 +23,8 @@ const Logo = () => {
                     alt="Logo"
                     width={60}
                     height={60}
+                    quality={100}
+                    priority={true}
                 />
             </Box>
         </Link >
