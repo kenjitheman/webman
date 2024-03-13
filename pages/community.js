@@ -39,7 +39,7 @@ const Community = () => {
                                         as={IoLink}
                                         w={10} h={10} mx={2}
                                         alignSelf={"center"}
-                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
                                         display={{ base: "none", sm: "block" }}
                                     />
                                     <Heading
@@ -48,7 +48,7 @@ const Community = () => {
                                         textAlign={"left"}
                                         fontWeight={"bold"}
                                         fontSize={{ base: "2xl", md: "3xl" }}
-                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
                                         w={"100%"}
                                     >
                                         {t("community.title")}
@@ -57,7 +57,7 @@ const Community = () => {
                             </ScrollAnimation>
                             <ScrollAnimation>
                                 <Text
-                                    color={useColorModeValue("white_gray", "dark_gray")}
+                                    color={useColorModeValue("light_gray", "dark_gray")}
                                     fontSize={{ base: "xl", md: "2xl" }}
                                 >
                                     {t("community.description")}
@@ -65,7 +65,7 @@ const Community = () => {
                             </ScrollAnimation>
                             <ScrollAnimation>
                                 <Divider
-                                    borderColor={useColorModeValue("white_border_color", "dark_border_color")}
+                                    borderColor={useColorModeValue("light_border_color", "dark_border_color")}
                                     m={0}
                                     borderWidth={1}
                                     my={10}
@@ -75,12 +75,12 @@ const Community = () => {
                                 <Heading
                                     fontSize={{ base: "xl", md: "2xl" }}
                                     fontWeight={"bold"}
-                                    color={useColorModeValue("white_yellow", "dark_yellow")}
+                                    color={useColorModeValue("light_yellow", "dark_yellow")}
                                 >
                                     {t("community.title")}
                                 </Heading>
                                 <Text
-                                    color={useColorModeValue("white_gray", "dark_gray")}
+                                    color={useColorModeValue("light_gray", "dark_gray")}
                                     fontSize={{ base: "md", md: "lg" }}
                                     fontWeight={"regular"}
                                     pb={10}
