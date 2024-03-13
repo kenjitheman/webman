@@ -1,7 +1,7 @@
 const vars = {
     website_name: "Alt Corporation",
     contacts: {
-        owner: "https://t.me/bybitsignals_01",
+        owner: "https://t.me/bybitsignals_0",
         content: "https://t.me/alt_corporation",
         traffic: "https://t.me/altcorp_traffic",
         email: "info@altcorp.org"
