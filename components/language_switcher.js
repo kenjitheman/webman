@@ -9,9 +9,13 @@ const LanguageSwitcher = ({ id }) => {
     const router = useRouter();
 
     const [selectedLanguage, setSelectedLanguage] = useState(() => {
-        return typeof window !== "undefined" ?
-            localStorage.getItem("preferredLanguage") || router.locale :
-            router.locale;
+        if (typeof window !== "undefined") {
+            const preferredLanguage = localStorage.getItem("preferredLanguage");
+            if (preferredLanguage && languages[preferredLanguage]) {
+                return preferredLanguage;
+            }
+        }
+        return router.locale;
     });
 
     useEffect(() => {
