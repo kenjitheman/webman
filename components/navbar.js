@@ -17,6 +17,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaTelegram } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 import { RiTelegramLine } from "react-icons/ri";
+import { Divider } from "@chakra-ui/react";
 
 const NavLink = ({ href, children }) => {
     return (
@@ -99,7 +100,9 @@ const Navbar = () => {
                         justifyContent={"flex-end"}
                     >
                         <LanguageSwitcher id={"language-switcher-nav"} />
+                        <Divider orientation='vertical' h={6} />
                         <ThemeToggleButton />
+                        <Divider orientation='vertical' h={6} />
                         <Link
                             href={links.socials.discord}
                             target="_blank"

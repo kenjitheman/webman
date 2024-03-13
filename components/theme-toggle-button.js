@@ -17,7 +17,7 @@ const ThemeToggleButton = () => {
                     whileTap={{ scale: 0.9 }}
                     justifyContent="space-between"
                     alignItems="center"
-                    px={3}
+                    px={1}
                 >
                     <FaSun size="1.1rem" />
                     <Switch
