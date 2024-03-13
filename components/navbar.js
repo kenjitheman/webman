@@ -32,7 +32,7 @@ const NavLink = ({ href, children }) => {
                 color={useColorModeValue("black", "white")}
                 _hover={{
                     textDecoration: "none",
-                    color: useColorModeValue("white_yellow", "dark_yellow")
+                    color: useColorModeValue("light_yellow", "dark_yellow")
                 }}
                 href={href}
                 target="_blank"
@@ -53,7 +53,7 @@ const NavLink = ({ href, children }) => {
             textDecoration="none"
             _hover={{
                 textDecoration: "none",
-                color: useColorModeValue("white_yellow", "dark_yellow")
+                color: useColorModeValue("light_yellow", "dark_yellow")
             }}
             href={href}
             target="_self"

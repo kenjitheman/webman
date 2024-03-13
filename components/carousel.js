@@ -24,7 +24,7 @@ const AutoplayCarousel = () => {
                 border={"1px solid"}
                 objectFit={"cover"}
                 fill={true}
-                borderColor={useColorModeValue("gray.300", "gray.600")}
+                borderColor={useColorModeValue("light_gray", "dark_gray")}
                 quality={100}
                 h={"sm"}
             />

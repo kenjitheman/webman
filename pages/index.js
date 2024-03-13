@@ -127,21 +127,21 @@ const Home = () => {
                                             as={IoLink}
                                             w={10} h={10} mx={2}
                                             alignSelf={"center"}
-                                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                                            color={useColorModeValue("light_yellow", "dark_yellow")}
                                             display="block"
                                         />
                                         <Heading
                                             textAlign={"left"}
                                             fontSize={{ base: "2xl", md: "3xl" }}
                                             fontWeight={"bold"}
-                                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                                            color={useColorModeValue("light_yellow", "dark_yellow")}
                                             w={"100%"}
                                         >
                                             {t("about_us.title")}
                                         </Heading>
                                     </Flex>
                                     <Text
-                                        color={useColorModeValue("white_gray", "dark_gray")}
+                                        color={useColorModeValue("light_gray", "dark_gray")}
                                         fontSize={{ base: "xl", md: "2xl" }}
                                         fontWeight={"regular"}
                                     >
@@ -188,7 +188,7 @@ const Home = () => {
                                             rounded={"3xl"}
                                             alt={"About us image"}
                                             border={"1px solid"}
-                                            borderColor={useColorModeValue("white_border_color", "dark_border_color")}
+                                            borderColor={useColorModeValue("light_border_color", "dark_border_color")}
                                             objectFit={"cover"}
                                             fill={true}
                                             quality={100}
@@ -235,14 +235,14 @@ const Home = () => {
                                         as={IoLink}
                                         w={10} h={10} mx={2}
                                         alignSelf={"center"}
-                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
                                         display="block"
                                     />
                                     <Heading
                                         textAlign={"left"}
                                         fontSize={{ base: "2xl", md: "3xl" }}
                                         fontWeight={"bold"}
-                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
                                         w={"100%"}
                                     >
                                         {t("faq.title")}
@@ -251,7 +251,7 @@ const Home = () => {
                             </ScrollAnimation>
                             <ScrollAnimation>
                                 <Text
-                                    color={useColorModeValue("white_gray", "dark_gray")}
+                                    color={useColorModeValue("light_gray", "dark_gray")}
                                     fontSize={{ base: "xl", md: "2xl" }} pb={4}
                                     fontWeight={"regular"}
                                 >
@@ -289,7 +289,7 @@ const Home = () => {
                                                         _hover={{
                                                             bg: "none",
                                                             border: "1px solid",
-                                                            borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                                                            borderColor: useColorModeValue("light_yellow", "dark_yellow")
                                                         }}
                                                     >
                                                         <Text
@@ -304,7 +304,7 @@ const Home = () => {
                                                     </AccordionButton>
                                                     <AccordionPanel>
                                                         <Text
-                                                            color={useColorModeValue("white_gray", "dark_gray")}
+                                                            color={useColorModeValue("light_gray", "dark_gray")}
                                                             fontSize={{ base: "lg", md: "xl" }}
                                                             fontWeight={"regular"}
                                                             wordBreak={"break-word"}
@@ -322,7 +322,7 @@ const Home = () => {
                                                         _hover={{
                                                             bg: "none",
                                                             border: "1px solid",
-                                                            borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                                                            borderColor: useColorModeValue("light_yellow", "dark_yellow")
                                                         }}
                                                     >
                                                         <Text
@@ -337,7 +337,7 @@ const Home = () => {
                                                     </AccordionButton>
                                                     <AccordionPanel>
                                                         <Text
-                                                            color={useColorModeValue("white_gray", "dark_gray")}
+                                                            color={useColorModeValue("light_gray", "dark_gray")}
                                                             fontSize={{ base: "lg", md: "xl" }}
                                                             fontWeight={"regular"}
                                                             wordBreak={"break-word"}
@@ -355,7 +355,7 @@ const Home = () => {
                                                         _hover={{
                                                             bg: "none",
                                                             border: "1px solid",
-                                                            borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                                                            borderColor: useColorModeValue("light_yellow", "dark_yellow")
                                                         }}
                                                     >
                                                         <Text
@@ -370,7 +370,7 @@ const Home = () => {
                                                     </AccordionButton>
                                                     <AccordionPanel>
                                                         <Text
-                                                            color={useColorModeValue("white_gray", "dark_gray")}
+                                                            color={useColorModeValue("light_gray", "dark_gray")}
                                                             fontSize={{ base: "lg", md: "xl" }}
                                                             fontWeight={"regular"}
                                                             wordBreak={"break-word"}
@@ -405,7 +405,7 @@ const Home = () => {
                                             as={IoLink}
                                             w={10} h={10}
                                             alignSelf={"center"}
-                                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                                            color={useColorModeValue("light_yellow", "dark_yellow")}
                                             display="block"
                                         />
                                         <Flex flexDirection={"row"} alignItems={"center"}>
@@ -415,7 +415,7 @@ const Home = () => {
                                                 textAlign={"left"}
                                                 fontSize={{ base: "2xl", md: "3xl" }}
                                                 fontWeight={"bold"}
-                                                color={useColorModeValue("white_yellow", "dark_yellow")}
+                                                color={useColorModeValue("light_yellow", "dark_yellow")}
                                                 w={"100%"}
                                             >
                                                 {t("reviews.title")}
@@ -429,7 +429,7 @@ const Home = () => {
                                                 <FiArrowUpRight
                                                     size={"2rem"}
                                                     alignSelf={"center"}
-                                                    color={useColorModeValue("white_yellow", "dark_yellow")}
+                                                    color={useColorModeValue("light_yellow", "dark_yellow")}
                                                 />
                                             </Link>
                                         </Flex>
@@ -437,7 +437,7 @@ const Home = () => {
                                 </ScrollAnimation>
                                 <ScrollAnimation>
                                     <Text
-                                        color={useColorModeValue("white_gray", "dark_gray")}
+                                        color={useColorModeValue("light_gray", "dark_gray")}
                                         fontWeight={"regular"}
                                         fontSize={{ base: "xl", md: "2xl" }}
                                         pb={7}
@@ -472,7 +472,7 @@ const Home = () => {
                                             as={IoLink}
                                             w={10} h={10} mx={2}
                                             alignSelf={"center"}
-                                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                                            color={useColorModeValue("light_yellow", "dark_yellow")}
                                             display="block"
                                         />
                                         <Heading
@@ -480,7 +480,7 @@ const Home = () => {
                                             textAlign={"left"}
                                             fontSize={{ base: "2xl", md: "3xl" }}
                                             fontWeight={"bold"}
-                                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                                            color={useColorModeValue("light_yellow", "dark_yellow")}
                                             w={"100%"}
                                         >
                                             {t("contacts.title")}
@@ -489,7 +489,7 @@ const Home = () => {
                                 </ScrollAnimation>
                                 <ScrollAnimation>
                                     <Text
-                                        color={useColorModeValue("white_gray", "dark_gray")}
+                                        color={useColorModeValue("light_gray", "dark_gray")}
                                         fontSize={{ base: "xl", md: "2xl" }} pb={7}
                                         fontWeight={"regular"}
                                     >

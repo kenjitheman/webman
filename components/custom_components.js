@@ -18,12 +18,12 @@ const WelcomeStat = (props) => {
                 minH={"100%"}
                 shadow={"lg"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
+                borderColor={useColorModeValue("light_border_color", "dark_border_color")}
                 css={{ backdropFilter: "blur(10px)" }}
                 rounded={"3xl"}
                 _hover={{
                     cursor: "pointer",
-                    borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                    borderColor: useColorModeValue("light_yellow", "dark_yellow")
                 }}
                 justifyContent={"center"}
                 alignItems={"center"}
@@ -34,7 +34,7 @@ const WelcomeStat = (props) => {
                         <StatNumber
                             fontSize={{ base: "3xl", xl: "4xl" }}
                             fontWeight={"bold"}
-                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                            color={useColorModeValue("light_yellow", "dark_yellow")}
                             textAlign={"center"}
                         >
                             {title}
@@ -42,7 +42,7 @@ const WelcomeStat = (props) => {
                         <StatLabel
                             fontSize={{ base: "xl", xl: "2xl" }}
                             fontWeight={"regular"}
-                            color={useColorModeValue("white_gray", "dark_gray")}
+                            color={useColorModeValue("light_gray", "dark_gray")}
                             textAlign={"center"}
                         >
                             {text}
@@ -65,17 +65,17 @@ const CommunityInfo = (props) => {
                 p={8}
                 shadow={"lg"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
+                borderColor={useColorModeValue("light_border_color", "dark_border_color")}
                 rounded={"3xl"}
                 _hover={{
                     cursor: "pointer",
-                    borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                    borderColor: useColorModeValue("light_yellow", "dark_yellow")
                 }}
             >
                 <Flex align={"center"} flexDirection="row">
                     <Stack direction={"column"} spacing={2}>
                         <Flex>
-                            <Box color={useColorModeValue("white_yellow", "dark_yellow")} alignContent={"start"}>
+                            <Box color={useColorModeValue("light_yellow", "dark_yellow")} alignContent={"start"}>
                                 {icon}
                             </Box>
                             <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight={"medium"} px={{ base: 2, md: 4 }}>
@@ -85,7 +85,7 @@ const CommunityInfo = (props) => {
                         <Text
                             fontSize={{ base: "lg", md: "xl" }}
                             fontWeight={"regular"}
-                            color={useColorModeValue("white_gray", "dark_gray")}
+                            color={useColorModeValue("light_gray", "dark_gray")}
                         >
                             {text}
                         </Text>
@@ -109,15 +109,15 @@ const InfoFullyGrid = (props) => {
                 p={8}
                 shadow={"lg"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
+                borderColor={useColorModeValue("light_border_color", "dark_border_color")}
                 rounded={"3xl"}
                 _hover={{
                     cursor: "pointer",
-                    borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                    borderColor: useColorModeValue("light_yellow", "dark_yellow")
                 }}
             >
                 <Flex align={"center"}>
-                    <Box color={useColorModeValue("white_yellow", "dark_yellow")} alignContent={"start"}>
+                    <Box color={useColorModeValue("light_yellow", "dark_yellow")} alignContent={"start"}>
                         {icon}
                     </Box>
                     <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight={"medium"} px={{ base: 3, md: 5 }}>
@@ -143,11 +143,11 @@ const Service = (props) => {
                 minH={"100%"}
                 shadow={"lg"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
+                borderColor={useColorModeValue("light_border_color", "dark_border_color")}
                 rounded={"3xl"}
                 _hover={{
                     cursor: "pointer",
-                    borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                    borderColor: useColorModeValue("light_yellow", "dark_yellow")
                 }}
                 p={7}
             >
@@ -162,9 +162,9 @@ const Service = (props) => {
                             h={16}
                             align={"center"}
                             justify={"center"}
-                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                            color={useColorModeValue("light_yellow", "dark_yellow")}
                             border={"1px solid"}
-                            borderColor={useColorModeValue("white_border_color", "dark_border_color")}
+                            borderColor={useColorModeValue("light_border_color", "dark_border_color")}
                             rounded={"3xl"}
                             p={2}
                         >
@@ -196,13 +196,13 @@ const Service = (props) => {
                 >
                     <Icon
                         as={TbInfoSquareRounded}
-                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                        color={useColorModeValue("light_yellow", "dark_yellow")}
                         w={9} h={9}
                     />
                     <Text
                         fontSize={"xl"}
                         fontWeight={"regular"}
-                        color={useColorModeValue("white_gray", "dark_gray")}
+                        color={useColorModeValue("light_gray", "dark_gray")}
                         p={3}
                         justify={"center"}
                         wordBreak={"break-word"}
@@ -216,7 +216,7 @@ const Service = (props) => {
                             <ListItem key={index} fontSize={"xl"} fontWeight={"regular"}>
                                 <Icon
                                     as={CheckIcon}
-                                    color={useColorModeValue("white_yellow", "dark_yellow")}
+                                    color={useColorModeValue("light_yellow", "dark_yellow")}
                                     pr={2} w={7} h={7}
                                 />
                                 {includes[key]}
@@ -237,11 +237,11 @@ const Info = (props) => {
                 p={5}
                 minH={"full"}
                 border={"1px solid"}
-                borderColor={useColorModeValue("white_border_color", "dark_border_color")}
+                borderColor={useColorModeValue("light_border_color", "dark_border_color")}
                 shadow={"lg"}
                 _hover={{
                     cursor: "pointer",
-                    borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                    borderColor: useColorModeValue("light_yellow", "dark_yellow")
                 }}
                 rounded={"3xl"}
                 css={{ backdropFilter: "blur(10px)" }}
@@ -251,12 +251,12 @@ const Info = (props) => {
                         flexDirection="row"
                         alignItems="center"
                         justifyContent="start"
-                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                        color={useColorModeValue("light_yellow", "dark_yellow")}
                     >
                         {icon}
                         <Text
                             fontWeight={"medium"}
-                            color={useColorModeValue("white_yellow", "dark_yellow")}
+                            color={useColorModeValue("light_yellow", "dark_yellow")}
                             pl={{ base: 3, md: 4 }}
                             fontSize={{ base: "lg", md: "2xl" }}
                             wordBreak={"break-word"}
@@ -266,7 +266,7 @@ const Info = (props) => {
                         </Text>
                     </Flex>
                     <Text
-                        color={useColorModeValue("white_gray", "dark_gray")}
+                        color={useColorModeValue("light_gray", "dark_gray")}
                         fontSize={{ base: "lg", md: "xl" }}
                         fontWeight={"regular"}
                         wordBreak={"break-word"}

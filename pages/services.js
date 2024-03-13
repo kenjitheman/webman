@@ -42,7 +42,7 @@ const Services = () => {
                                         as={IoLink}
                                         w={10} h={10} mx={2}
                                         alignSelf={"center"}
-                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
                                         display={{ base: "none", md: "block" }}
                                     />
                                     <Heading
@@ -50,7 +50,7 @@ const Services = () => {
                                         py={3}
                                         textAlign={"left"}
                                         fontSize={{ base: "2xl", md: "3xl" }}
-                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
                                         w={"100%"}
                                         wordBreak={"break-word"}
                                     >
@@ -60,7 +60,7 @@ const Services = () => {
                             </ScrollAnimation>
                             <ScrollAnimation>
                                 <Text
-                                    color={useColorModeValue("white_gray", "dark_gray")}
+                                    color={useColorModeValue("light_gray", "dark_gray")}
                                     fontSize={{ base: "xl", md: "2xl" }}
                                     pb={10}
                                 >
@@ -139,7 +139,7 @@ const Services = () => {
                                         transform: "scale(1.05)",
                                         transition: "0.3s",
                                         border: "1px solid",
-                                        borderColor: useColorModeValue("white_yellow", "dark_yellow")
+                                        borderColor: useColorModeValue("light_yellow", "dark_yellow")
                                     }}
                                 >
                                     <Icon
@@ -148,11 +148,11 @@ const Services = () => {
                                         h={10}
                                         mx={2}
                                         alignSelf={"center"}
-                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
                                         display="block"
                                     />
                                     <Text
-                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
                                         fontSize={{ base: "xl", md: "2xl" }}
                                     >
                                         {t("services.ask_question")}
@@ -164,7 +164,7 @@ const Services = () => {
                                         ml={3}
                                         mr={2}
                                         alignSelf={"center"}
-                                        color={useColorModeValue("white_yellow", "dark_yellow")}
+                                        color={useColorModeValue("light_yellow", "dark_yellow")}
                                     />
                                 </Button>
                             </Link>
