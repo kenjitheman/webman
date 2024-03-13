@@ -19,30 +19,6 @@ import { FaDiscord } from "react-icons/fa";
 import { RiTelegramLine } from "react-icons/ri";
 
 const NavLink = ({ href, children }) => {
-    const isExternalLink = href.startsWith("http");
-
-    if (isExternalLink) {
-        return (
-            <Box
-                as="a"
-                px={2}
-                py={2}
-                fontSize={{ lg: "1.1rem", xl: "1.2rem", "2xl": "1.45rem" }}
-                textDecoration="none"
-                color={useColorModeValue("black", "white")}
-                _hover={{
-                    textDecoration: "none",
-                    color: useColorModeValue("light_yellow", "dark_yellow")
-                }}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                {children}
-            </Box>
-        );
-    }
-
     return (
         <Box
             as="a"
@@ -78,8 +54,8 @@ const Navbar = () => {
     };
 
     const Links = {
-        home: `/${get_current_locale_from_local_storage()}/`,
-        services: `/${get_current_locale_from_local_storage()}/services`,
+        home: `/${get_current_locale_from_local_storage()}`,
+        services: `${get_current_locale_from_local_storage()}/services`,
         community: `/${get_current_locale_from_local_storage()}/community`,
         education: `/${get_current_locale_from_local_storage()}/education`,
         invest: `/${get_current_locale_from_local_storage()}/invest-fund`
