@@ -10,7 +10,7 @@ import Section from "../components/section";
 import Layout from "../components/layouts/article";
 import { ScrollAnimation } from "../components/scroll_animation";
 import { Service } from "../components/custom_components";
-import links from "../components/vars";
+import vars from "../components/vars";
 
 import { TiChartLineOutline } from "react-icons/ti";
 import { HiOutlineKey } from "react-icons/hi";
@@ -25,7 +25,7 @@ const Services = () => {
     const { t } = useTranslation("common");
     return (
         <Layout
-            title={t("services.page_title") + " | " + "Alt Corporation"}
+            title={t("services.page_title") + " | " + vars.website_name}
             description={t("services.page_description")}
         >
             <Box>
@@ -82,28 +82,28 @@ const Services = () => {
                                         title={t("services.1.title")}
                                         text={t("services.1.description")}
                                         includes={t("services.1.includes")}
-                                        link={links.contacts.content}
+                                        link={vars.contacts.content}
                                     />
                                     <Service
                                         icon={<Icon as={HiOutlineKey} w={10} h={10} />}
                                         title={t("services.2.title")}
                                         text={t("services.2.description")}
                                         includes={t("services.2.includes")}
-                                        link={links.contacts.content}
+                                        link={vars.contacts.content}
                                     />
                                     <Service
                                         icon={<Icon as={GrTransaction} w={10} h={10} />}
                                         title={t("services.3.title")}
                                         text={t("services.3.description")}
                                         includes={t("services.3.includes")}
-                                        link={links.contacts.owner}
+                                        link={vars.contacts.owner}
                                     />
                                     <Service
                                         icon={<Icon as={MdDesignServices} w={10} h={10} />}
                                         title={t("services.5.title")}
                                         text={t("services.5.description")}
                                         includes={t("services.5.includes")}
-                                        link={links.contacts.owner}
+                                        link={vars.contacts.owner}
                                     />
                                 </SimpleGrid>
                             </Flex>
@@ -117,14 +117,14 @@ const Services = () => {
                                         title={t("services.4.title")}
                                         text={t("services.4.description")}
                                         includes={t("services.4.includes")}
-                                        link={links.contacts.traffic}
+                                        link={vars.contacts.traffic}
                                     />
                                 </SimpleGrid>
                             </Flex>
                         </Box>
                         <Flex justifyContent={"center"} mt={5} mb={10}>
                             <Link
-                                href={links.contacts.owner}
+                                href={vars.contacts.owner}
                                 isExternal
                             >
                                 <Button

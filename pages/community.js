@@ -8,9 +8,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
-import { ScrollAnimation } from "../components/scroll_animation.js";
+import { ScrollAnimation } from "../components/scroll_animation";
 import { CommunityInfo } from "../components/custom_components";
-import links from "../components/vars.js";
+import vars from "../components/vars";
 
 import { IoLink } from "react-icons/io5";
 import { FaTelegram } from "react-icons/fa6";
@@ -21,14 +21,13 @@ const Community = () => {
     const { t } = useTranslation("common");
     return (
         <Layout
-            title={t("community.page_title") + " | " + "Alt Corporation"}
+            title={t("community.page_title") + " | " + vars.website_name}
             description={t("community.page_description")}
         >
             <Box>
                 <Container maxW="95%">
                     <Section delay={0.3}>
                         <Box
-                            fontFamily={"'Etna', sans-serif"}
                             rounded={"3xl"}
                             maxW={"10xl"}
                             py={10}
@@ -37,13 +36,14 @@ const Community = () => {
                                 <Flex alignItems={"start"} alignContent={"start"} flexDirection={"row"}>
                                     <Icon
                                         as={IoLink}
-                                        w={10} h={10} mx={2}
+                                        w={10}
+                                        h={10}
+                                        mx={2}
                                         alignSelf={"center"}
                                         color={useColorModeValue("light_yellow", "dark_yellow")}
                                         display={{ base: "none", sm: "block" }}
                                     />
                                     <Heading
-                                        fontFamily={"'Etna', sans-serif"}
                                         py={3}
                                         textAlign={"left"}
                                         fontWeight={"bold"}
@@ -58,7 +58,7 @@ const Community = () => {
                             <ScrollAnimation>
                                 <Text
                                     color={useColorModeValue("light_gray", "dark_gray")}
-                                    fontSize={{ base: "xl", md: "2xl" }}
+                                    fontSize={{ base: "xl", md: "2xl", lg: "1.5rem" }}
                                 >
                                     {t("community.description")}
                                 </Text>
@@ -81,7 +81,7 @@ const Community = () => {
                                 </Heading>
                                 <Text
                                     color={useColorModeValue("light_gray", "dark_gray")}
-                                    fontSize={{ base: "md", md: "lg" }}
+                                    fontSize={{ base: "lg", md: "xl" }}
                                     fontWeight={"regular"}
                                     pb={10}
                                 >
@@ -157,7 +157,7 @@ const Community = () => {
                                     </ScrollAnimation>
                                     <ScrollAnimation>
                                         <Link
-                                            href={links.socials.discord}
+                                            href={vars.socials.discord}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-label="Discord"

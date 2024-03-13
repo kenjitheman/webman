@@ -1,6 +1,7 @@
 import NextLink from "next/link";
 import { Box, Button, Container, Divider, Heading } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
+import vars from "../components/vars";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -8,7 +9,7 @@ const NotFound = () => {
     const { t } = useTranslation("common");
     return (
         <Layout
-            title="404 | Alt Corporation"
+            title={"404" + " | " + vars.website_name}
             description={t("404.description")}
         >
             <Container my={"32vh"}>
@@ -17,7 +18,7 @@ const NotFound = () => {
                     fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
                     align="center"
                 >
-                    404 | {t("404.description")}
+                    {t("404.description")}
                 </Heading>
                 <Divider my={5} />
                 <Box my={5} align="center">

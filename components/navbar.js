@@ -54,8 +54,8 @@ const Navbar = () => {
     };
 
     const Links = {
-        home: `/${get_current_locale_from_local_storage()}`,
-        services: `${get_current_locale_from_local_storage()}/services`,
+        home: `/${get_current_locale_from_local_storage()}/`,
+        services: `/${get_current_locale_from_local_storage()}/services`,
         community: `/${get_current_locale_from_local_storage()}/community`,
         education: `/${get_current_locale_from_local_storage()}/education`,
         invest: `/${get_current_locale_from_local_storage()}/invest-fund`
