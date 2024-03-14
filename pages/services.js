@@ -1,8 +1,8 @@
-import { Box, Container, Heading } from "@chakra-ui/react";
-import Link from "next/link";
 import {
-    Flex, Icon, SimpleGrid, Text, useColorModeValue, Button
+    Box, Container, Heading, Flex, Icon,
+    SimpleGrid, Text, useColorModeValue, Button
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
