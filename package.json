@@ -1,7 +1,7 @@
 {
-    "name": "altcorp-org",
+    "name": "fckjs",
     "version": "1.0",
-    "description": "Alt Corporation's website",
+    "description": "description",
     "scripts": {
         "dev": "next dev -H 0.0.0.0",
         "build": "ANALYZE=true next build",
@@ -10,7 +10,7 @@
         "lint": "next lint"
     },
     "keywords": [],
-    "author": "kenjitheman",
+    "author": "nezutero",
     "license": "UNLICENSED",
     "dependencies": {
         "@chakra-ui/icons": "^2.0.15",
